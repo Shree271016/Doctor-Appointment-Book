@@ -4,8 +4,11 @@ import heroImg03 from "../assets/images/hero-img03.png";
 import icon01 from "../assets/images/icon01.png";
 import icon02 from "../assets/images/icon02.png";
 import icon03 from "../assets/images/icon03.png";
+import videoIcon from "../assets/images/video-icon.png";
+import featureImg from "../assets/images/feature-img.png";
+import avatarIcon  from "../assets/images/avatar-icon.png";
 import { Link } from "react-router-dom";
-import {BsArrowRight} from "react-icons/bs"
+import { BsArrowRight } from "react-icons/bs"
 import About from "../components/About/About";
 import ServicesList from "../components/Services/ServicesList";
 
@@ -25,10 +28,10 @@ const Home = () => {
               <div className="lg:w-[570px]">
                 <h1 className='text-[36px] leading-[46px] text-[#B63E96] font-[800] md:text-[60px] md:leading-[70px]'> We help patients live a healthy, longer life.</h1>
                 <p className='text__para'>
-                 MEDICAREplus is Kathmandu’s leading preventive clinic, offering top-quality care for all ages. With skilled professionals and advanced facilities, we focus on wellness, prevention, and patient comfort—whether at our clinic or your home.
+                  MEDICAREplus is Kathmandu’s leading preventive clinic, offering top-quality care for all ages. With skilled professionals and advanced facilities, we focus on wellness, prevention, and patient comfort—whether at our clinic or your home.
                 </p>
 
-                <button className='btn bg-[#007e69] hover:text-[#007e69] hover:bg-[white] hover:border-[#007e69] border-[1px]'> Request an Appointment</button>
+                <button className='btn bg-[#007e69]  hover:bg-[#37d892] hover:text-white hover:border-[#007e69] border-[1px]'> Request an Appointment</button>
 
                 {/* hero counter */}
                 <div className='mt-[30px] lg:mt-[70px] flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-[30px]'>
@@ -103,8 +106,8 @@ const Home = () => {
               <div className="mt-[30px]">
                 <h2 className="text-[26px] landing-9 text-headingColor font-[700] text-center"> Find a Doctor</h2>
                 <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center "> World class care for everyone. Our health offers unmatched,expert health care. From the lab to the clinic.</p>
-                <Link  to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[30px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none">
-                <BsArrowRight className="group-hover:text-white w-6 h-5" />
+                <Link to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[30px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none">
+                  <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </Link>
 
               </div>
@@ -117,11 +120,11 @@ const Home = () => {
 
               <div className="mt-[30px]">
                 <h2 className="text-[26px] landing-9 text-headingColor font-[700] text-center"> Find a Location</h2>
-                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center ">MedicarePlus, Duwakot 2,Bhaktapur, Nepal  01-1234567<br/> 
-                <span className="text-blue-600 cursor-pointer">shreekrishnapudasaini.com.np</span>  <br/>
-               <span className="text-xl cursor-pointer"> &#9877; View on Map &#10132; </span></p>
+                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center ">MedicarePlus, Duwakot 2,Bhaktapur, Nepal  01-1234567<br />
+                  <span className="text-blue-600 cursor-pointer">shreekrishnapudasaini.com.np</span>  <br />
+                  <span className="text-xl cursor-pointer"> &#9877; View on Map &#10132; </span></p>
                 <Link to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[30px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none">
-                <BsArrowRight className="group-hover:text-white w-6 h-5" />
+                  <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </Link>
 
               </div>
@@ -136,7 +139,7 @@ const Home = () => {
                 <h2 className="text-[26px] landing-9 text-headingColor font-[700] text-center"> Book an Appointment</h2>
                 <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center "> Experience expert care at Medicare+ with skilled professionals and advanced facilities, ensuring your health and wellness.</p>
                 <Link to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[30px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none">
-                <BsArrowRight className="group-hover:text-white w-6 h-5" />
+                  <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </Link>
 
               </div>
@@ -151,24 +154,88 @@ const Home = () => {
         </div>
       </section>
 
-    
-   <About/>
 
-        {/* services section */}
-        <section>
-          <div className="container">
-            <div className="xl:w-[470px] mx-auto">
-              <h2 className="heading text-center "> Our Medical Services</h2>
-              <p className="text__para text-center">
-                World-class care for everyone. Our helath System offers unmatched,expert health care.
-              </p>
+      <About />
+
+      {/* services section */}
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center "> Our Medical Services</h2>
+            <p className="text__para text-center">
+              World-class care for everyone. Our helath System offers unmatched,expert health care.
+            </p>
+
+          </div>
+
+          <ServicesList />
+        </div>
+      </section>
+      {/* service section end */}
+
+      {/* feature section start */}
+      <section>
+
+        <div className="container">
+          <div className="flex items-center justify-between flex-col lg:flex-row">
+            <div className="xl:w-[670px]">
+              <h2 className="heading">
+                Get Virtual Treatment <br /> Anytime
+              </h2>
+              <ul>
+                <li className="text__para">
+                  1. Schedule the appointment durectly.
+                </li>
+                <li className="text__para">
+                  2. Search for your physician here, and content their office.
+                </li>
+                <li className="text__para">
+                  3. View our physicians who are accepting new patients, use the online scheduling tool to select an appointmet time.
+                </li>
+              </ul>
+              <Link to="/">
+                <button className="btn">Learn More...</button>
+              </Link>
+            </div>
+            {/* feature image */}
+            <div className="relative z-10 xl:w-[770px] flex justify-end mt-[50px] lg:mt-0">
+              <img src={featureImg} className="w-3/4" alt="" />
+              <div className="w-[150px] lg:w-[248px] bg-[#f6f6f6] shadow-xl absolute bottom-[50px] left-0 md:bottom-[100px] md:left-5 z-20 p-2 pb-3 lg:px-4 lg:pt-4 lg:pb-[26px] rounded-[10px]">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-[6px] lg:gap-3">
+                    <p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-5 text-headingColor font-[600]">
+                      Thu, 24
+                    </p>
+                    <p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-5 text-textColor font-[400]"> 09:00AM</p>
+
+                  </div>
+                  <span className="w-5 h-5 lg:w-[34px] lg:h-[34px] flex items-center justify-center bg-yellowColor rounded py-1 px-[6px] lg:py-3 lg:px-[9px]">
+                    <img src={videoIcon} />
+
+                  </span>
+
+                </div>
+                <div className="w-[65px] lg:w-[96px] bg-[#CCF0F3] py-1 px-2 lg:py-[6px] lg:px-[10px] text-[8px] leading-[8px] lg:text-[12px] lg:leading-4 text-irisBlueColor font-[500] mt-2 lg:mt-3 rounded-full cursor-pointer">
+                  Consultaiton
+                </div>
+                <div className="flex items-center gap-[6px] lg:gap-[10px] mt-2 lg:mt-[16px]">
+                  <img src={avatarIcon} alt="" />
+                  <h4 className="text-[10px] leading-3 lg:text-[16px] lg:leading-[22px] font-[700] text-headingColor">
+                    Dr. Ranjitha Nair
+                  </h4>
+
+                </div>
+              </div>
 
             </div>
 
-            <ServicesList/>
           </div>
-        </section>
-      
+
+        </div>
+
+      </section>
+
+      {/* feature section end */}
 
 
     </>

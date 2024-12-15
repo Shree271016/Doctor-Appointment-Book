@@ -25,7 +25,7 @@ const About = () => {
         <p className='text__para mt-[30px] '> Our best is something we strive for each day, caring for our patients—not looking back at what we accomplished but towards what we can do tomorrow. Providing the best care, compassion, innovation, excellence, dedication, integrity, empathy, trust, teamwork, and growth.
         </p>
             <Link to='/'>
-            <button className='btn bg-[#007e69] rounded-[50px] hover:bg-[white] hover:text-[#007e69] hover:border-[#007e69] border-[1px]'>Learn More...</button></Link>
+            <button className='btn bg-[#007e69] rounded-[50px] hover:bg-[#37d892]  hover:text-white hover:border-[#007e69] border-[1px]'>Learn More...</button></Link>
         </div>
 
 
