@@ -223,7 +223,6 @@ const Home = () => {
                   <h4 className="text-[10px] leading-3 lg:text-[16px] lg:leading-[22px] font-[700] text-headingColor">
                     Dr. Ranjitha Nair
                   </h4>
-
                 </div>
               </div>
 
@@ -236,8 +235,19 @@ const Home = () => {
       </section>
 
       {/* feature section end */}
+      {/* our great doctors */}
+      <section>
+
+        <div className="container">
+          <div className="xl:w[470px] mx-auto">
+            <h2 className="heading text-center "> Our great doctors</h2>
+            <p className="text__para text-center"> World-class care for everyone.Our health system offers unmatched, expert health care.</p>
 
 
+          </div>
+        </div>
+      </section>
+      
     </>
 
   </>
