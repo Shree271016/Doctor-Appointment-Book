@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs"
 import About from "../components/About/About";
 import ServicesList from "../components/Services/ServicesList";
+import DoctorList from "../components/Doctors/DoctorList";
 
 const Home = () => {
   return <>
@@ -245,6 +246,7 @@ const Home = () => {
 
 
           </div>
+       <DoctorList/>
         </div>
       </section>
       
