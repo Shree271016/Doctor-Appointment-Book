@@ -12,11 +12,14 @@ import { BsArrowRight } from "react-icons/bs"
 import About from "../components/About/About";
 import ServicesList from "../components/Services/ServicesList";
 import DoctorList from "../components/Doctors/DoctorList";
+import faqImg from "../assets/images/faq-img.png";
+import FaqList from "../components/Faq/FaqList";
 
 const Home = () => {
-  return <>
+  return ( 
+  <>
     {/* hero section */}
-    <>
+    
 
       <section className="hero__section pt-[60px] 2xl:h-[800px]">
         <div className='container'>
@@ -87,7 +90,7 @@ const Home = () => {
       </section>
 
       {/* hero section end */}
-
+      
       <section>
         <div className="container">
           <div className="lg:w-[470px] mx-auto">
@@ -154,7 +157,6 @@ const Home = () => {
 
         </div>
       </section>
-
 
       <About />
 
@@ -249,10 +251,24 @@ const Home = () => {
        <DoctorList/>
         </div>
       </section>
+      {/* our great doctors end*/}
       
-    </>
-
+    
+{/* FAQ section start */}
+<div className="container">
+  <div className="flex justify-between gap-[50px] lg:gap-0">
+    <div className="w-1/2 hidden md:block">
+    <img src={faqImg} alt="" />
+    </div>
+    <div className="w-full md:w-1/2">
+      <h2 className="heading ">Most questions by our beloved patients.</h2>
+      < FaqList/>
+    </div>
+  </div>
+</div>
+{/* FAQ section end */}
   </>
+  )
 }
 
 export default Home;
