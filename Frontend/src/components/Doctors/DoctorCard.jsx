@@ -34,7 +34,7 @@ const DoctorCard = ({ doctor }) => {
                     </p>
                 </div>
                 <Link to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69]  text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none">
-                  <BsArrowRight className="group-hover:text-white w-6 h-5" />
+                  <BsArrowRight className="group-hover:text-white w-6 h-6 " />
                 </Link>
             </div>
 
