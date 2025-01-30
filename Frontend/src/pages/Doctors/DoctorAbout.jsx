@@ -15,14 +15,14 @@ const DoctorAbout = () => {
                     Research interests: simulation-based medical education, rapid prototyping, innovations in education, clinical and translational research.
 
                     <br />  <br />
-                    &#x2756; NMC Number- 1234 <br />
-                    &#x2756; Qualification - MBBS, MS <br />
-                    &#x2756; Speciality - Consultant General / Pediatric & Laparoscopic Surgeon <br />
-                    &#x2756;  Website - https:// Saleh Mahmud.wordpress.com.np
+                    &#x2756; <span className="font-bold">  NMC Number  </span>- 1234 <br />
+                    &#x2756; <span className="font-bold">Qualification </span> - MBBS, MS <br />
+                    &#x2756; <span className="font-bold">Speciality </span> - Consultant General / Pediatric & Laparoscopic Surgeon <br />
+                    &#x2756;  <span className="font-bold">Website </span> -<span className="text-blue-500 cursor-pointer"> https:// Saleh Mahmud.wordpress.com.np </span>
                 </p>
             </div>
             <div className="mt-12">
-                <h3 className="text-[20px] leading-[30px] text-headingColor font-semibold">Education</h3>
+                <h3 className="text-[20px] leading-[30px] text-headingColor font-semibold border-b border-solid border-[#0066ff34]">Education</h3>
                 <ul className="pt-4 md:p-5">
                     <li className="flex flex-col sm:flex-row sm:justify-between sm:items-end md:gap-5 mb-[30px] ">
                         <div>
@@ -52,7 +52,7 @@ const DoctorAbout = () => {
 
             </div>
             <div className="mt-12">
-                <h3 className="text-[20px] leading-[30px] text-headingColor font-semibold">Experience
+                <h3 className="text-[20px] leading-[30px] text-headingColor font-semibold border-b border-solid border-[#0066ff34]">Experience
 
                 </h3>
                 <ul className="grid sm:grid-cols-2 gap-[30px] pt-4 md:p-5">

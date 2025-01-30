@@ -93,7 +93,7 @@ const Home = () => {
       {/* hero section end */}
       
       <section>
-        <div className="container">
+        <div className="container bg-[#f6f6f6]">
           <div className="lg:w-[470px] mx-auto">
             <h2 className="heading text-center">
               Providing the best medical services
@@ -163,7 +163,7 @@ const Home = () => {
 
       {/* services section */}
       <section>
-        <div className="container">
+        <div className="container bg-[#f6f6f6]">
           <div className="xl:w-[470px] mx-auto">
             <h2 className="heading text-center "> Our Medical Services</h2>
             <p className="text__para text-center">

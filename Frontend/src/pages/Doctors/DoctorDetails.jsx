@@ -8,7 +8,7 @@ const DoctorDetails = () => {
   const [tab,setTab]= useState('about');
   return (
     <section>
-      <div className='max-w-[1170px] px-5 mx-auto'>
+      <div className='max-w-[1170px] px-5 mx-auto bg-[#f6f6f6]'>
         <div className="grid md:grid-cols-3 gap-[50px]">
           <div className="md:col-span-2"> 
             <div className="flex items-center gap-5 ">

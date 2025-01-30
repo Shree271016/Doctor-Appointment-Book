@@ -79,9 +79,9 @@ const quickLinks03 = [
 const Footer = () => {
   const year = new Date().getFullYear()
   return (
-    <footer className="pb-16 pt-10">
+    <footer className="pb-16 pt-10 bg-[#f6f6f6]">
 
-      <div className="container">
+      <div className="container ">
         <div className="flex justify-between flex-col md:flex-row flex-wrap gap-[30px]">
           <div>
             <img src={logo} alt="" />
