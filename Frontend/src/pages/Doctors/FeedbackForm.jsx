@@ -49,11 +49,11 @@ const FeedbackForm = () => {
                     Share your feedback or suggestions*
                 </h3>
                 <textarea name="" id="" className='border border-solid border-[#0066ff34] focus:outline outline-primaryColor w-full px-4 py-3 rounded-md' rows="5"
-                    placeholder='Write Your message'
+                    placeholder='Write Your Message'
                     onChange={e => setReviewText(e.target.value)}
                 ></textarea>
             </div>
-            <button type='' className='btn' onClick={handleSubmitReview}>
+            <button type='' className='btn mb-3' onClick={handleSubmitReview}>
                 Submit Feedback
             </button>
         </form>

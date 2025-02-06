@@ -37,7 +37,7 @@ const Feedback = () => {
         </div>
       </div>
       {!showFeedbackForm && <div className="text-center">
-        <button className="btn" onClick={()=>setShowFeedbackForm(true)}>Give Feedback</button>
+        <button className="btn mb-3" onClick={()=>setShowFeedbackForm(true)}>Give Feedback</button>
       </div>}
       {showFeedbackForm && <FeedbackForm/>}
 
