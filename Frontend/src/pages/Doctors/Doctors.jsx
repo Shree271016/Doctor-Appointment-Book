@@ -29,7 +29,7 @@ const Doctors = () => {
 
       <section>
       <div className="container">
-          <div className="xl:w[470px] mx-auto">
+          <div className="xl:w-[470px] mx-auto">
             <h2 className="heading text-center "> Our Patients Speak</h2>
             <p className="text__para text-center"> World-class care for everyone. Experience compassionate, personalized health care tailored to your needs.</p>
 

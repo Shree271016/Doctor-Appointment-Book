@@ -61,7 +61,7 @@ const Header = () => {
             <ul className="menu flex items-center gap-[2.7rem]">
               {
                 navLinks.map((link,index)=><li key={index}>
-                  <NavLink to={link.path} className={navClass=>navClass.isActive ? 'text-primaryColor text-[20px] leading-7 font-[600]' : 'text-textColor text-[18px] leading-7 font-[600] hover:text-primaryColor'}>{link.display}
+                  <NavLink to={link.path} className={navClass=>navClass.isActive ? 'text-[rgb(0,126,105)] text-[20px] leading-7 font-[600]' : 'text-textColor text-[18px] leading-7 font-[600] hover:text-[rgb(56,173,153)]'}>{link.display}
 
                   </NavLink>
 

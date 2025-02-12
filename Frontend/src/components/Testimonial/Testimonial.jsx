@@ -38,7 +38,7 @@ const Testimonial = () => {
 
                         </div>
                     </div>
-                    <p className='text-[16px] leading-7 font-[400] text-textColor'>""I visited this clinic for my health concerns, and I am extremely satisfied with the care I received. The staff is highly professional and friendly. Highly recommend their services!"
+                    <p className='text-[16px] leading-7 font-[400] text-textColor'>&quot;I visited this clinic for my health concerns, and I am extremely satisfied with the care I received. The staff is highly professional and friendly. Highly recommend their services!&quot;
 
                     </p>
 
@@ -61,7 +61,7 @@ const Testimonial = () => {
 
                         </div>
                     </div>
-                    <p className='text-[16px] leading-7 font-[400] text-textColor'>"Their medical team is truly remarkable. From diagnosis to treatment, they ensure every detail is taken care of. I feel fortunate to have found such an amazing healthcare provider."
+                    <p className='text-[16px] leading-7 font-[400] text-textColor'>&quot;Their medical team is truly remarkable. From diagnosis to treatment, they ensure every detail is taken care of. I feel fortunate to have found such an amazing healthcare provider.&quot;
 
                     </p>
 
@@ -84,7 +84,7 @@ const Testimonial = () => {
 
                         </div>
                     </div>
-                    <p className='text-[16px] leading-7 font-[400] text-textColor'>"I received excellent treatment here. The doctors were very kind and explained everything in detail. I feel healthier and happier now!"
+                    <p className='text-[16px] leading-7 font-[400] text-textColor'>&quot;I received excellent treatment here. The doctors were very kind and explained everything in detail. I feel healthier and happier now!&quot;
 
                     </p>
 
@@ -107,7 +107,7 @@ const Testimonial = () => {
 
                         </div>
                     </div>
-                    <p className='text-[16px] leading-7 font-[400] text-textColor'>"The clinic exceeded my expectations. The staff was attentive, and the facilities were well-maintained. I wouldn’t hesitate to recommend them to anyone seeking quality care."
+                    <p className='text-[16px] leading-7 font-[400] text-textColor'>&quot;The clinic exceeded my expectations. The staff was attentive, and the facilities were well-maintained. I wouldn’t hesitate to recommend them to anyone seeking quality care.&quot;
 
                     </p>
 
@@ -130,7 +130,7 @@ const Testimonial = () => {
 
                         </div>
                     </div>
-                    <p className='text-[16px] leading-7 font-[400] text-textColor'>"This place is a blessing for those in need of reliable medical services. They provide exceptional care and ensure your comfort at all times."
+                    <p className='text-[16px] leading-7 font-[400] text-textColor'>&quot;This place is a blessing for those in need of reliable medical services. They provide exceptional care and ensure your comfort at all times.&quot;
 
                     </p>
 
@@ -153,7 +153,7 @@ const Testimonial = () => {
 
                         </div>
                     </div>
-                    <p className='text-[16px] leading-7 font-[400] text-textColor'>"I’ve never felt more at ease during a doctor’s visit. The attention to detail and personalized care are unmatched. Truly the best in the field!"
+                    <p className='text-[16px] leading-7 font-[400] text-textColor'>&quot;I’ve never felt more at ease during a doctor’s visit. The attention to detail and personalized care are unmatched. Truly the best in the field!&quot;
 
                     </p>
 
@@ -176,7 +176,7 @@ const Testimonial = () => {
 
                         </div>
                     </div>
-                    <p className='text-[16px] leading-7 font-[400] text-textColor'>"The doctors and nurses here treat every patient with compassion and respect. I’ve always had positive experiences and feel well-cared-for every time I visit."
+                    <p className='text-[16px] leading-7 font-[400] text-textColor'>&quot;The doctors and nurses here treat every patient with compassion and respect. I’ve always had positive experiences and feel well-cared-for every time I visit.&quot;
 
                     </p>
 
@@ -200,7 +200,7 @@ const Testimonial = () => {
                         </div>
                     </div>
                     <p className='text-[16px] leading-7 font-[400] text-textColor'>
-                    "Amazing service and excellent doctors! They go above and beyond to ensure patient satisfaction. I couldn’t be happier with the care I received."
+                    &quot;Amazing service and excellent doctors! They go above and beyond to ensure patient satisfaction. I couldn’t be happier with the care I received.&quot;
                     </p>
 
                 </div>

@@ -29,7 +29,7 @@ const DoctorDetails = () => {
                   <span className=' text-[14px] leading-5 lg:text-[16px] lg:leading-7 font-[400] text-textColor'>(272)
                   </span>
                 </div>
-                <p className="text__para textl-[14px] leading-5 md-text-[15px] lg:max-w-[390px] "> Dr.  Saleh Mahmud, award winner surgeon has been the pioneer of Liver Transplant and Hepatobiliary Surgery in Nepal.</p>
+                <p className="text__para textl-[14px] leading-5 md-text-[15px] lg:max-w-[390px] " > Dr.  Saleh Mahmud, award winner surgeon has been the pioneer of Liver Transplant and Hepatobiliary Surgery in Nepal.</p>
                 <p className="mt-1">&#x2756; NMC Number- 1234</p>
               </div>
             </div>
