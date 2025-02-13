@@ -20,7 +20,7 @@ const corsOptions = {
 }
 
 app.get('/',(req,res)=>{
-    res.send('Api is Working')
+    res.send('Api Is Working')
 })
 // we will use middleware and we are going to perse this on data
 app.use(express.json());
