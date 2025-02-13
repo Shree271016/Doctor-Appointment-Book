@@ -29,6 +29,6 @@ app.use(cors(corsOptions));
 
 // to test the server we have to listen the app
 app.listen(port,()=>{
-    console.log("Server is Running on Port" + port)
+    console.log("Server Is Running On Port " + port)
 })
 
