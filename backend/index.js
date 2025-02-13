@@ -27,7 +27,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors(corsOptions));
 
-// to test the server we have to listen the app
+// to test the server we have to listen the app 
+// checked
 app.listen(port,()=>{
     console.log("Server is Running on Port " + port)
 })
