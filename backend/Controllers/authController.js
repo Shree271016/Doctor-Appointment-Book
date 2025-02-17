@@ -3,6 +3,12 @@ import Doctor from '../models/DoctorSchema.js';
 import jwt from "jsonwebtoken";
 import bcrypt from 'bcryptjs';
 
+
+const generateToken = user => {
+    return jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET_KEY, {
+        expiresIn: '30d',
+    })
+}
 export const register = async (req, res) => {
     const { email, password, name, role, photo, gender } = req.body
 
@@ -10,10 +16,10 @@ export const register = async (req, res) => {
         let user = null
 
         if (role === 'patient') {
-            user = User.findOne({ email })
+            user = await User.findOne({ email })
         }
         else if (role === 'doctor') {
-            user = User.findOne({ email })
+            user = await Doctor.findOne({ email })
         }
 
         // check if user is exit
@@ -56,9 +62,41 @@ export const register = async (req, res) => {
 }
 
 export const login = async (req, res) => {
+    const { email } = req.body
     try {
+        let user = null
+
+        const patient = await User.findOne({ email: email })
+        const doctor = await Doctor.findOne({ email: email })
+
+        if (patient) {
+            user = patient
+        }
+        if (doctor) {
+            user = doctor
+        }
+
+        // check if user exit or not
+        if (!user) {
+            return res.status(404).json({ message: "User Not Found" });
+        }
+
+        // Compare Password
+        const isPasswordMatch = await bcrypt.compare(req.body.password, user.password)
+
+        if (!isPasswordMatch) {
+            return res.status(400).json({ status: false, message: "Invalid Credientials" });
+        }
+
+        // get Token
+        const token = generateToken(user);
+
+        const { password, role, appointment, ...rest } = user._doc
+        res
+            .status(200)
+            .json({ status: true, message: "Successfully Login", token, data: { ...rest }, role })
 
     } catch (err) {
-
+        res.status(500).json({ status: false, message: "Failed to Login" })
     }
 }
