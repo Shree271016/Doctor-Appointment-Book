@@ -61,7 +61,7 @@ export const getAllDoctor = async (req, res) => {
             }).select("-password")
         } else {
             doctors = await Doctor.find({
-                // isApproved: "approved"
+                isApproved: "approved"
             }).select("-password")
         }
 
