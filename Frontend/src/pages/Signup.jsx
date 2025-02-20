@@ -12,8 +12,8 @@ const Signup = () => {
     email: "",
     password: "",
     photo: selectedFile,
-    gender: "",
-    role: 'patient',
+    gender: "", 
+    role: "patient",
 
   })
   const handleInputChange = e => {
@@ -79,10 +79,12 @@ const Signup = () => {
             </div>
             <div className='mb-5 flex items-center justify-between'>
               <label className='text-headingColor font-bold text-[16px] leading-7 '>
-                Are You a : <select value={formData.role}
+                Are You a : <select value={formData.role} name="role"
                 onChange={handleInputChange} className='text-textColor font-bold  text-[15px] leading-7 px-4 py-3 focus:outline-none'>
+                  <option value="">Select</option>
+
                   <option value="patient">Patient</option>
-                  <option value="patient">Doctor</option>
+                  <option value="doctor">Doctor</option>
                 </select>
               </label>
               <label className='text-headingColor font-bold text-[16px] leading-7 '>
@@ -91,7 +93,7 @@ const Signup = () => {
                   <option value="">Select</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
-                  <option value="other">Other</option>
+                  <option value="others">Others</option>
                 </select>
               </label>
             </div>
