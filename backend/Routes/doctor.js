@@ -3,6 +3,8 @@ import { updateDoctor, deleteDoctor, getAllDoctor, getSingleDoctor } from '../Co
 
 const router = express.Router();
 
+
+// sabai register doctor nikalnalai http://localhost:5000/api/v1/doctors
 router.get('/', getAllDoctor);
 router.get('/:id', getSingleDoctor);
 router.put('/:id', updateDoctor);
