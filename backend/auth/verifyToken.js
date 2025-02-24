@@ -14,8 +14,9 @@ export const authenticate = async (req, res, next) => {
         const token = authToken.split(" ")[1];
         //    verufy token
         const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY)
-        req.userId = decoded.userId
-        req.role = decoded.role
+
+        req.userId = decoded.userId;
+        req.role = decoded.role;
         next();
         //    must be call the next function
     } catch (err) {
@@ -27,67 +28,83 @@ export const authenticate = async (req, res, next) => {
 
     }
 };
-// export const restrict = roles => async (req, res, next) => {
-//     const userId = req.userId;
-
-//     let user;
-
-//     const patient = await User.findById(userId);
-//     const doctor = await Doctor.findById(userId);
-
-//     if (patient) {
-//         user = patient;
-//     }
-//     if (doctor) {
-//         user = doctor;
-//     }
-
-//     if (!roles.includes(user.role)) {
-//         return res
-//         .status(401)
-//         .json({ success: false, message: "You're not authorized" })
-//     }
-//     next();
-
-// };
-
 export const restrict = roles => async (req, res, next) => {
     const userId = req.userId;
-  
-    // Check if userId is provided
-    if (!userId) {
-      return res.status(401).json({ 
-        success: false, 
-        message: "User ID not found in request ,You're not authorized" 
-      });
-    }
-  
+
+    console.log("User ID:", userId);// Debugging log
+
     let user;
-  
-    // Try to find the user in the User collection (patients)
-    user = await User.findById(userId);
-  
-    // If not found in User collection, try the Doctor collection
-    if (!user) {
-      user = await Doctor.findById(userId);
+
+    const patient = await User.findById(userId);
+    const doctor = await Doctor.findById(userId);
+
+    console.log("Patient:", patient); // Debugging log
+    console.log("Doctor:", doctor); // Debugging log
+
+    if (patient) {
+        user = patient;
     }
-  
-    // If user is still not found, return an error
-    if (!user) {
-      return res.status(404).json({ 
-        success: false, 
-        message: "User not found" 
-      });
+    if (doctor) {
+        user = doctor;
     }
+
+    if (!user) {
+      return res.status(401).json({ success: false, message: "User not found" });
+       }
   
-    // Check if the user's role is allowed
     if (!roles.includes(user.role)) {
-      return res.status(403).json({ 
-        success: false, 
-        message: "You're not authorized" 
-      });
+        return res
+        .status(401)
+        .json({ success: false, message: "You're not authorized" })
     }
-  
-    // If authorized, proceed to the next middleware/route
     next();
-  };
+
+};
+
+// export const restrict = roles => async (req, res, next) => {
+//     const userId = req.userId;
+//     // Check if userId is provided
+//     if (!userId) {
+//       return res.status(401).json({ 
+//         success: false, 
+//         message: "User ID not found in request ,You're not authorized" 
+//       });
+//     }
+  
+//     // let user;
+  
+//     // // Try to find the user in the User collection (patients)
+//     // user = await User.findById(userId);
+  
+//     // // If not found in User collection, try the Doctor collection
+//     // if (!user) {
+//     //   user = await Doctor.findById(userId);
+//     // }
+  
+//     // // If user is still not found, return an error
+//     // if (!user) {
+//     //   return res.status(404).json({ 
+//     //     success: false, 
+//     //     message: "User not found" 
+//     //   });
+//     // }
+  
+//     if (!userId) {
+//       return res.status(401).json({ success: false, message: "You're not authorized" });
+//   }
+
+//   let user = await Patient.findById(userId) || await Doctor.findById(userId);
+  
+
+
+//     // Check if the user's role is allowed
+//     if (!roles.includes(user.role)) {
+//       return res.status(403).json({ 
+//         success: false, 
+//         message: "You're not authorized" 
+//       });
+//     }
+  
+//     // If authorized, proceed to the next middleware/route
+//     next();
+//   };
