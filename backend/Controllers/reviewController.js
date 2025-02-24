@@ -14,24 +14,45 @@ export const getAllReviews = async (req, res) =>{
 };
 
 
-// Create review 
+
+
 export const createReview = async (req, res) => {
-    if (!req.body.doctor) req.body.doctor = req.params.doctorId;
-    if (!req.body.user) req.body.user = req.userId;
+    try {
+        // Check if doctorId is in params or body
+        const doctorId = req.params.doctorId || req.body.doctor;
+        if (!doctorId) {
+            return res.status(400).json({ success: false, message: "Doctor ID is required" });
+        }
 
-    const newReview =  new Review(req.body)
+        // Ensure the user is authenticated
+        if (!req.userId) {
+            return res.status(401).json({ success: false, message: "Unauthorized user" });
+        }
 
-    try{
+        // Check if doctor exists
+        const doctor = await Doctor.findById(doctorId);
+        if (!doctor) {
+            return res.status(404).json({ success: false, message: "Doctor not found" });
+        }
+
+        // Create a new review
+        const newReview = new Review({
+            doctor: doctorId,
+            user: req.userId,
+            reviewText: req.body.reviewText,
+            rating: req.body.rating,
+        });
+
+        // Save the review
         const savedReview = await newReview.save();
 
-        await Doctor.findByIdAndUpdate(req.body.doctor,{
-            $push :{reviews:savedReview._id},
-     } );
-     res.status(200).json({success:true,message:"Review Submitted",data:savedReview});
-    
-    } catch(err){
-        res.status(500).json({success:false,message:err.message})
+        // Push review ID to doctor
+        await Doctor.findByIdAndUpdate(doctorId, {
+            $push: { reviews: savedReview._id },
+        });
 
+        res.status(201).json({ success: true, message: "Review submitted", data: savedReview });
+    } catch (err) {
+        res.status(500).json({ success: false, message: err.message });
     }
-
-}
+};
