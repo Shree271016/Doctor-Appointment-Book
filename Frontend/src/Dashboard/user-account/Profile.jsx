@@ -50,10 +50,10 @@ const Profile = ({user}) => {
 
     try {
       const res = await fetch(`${BASE_URL}/users/${user._id}`, {
-        method: 'put',
+        method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
-          Authorization:`Bearer${token}`,
+          Authorization:`Bearer ${token}`,
         },
         body: JSON.stringify(formData)
       })
