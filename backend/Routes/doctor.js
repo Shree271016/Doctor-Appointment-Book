@@ -1,6 +1,6 @@
 import express from 'express';
 import { updateDoctor, deleteDoctor, getAllDoctor, getSingleDoctor, getDoctorProfile } from '../Controllers/doctorController.js';
-import { authenticate,restrict } from '../auth/verifyToken.js';
+import { authenticate, restrict } from '../auth/verifyToken.js';
 import reviewRouter from "./review.js";
 
 
@@ -13,10 +13,13 @@ router.use('/:doctorId/reviews', reviewRouter);
 // sabai register doctor nikalnalai http://localhost:5000/api/v1/doctors
 router.get('/', getAllDoctor);
 router.get('/:id', getSingleDoctor);
-router.put('/:id',authenticate,restrict(['doctor']), updateDoctor);
-router.delete('/:id',authenticate,restrict(['doctor']), deleteDoctor);
+router.put('/:id',authenticate,restrict(["doctor"]), updateDoctor);
+router.delete('/:id',authenticate,restrict(["doctor"]), deleteDoctor);
 
-router.get("/profile/me",authenticate,restrict(["doctor"]),getDoctorProfile);
+// doctor profiel route
+router.get("/profile/me", authenticate, restrict(["doctor"]), getDoctorProfile);
+
+
 
 
 export default router;

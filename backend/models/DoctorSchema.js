@@ -15,6 +15,7 @@ const DoctorSchema = new mongoose.Schema({
   specialization: { type: String },
   qualifications: {
     type: Array,
+    default: [],
   },
 
   experiences: {
@@ -38,7 +39,7 @@ const DoctorSchema = new mongoose.Schema({
     enum: ["pending", "approved", "cancelled"],
     default: "pending",
   },
-  appointments: [{ type: mongoose.Types.ObjectId, ref: "Appointment" }],
+  appointments: [{ type: mongoose.Types.ObjectId, ref: "Booking" }],
 });
 
 export default mongoose.model("Doctor", DoctorSchema);

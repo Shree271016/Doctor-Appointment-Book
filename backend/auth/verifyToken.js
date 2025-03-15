@@ -4,15 +4,13 @@ import User from "../models/UserSchema.js";
 
 
 export const authenticate = async (req, res, next) => {
-    // get token from header
     const authToken = req.headers.authorization;
-    // check token is exists
-    if (!authToken || !authToken.startsWith('Bearer ')) {
+    if (!authToken || !authToken.startsWith("Bearer ")) {
         return res.status(401).json({ success: false, message: 'No token, authorization denied' })
     }
     try {
         const token = authToken.split(" ")[1];
-        //    verufy token
+        //    verify token
         const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
 
         req.userId = decoded.id;
@@ -28,10 +26,12 @@ export const authenticate = async (req, res, next) => {
 
     }
 };
-export const restrict = roles => async (req, res, next) => {
-    const userId = req.userId;
 
   
+  
+export const restrict = (roles) => async (req, res, next) => {
+    const userId = req.userId;
+
 
     let user;
 
@@ -52,9 +52,7 @@ export const restrict = roles => async (req, res, next) => {
        }
   
     if (!roles.includes(user.role)) {
-        return res
-        .status(401)
-        .json({ success: false, message: "You're not authorized" })
+        return res.status(401).json({ success: false, message: "You're not authorized" })
     }
     next();
 

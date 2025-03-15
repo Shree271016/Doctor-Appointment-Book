@@ -1,8 +1,9 @@
-import useFetchData from "../../hooks/useFetchData";
+
 import { BASE_URL } from "../../utils/config";
 import DoctorCard from "../../components/Doctors/DoctorCard";
 import Loading from "../../components/Loader/Loading";
 import Error from "../../components/Error/Error";
+import { useFetchData } from "../../hooks/useFetchData.jsx";
 
 const MyBookings = () => {
   const { data: appointments, loading, error, } = useFetchData(`${BASE_URL}/users/appointments/my-appointments`)
@@ -21,7 +22,7 @@ const MyBookings = () => {
       )}
       {
         !loading && !error && appointments.length === 0 && (
-          <h2 className="mt-5 text-center  leading-7 text-[20px] font-semibold text-primaryColor">
+          <h2 className="mt-5 text-center  leading-7 text-[22px] font-bold text-[rgb(0,126,108)]">
             You did not book any doctor yet!
           </h2>
         )

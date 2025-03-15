@@ -20,9 +20,9 @@ export const updateUser = async (req, res) => {
     }
 };
 export const deleteUser = async (req, res) => {
+    const id = req.params.id;
     try {
-        await User.findByIdAndDelete
-            (id)
+        await User.findByIdAndDelete(id);
         res.status(200).json({
             success: true, message: "Successfully Deleted",
 
@@ -61,23 +61,21 @@ export const getAllUser = async (req, res) => {
 
 
 export const getUserProfile = async (req, res) => {
-    // const userId = res.userId;
-    const userId = req.userId;  // Corrected from res.userId to req.userId
+    const userId = req.userId;  
     try {
-        const user = await User.findById(userId).select("-password");;
+        const user = await User.findById(userId).select("-password");
         if (!user) {
             return res.status(404).json({ success: false, message: 'User not found' });
         }
-        // const { password, ...rest } = user._doc;
-        // res.status(200)({ success: true, message: "Profile info is getting", data: { ...rest } });
+      
         res.status(200).json({ 
             success: true, 
             message: "Profile info retrieved successfully", 
-            data: user 
+            data: user ,
         });
 
     } catch (err) {
-        res.status(500)({ success: false, message: "Something went wrong,Cannot get" });
+        res.status(500).json({ success: false, message: "Something went wrong,Cannot get" });
 
     }
 }
@@ -88,16 +86,16 @@ export const getMyAppointments = async(req, res)=> {
         const bookings = await Booking.find({ user: req.userId });
 
         // extract doctor ids from appontment bookings
-        const doctorIds = bookings.map(el => el.doctor.id);
+        const doctorIds = bookings.map(el => el.doctor);
 
 
         // step3:retrive doctors using doctor ids
-        const doctors = await Doctor.find({ _id: { $in: doctorIds } }).select('-password')
+        const doctors = await Doctor.find({ _id: { $in: doctorIds } }).select('-password');
 
         res.status(200).json({
-            success: true, message: "Appointments are getting", data: doctors});
+            success: true, message: "Appointments are getting", data: doctors,});
 
     } catch (err) {
-        res.status(500)({ success: false, message: "Something went wrong,Cannot get" });
+        res.status(500).json({ success: false, message: "Something went wrong,Cannot get" });
     };
 };
