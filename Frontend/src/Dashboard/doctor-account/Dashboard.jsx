@@ -24,7 +24,7 @@ const Dashboard = () => {
             <div className='grid lg:grid-cols-3 gap-[30px] lg:gap-[50px]'>
               <Tabs tab={tab} setTab={setTab} />
 
-              <div className="lg:col-span-2">
+              <div className="lg:col-span-2 bg-[rgb(255,255,255)]">
                 <h1 className="text-2xl font-bold">Welcome, Dr. {data.name}</h1>
                 {/* <p>Email: {data.email}</p> */}
                 {data.isApproved === "pending" && (
@@ -41,28 +41,28 @@ const Dashboard = () => {
                         <img src={data?.photo} alt="" className='w-full' />
                       </figure>
                       <div>
-                        <span className='bg-[#CCF0f3] text-irisBlueColor py-1 px-4 lg:py-2 lg:px-6 rounded-md text-[12px] leading-4 lg:text-[16px] lg:leading-6 font-semibold'>Surgeon</span>
+                        <span className='bg-[#CCF0f3] text-irisBlueColor py-1 px-4 lg:py-2 lg:px-6 rounded-md text-[12px] leading-4 lg:text-[16px] lg:leading-6 font-semibold'>{data.specialization}</span>
                         <h3 className='flex items-center gap-[6px] '>
-                          <span className='text-[22px] leading-9 font-bold text-headingColor mt-3  '>Shree Krishna Pudasaini</span>
+                          <span className='text-[22px] leading-9 font-bold text-headingColor mt-3  '>{data.name}</span>
                         </h3>
                         <div className='flex items-center gap-[6px]'>
                           <span className='flex items-center gap-[6px] text-headingColor text-[14px] leading-5 lg:text-[16px] font-semibold'>
-                            <img src={starIcon} alt="" />4.5
+                            <img src={starIcon} alt="" />{data.averageRating}
                           </span>
                           <span className=' text-headingColor text-[14px] leading-5 lg:text-[16px] font-semibold'>
-                            (234)
+                            ({data.totalRating})
                           </span>
                         </div >
-                        <p className='text__para font-[15px] lg:max-w-[390px] leading-6'>Doctor Bio</p>
+                        <p className='text__para font-[15px] lg:max-w-[390px] leading-6'>{data?.bio}</p>
 
                       </div>
                     </div>
-                    <DoctorAbout name={data.name} about={data.about} qualifications={data.qualifications} experiences={data.experiences} />
+                    <DoctorAbout name={data.name} phone={data.phone} about={data.about} qualifications={data.qualifications} experiences={data.experiences} />
 
                   </div>)}
 
                   {tab === "appointments" && <div>Appointments content goes here</div>}
-                  {tab === "settings" && <Profile/>}
+                  {tab === "settings" && <Profile doctorData={data}/>}
                 </div>
               </div>
             </div>

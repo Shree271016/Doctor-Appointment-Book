@@ -1,10 +1,17 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AiOutlineDelete } from 'react-icons/ai';
-const Profile = () => {
+import uploadImageToCloudinary from "./../../utils/uploadCloudinary";
+import { toast } from "react-toastify";
+import { BASE_URL, token } from '../../utils/config';
+
+
+const Profile = ({ doctorData }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    password: "",
     phone: "",
     bio: "",
     gender: '',
@@ -18,15 +25,56 @@ const Profile = () => {
 
   });
 
+  useEffect(() => {
+    setFormData({
+      name: doctorData?.name,
+      email: doctorData?.email,
+      phone: doctorData?.phone,
+      bio: doctorData?.bio,
+      gender: doctorData?.gender,
+      specialization: doctorData?.specialization,
+      ticketprice: doctorData?.ticketprice,
+      qualifications: doctorData?.qualifications,
+      experiences: doctorData?.experiences,
+      timeslots: doctorData?.timeslots,
+      about: doctorData?.about,
+      photo: doctorData?.photo,
+    })
+  }, [doctorData])
+
 
   const handleInputChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleFileInputChange = e => { };
+  const handleFileInputChange = async event => {
+    const file = event.target.files[0];
+    const data = await uploadImageToCloudinary(file);
+    setFormData({ ...formData, photo: data?.url });
+  };
 
   const updateProfileHandler = async e => {
     e.preventDefault();
+
+    try {
+      const res = await fetch(`${BASE_URL}/doctors/${doctorData._id}`, {
+        method: 'PUT',
+        headers: {
+          'content-type': 'application/json',
+          Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify(formData)
+      });
+      const result = await res.json();
+      if (!res.ok) {
+        throw Error(result.message);
+      }
+      toast.success(result.message);
+
+    } catch (err) {
+      toast.error(err.message)
+
+    }
   }
 
 
