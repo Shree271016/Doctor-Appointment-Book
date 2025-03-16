@@ -19,9 +19,9 @@ const Profile = ({ doctorData }) => {
     ticketprice: 0,
     qualifications: [],
     experiences: [],
-    timeslots: [],
+    timeSlots: [],
     about: '',
-    photo: null,
+    photo: "",
 
   });
 
@@ -36,7 +36,7 @@ const Profile = ({ doctorData }) => {
       ticketprice: doctorData?.ticketprice,
       qualifications: doctorData?.qualifications,
       experiences: doctorData?.experiences,
-      timeslots: doctorData?.timeslots,
+      timeSlots: doctorData?.timeSlots,
       about: doctorData?.about,
       photo: doctorData?.photo,
     })
@@ -55,6 +55,11 @@ const Profile = ({ doctorData }) => {
 
   const updateProfileHandler = async e => {
     e.preventDefault();
+
+    if (!doctorData?._id) {
+      toast.error("Invalid doctor data");
+      return;
+    }
 
     try {
       const res = await fetch(`${BASE_URL}/doctors/${doctorData._id}`, {
@@ -144,18 +149,18 @@ const Profile = ({ doctorData }) => {
   // for timeslots
   const addTimeSlot = e => {
     e.preventDefault();
-    addItem('timeslots', {
+    addItem('timeSlots', {
       day: 'Sunday', startingTime: '12:00', endingTime: '06:30',
 
     })
   }
   const handleTimeSlotChange = (event, index) => {
-    handleReusableInputChangeFunc("timeslots", index, event)
+    handleReusableInputChangeFunc("timeSlots", index, event)
   }
 
   const deleteTimeSlot = (e, index) => {
     e.preventDefault();
-    deleteItem("timeslots", index);
+    deleteItem("timeSlots", index);
   }
 
 
@@ -170,7 +175,7 @@ const Profile = ({ doctorData }) => {
         </div>
         <div className='mb-2'>
           <p className="form__label">Email*</p>
-          <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder='Email' className='form__input' readOnly aria-readonly disabled="true" />
+          <input type="email" name="email" value={formData.email } onChange={handleInputChange} placeholder='Email' className='form__input' readOnly aria-readonly disabled="true" />
 
         </div>
         <div className='mb-2'>
@@ -275,7 +280,7 @@ const Profile = ({ doctorData }) => {
         </div>
         <div className='mb-5'>
           <p className='form__label font-bold text-xl  text-[rgb(0,126,105)]'>Time Slots:*</p>
-          {formData.timeslots?.map((item, index) => (
+          {formData.timeSlots?.map((item, index) => (
             <div key={index}>
               <div>
                 <div className='grid grid-cols-2 md:grid-cols-4 mb-[30px] gap-5'>
