@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 import starIcon from "./../../assets/images/Star.png";
 import { Link } from "react-router-dom";
@@ -5,7 +6,7 @@ import { BsArrowRight } from "react-icons/bs";
 const DoctorCard = ({ doctor }) => {
 
 
-    const { name, avgRating, photo, specialization, totalPatients, hospital, totalRating } = doctor;
+    const { name, avgRating, photo, specialization,experiences, totalRating } = doctor;
     return (
         <div className='p-3 lg:p-5 bg-[#f6f6f6] rounded-2xl'>
             <div>
@@ -27,14 +28,14 @@ const DoctorCard = ({ doctor }) => {
             <div className="mt-[18px] lg:mt-5 flex items-center justify-between">
                 <div>
 
-                    <h3 className="text-[16px] leading-7 lg:text-[18px] lg:leading-[30px] font-semibold text-headingColor">+{totalPatients} Patients
-                    </h3>
+                    {/* <h3 className="text-[16px] leading-7 lg:text-[18px] lg:leading-[30px] font-semibold text-headingColor">+{totalPatients} Patients
+                    </h3> */}
                     <p className="text-[14px] leading-6 font-[500] text-textColor" >
-                        At {hospital}
+                        At {experiences && experiences[0]?.hospital}
                     </p>
                 </div>
                 <Link to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69]  text-[#007e69] inline-flex  items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none ">
-                  <BsArrowRight className="group-hover:text-white w-6 h-6 " />
+                    <BsArrowRight className="group-hover:text-white w-6 h-6 " />
                 </Link>
             </div>
 

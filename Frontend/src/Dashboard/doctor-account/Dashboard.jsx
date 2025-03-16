@@ -7,6 +7,7 @@ import { useState } from 'react';
 import starIcon from "../../assets/images/Star.png";
 import DoctorAbout from '../../pages/Doctors/DoctorAbout';
 import Profile from "./Profile";
+import Appointments from './Appointments';
 
 const Dashboard = () => {
   const { data, loading, error } = useFetchData(`${BASE_URL}/doctors/profile/me`);
@@ -61,8 +62,8 @@ const Dashboard = () => {
 
                   </div>)}
 
-                  {tab === "appointments" && <div>Appointments content goes here</div>}
-                  {tab === "settings" && <Profile doctorData={data}/>}
+                  {tab === "appointments" && <Appointments appointments={data.appointments} />}
+                  {tab === "settings" && <Profile doctorData={data} />}
                 </div>
               </div>
             </div>
