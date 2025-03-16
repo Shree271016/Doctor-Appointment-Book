@@ -1,50 +1,34 @@
-
-const SidePanel = () => {
+/* eslint-disable react/prop-types */
+import convertTime from "../../utils/convertTime"
+const SidePanel = ({ doctorId, ticketPrice, timeSlots }) => {
+    
     return (
         <div className="shadow-planeShadow p-3 mt-3 lg:p-5 rounded-md bg-white">
             <div className="flex items-center justify-between">
                 <p className="text__para mt-0 font-semibold ">
                     Ticket Price
                 </p>
-                <span className="text-[16px] leading-7 lg:leading-8 text-headingColor font-bold ">600 NPR
+                <span className="text-[16px] leading-7 lg:leading-8 text-headingColor font-bold ">Rs. {ticketPrice} |-
                 </span>
             </div>
             <div className="mt-[30px]">
                 <p className="text__para mt-0 font-semibold text-headingColor">Available Time Slots:</p>
                 <ul className="mt-3">
-                    <li className="flex items-center justify-between mb-2">
-                        <p className="text-[15px] leading-6 text-textColor font-semibold">
-                            Sunday
+                    {timeSlots?.map((item, index) => 
+                      (  <li key={index} className="flex items-center justify-between mb-2">
+                            <p className="text-[15px] leading-6 text-textColor font-semibold">
+                                {item.day.charAt(0).toUpperCase() + item.day.slice(1)}
 
-                        </p>
-                        <p className="text-[15px] leading-6 text-textColor font-semibold">
-                            4:15 PM - 9:30 PM
+                            </p>
+                            <p className="text-[15px] leading-6 text-textColor font-semibold">
+                                {convertTime(item.startingTime)} - {convertTime(item.endingTime)}
 
-                        </p>
+                            </p>
 
-                    </li>
-                    <li className="flex items-center justify-between mb-2">
-                        <p className="text-[15px] leading-6 text-textColor font-semibold">
-                            Wednesday
+                        </li>)
+                    )}
 
-                        </p>
-                        <p className="text-[15px] leading-6 text-textColor font-semibold">
-                            4:15 PM - 9:30 PM
 
-                        </p>
-
-                    </li>
-                    <li className="flex items-center justify-between mb-2">
-                        <p className="text-[15px] leading-6 text-textColor font-semibold">
-                            Friday
-
-                        </p>
-                        <p className="text-[15px] leading-6 text-textColor font-semibold">
-                            2:30 PM - 6:15 PM
-
-                        </p>
-
-                    </li>
 
                 </ul>
 

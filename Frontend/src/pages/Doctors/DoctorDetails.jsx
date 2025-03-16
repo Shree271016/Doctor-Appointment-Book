@@ -27,7 +27,7 @@ const DoctorDetails = () => {
     gender= '',
     reviews='',
     specialization= "",
-    ticketprice= 0,
+    ticketPrice= 0,
     averageRating=0,
     totalRating=0,
     qualifications= [],
@@ -47,8 +47,8 @@ const DoctorDetails = () => {
         {!loading && !error && (<div className="grid md:grid-cols-3 gap-[50px]">
           <div className="md:col-span-2">
             <div className="flex items-center gap-5 mb-28">
-              <figure className='max-w-[300px] max-h-[300px]' >
-                <img src={photo} alt="" className='w-full' />
+              <figure className='max-w-[300px] max-h-[300px] mt-2 ' >
+                <img src={photo} alt="" className='w-full rounded-xl' />
 
               </figure>
               <div className="max-h-[200px] ]">
@@ -92,7 +92,7 @@ const DoctorDetails = () => {
             </div>
           </div>
           <div>
-            <SidePanel />
+            <SidePanel  doctorId={doctor._id} ticketPrice={doctor.ticketPrice} timeSlots={timeSlots}/>
           </div>
         </div>)}
 
