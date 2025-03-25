@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import { authContext } from "./../../context/AuthContext";
 import MyBookings from "./MyBookings";
 import Profile from "./Profile";
 
@@ -9,6 +8,7 @@ import { BASE_URL } from "../../utils/config";
 
 import Loading from "../../components/Loader/Loading";
 import Error from "../../components/Error/Error";
+import { authContext } from "../../context/authContext";
 
 
 const MyAccount = () => {

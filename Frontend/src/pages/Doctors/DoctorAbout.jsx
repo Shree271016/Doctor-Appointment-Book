@@ -6,20 +6,12 @@ const DoctorAbout = ({name,about,qualifications,experiences,phone}) => {
     return (
         <div >
             <div>
-                <h3 className='text-[20px] leading-[30px] text-headingColor font-semibold flex items-center gap-2'>About of
-                    <span className='text-irisBlueColor font-bold text-[24px] leading-9'>
-                       {name}
+                <h3 className='text-[20px]  text-headingColor font-semibold flex items-center gap-2'>
+                    <span className='text-blue-700 font-bold text-[18px] leading-5 '>
+                       &quot; {about} &quot;
                     </span>
                 </h3>
-                <p className='text__para '>
-                   {about}
-
-                    <br />  <br />
-                    &#x2756; <span className="font-bold">  NMC Number  </span>- 1234 <br />
-                    &#x2756; <span className="font-bold">Qualification </span> - MBBS, MS <br />
-                    &#x2756; <span className="font-bold">Speciality </span> - Consultant General / Pediatric & Laparoscopic Surgeon <br />
-                    &#x2756;  <span className="font-bold">Website </span> -<span className="text-blue-500 cursor-pointer"> https:// Saleh Mahmud.wordpress.com.np </span>
-                </p>
+         
 
             </div>
                 <p className='text__para font-[15px] lg:max-w-[390px] leading-6'>Phone Number :{phone}</p>

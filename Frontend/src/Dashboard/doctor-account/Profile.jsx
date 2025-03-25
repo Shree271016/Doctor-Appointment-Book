@@ -150,7 +150,7 @@ const Profile = ({ doctorData }) => {
   const addTimeSlot = e => {
     e.preventDefault();
     addItem('timeSlots', {
-      day: 'Sunday', startingTime: '12:00', endingTime: '06:30',
+      day: 'Sunday', startingTime: '10:00', endingTime: '16:00',
 
     })
   }
@@ -175,7 +175,7 @@ const Profile = ({ doctorData }) => {
         </div>
         <div className='mb-2'>
           <p className="form__label">Email*</p>
-          <input type="email" name="email" value={formData.email } onChange={handleInputChange} placeholder='Email' className='form__input' readOnly aria-readonly disabled="true" />
+          <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder='Email' className='form__input' readOnly aria-readonly disabled="true" />
 
         </div>
         <div className='mb-2'>
@@ -201,9 +201,17 @@ const Profile = ({ doctorData }) => {
               <p className='form__label '>Specialization*</p>
               <select name="specialization" value={formData.specialization} onChange={handleInputChange} className='form__input py-3.5'>
                 <option value="">Select</option>
-                <option value="surgeon ">Surgeon</option>
-                <option value="neurologist">Neurologist</option>
-                <option value="dermatologist">Dermatologist</option>
+                <option value="Surgeon ">Surgeon</option>
+                <option value="Neurologist">Neurologist</option>
+                <option value="Dermatologist">Dermatologist</option>
+                <option value="Cardiologist">Cardiologist</option>
+                <option value="Gynecologist">Gynecologist</option>
+                <option value="Pulmonologist">Pulmonologist</option>
+                <option value="Pediatrician">Pediatrician</option>
+                <option value="Endocrinologist">Endocrinologist</option>
+                <option value="gastroenterologist">Gastroenterologist</option>
+                <option value="Oncologist">Oncologist</option>
+                <option value="Orthopedic surgeon">Orthopedic Surgeon</option>
               </select>
             </div>
             <div>

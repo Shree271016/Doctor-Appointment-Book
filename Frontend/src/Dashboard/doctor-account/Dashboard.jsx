@@ -37,12 +37,12 @@ const Dashboard = () => {
                 <div>
 
                   {tab === "overview" && (<div>
-                    <div className='flex items-center gap-4 mb-24'>
+                    <div className='flex items-center gap-4 mb-12 mt-3'>
                       <figure className='max-w-[200px] max-h-[200px]'>
                         <img src={data?.photo} alt="" className='w-full' />
                       </figure>
-                      <div>
-                        <span className='bg-[#CCF0f3] text-irisBlueColor py-1 px-4 lg:py-2 lg:px-6 rounded-md text-[12px] leading-4 lg:text-[16px] lg:leading-6 font-semibold'>{data.specialization}</span>
+                      <div className='mt-10'>
+                        <span className='bg-[#CCF0f3] text-irisBlueColor py-1 px-4 lg:py-2 lg:px-6 rounded-md text-[12px] leading-4 lg:text-[16px] lg:leading-6 font-semibold '>{data.specialization}</span>
                         <h3 className='flex items-center gap-[6px] '>
                           <span className='text-[22px] leading-9 font-bold text-headingColor mt-3  '>{data.name}</span>
                         </h3>
@@ -58,7 +58,7 @@ const Dashboard = () => {
 
                       </div>
                     </div>
-                    <DoctorAbout name={data.name} phone={data.phone} about={data.about} qualifications={data.qualifications} experiences={data.experiences} />
+                    <DoctorAbout name={data.name} phone={data.phone} about={data.about} qualifications={data.qualifications} experiences={data.experiences}  />
 
                   </div>)}
 

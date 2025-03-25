@@ -101,7 +101,8 @@ const Profile = ({user}) => {
                 name="password"
                 value={formData.password}
                 onChange={handleInputChange}
-                className="w-full px-4 pr-4 py-1 border-b-2 border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 text-headingColor placeholder:text-textColor rounded-md cursor-pointer"
+                className="w-full px-4 pr-4 py-1 border-b-2 border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 text-headingColor placeholder:text-textColor rounded-md cursor-pointer"aria-readonly
+                readOnly
                 
               />
             </div>
@@ -112,7 +113,8 @@ const Profile = ({user}) => {
                 value={formData.bloodType}
                 onChange={handleInputChange}
                 className="w-full px-4 pr-4 py-1 border-b-2 border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 text-headingColor placeholder:text-textColor rounded-md cursor-pointer"
-                required
+                aria-readonly
+                readOnly
               />
             </div>
             <div className='mb-5 flex items-center justify-between'>
@@ -131,7 +133,7 @@ const Profile = ({user}) => {
               {formData.photo && (
                 <figure className='w-[60px] h-[60px] rounded-full border-2 border-solid border-[#007e69] flex items-center justify-center'>
                 <img src={formData.photo} 
-                alt="" 
+                alt="photo" 
                 className='w-[60px] h-[60px] rounded-full border-2 border-solid border-[#007e69] flex items-center justify-center '
                 />
               </figure>

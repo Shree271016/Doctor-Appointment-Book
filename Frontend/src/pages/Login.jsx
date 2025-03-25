@@ -1,5 +1,5 @@
-import { useState,useContext } from "react";
-import { Link ,useNavigate} from "react-router-dom";
+import { useState, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { BASE_URL } from "../utils/config";
 import { toast } from "react-toastify";
 import { authContext } from "../context/authContext";
@@ -13,42 +13,42 @@ const Login = () => {
     password: "",
 
   })
-// lets define loader
-const [loading,setLoading]= useState(false);
-const navigate = useNavigate();
-const {dispatch} = useContext(authContext)
+  // lets define loader
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+  const { dispatch } = useContext(authContext)
 
   const handleInputChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
-// copyed fron signup
+  // copyed fron signup
   const submitHandler = async event => {
     event.preventDefault();
     setLoading(true);
 
     try {
       const res = await fetch(`${BASE_URL}/auth/login`, {
-        method: 'post',
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData)
-      })
+      });
+
       const result = await res.json()
       if (!res.ok) {
         throw new Error(result.message)
       }
       dispatch({
-        type:'LOGIN_SUCCESS',
-        payload:{
-          user:result.data,
-          token:result.token,
-          role:result.role,
+        type: 'LOGIN_SUCCESS',
+        payload: {
+          user: result.data,
+          token: result.token,
+          role: result.role,
         },
 
       });
 
-      console.log(result,"login data")
 
 
       setLoading(false);
@@ -92,7 +92,7 @@ const {dispatch} = useContext(authContext)
         </div>
         <div className="mt-7">
           <button type="submit" className="w-full bg-[#007e69] font-bold border-solid border-2 border-[#007e69] text-white text-[20px] leading-[30px] rounded-lg px-4 py-3 hover:bg-white hover:border-[#007e69] hover:border-solid  hover:text-[#007e69]">
-          {loading ? <HashLoader color="#fff" size={25} />:'login'}
+            {loading ? <HashLoader color="#fff" size={25} /> : 'login'}
           </button>
         </div>
         <p className="mt-5 text-textColor text-center">

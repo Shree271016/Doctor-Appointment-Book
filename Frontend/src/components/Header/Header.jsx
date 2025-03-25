@@ -78,10 +78,10 @@ const Header = () => {
           {token && user ? (
             <div>
               <Link to={`${role==="doctor"? "/doctors/profile/me":"/users/profile/me"}`}>
-                <figure className='w-[35px] h-[35px] rounded-full cursor-pointer mb-3'>
-                  <img src={user?.photo} className='w-full rounded-full ' alt="" />
+                <figure className='w-[45px] h-[45px] rounded-full cursor-pointer '>
+                  <img src={user?.photo} className='w-full rounded-full h-full ' alt="" />
                 </figure>
-          {/* <h1 className='text-xl'>{user?.name}</h1> */}
+          <h1 className='text-base font-semibold text-[rgb(0,126,106)] '>{user?.name}</h1>
 
               </Link>
             </div>

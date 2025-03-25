@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import {BiMenu} from "react-icons/bi";
 import { useContext } from "react";
-import { authContext } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { authContext } from "../../context/authContext";
 
 const Tabs = ({tab,setTab}) => {
 

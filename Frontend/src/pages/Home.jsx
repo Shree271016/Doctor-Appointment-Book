@@ -1,18 +1,18 @@
 import prajwal from "../assets/images/prajwal.png";
-import heroImg02 from "../assets/images/hero-img02.png";
-import heroImg03 from "../assets/images/hero-img03.png";
+import kasmita1 from "../assets/images/kasmita1.jpg";
+import doctor2 from "../assets/images/doctor2.avif";
 import icon01 from "../assets/images/icon01.png";
 import icon02 from "../assets/images/icon02.png";
 import icon03 from "../assets/images/icon03.png";
 import videoIcon from "../assets/images/video-icon.png";
-import featureImg from "../assets/images/feature-img.png";
+import kasmita2 from "../assets/images/kasmita2.jpg";
 import avatarIcon  from "../assets/images/avatar-icon.png";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs"
 import About from "../components/About/About";
 import ServicesList from "../components/Services/ServicesList";
 import DoctorList from "../components/Doctors/DoctorList";
-import faqImg from "../assets/images/faq-img.png";
+import kasmita3 from "../assets/images/kasmita3.jpg";
 import FaqList from "../components/Faq/FaqList";
 import Testimonial from "../components/Testimonial/Testimonial";
 
@@ -75,11 +75,11 @@ const Home = () => {
             {/* hero content */}
             <div className=" gap-[60px] justify-end grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
               <div>
-                <img className='w-full rounded-[15px] h-[95%]' src={prajwal} alt="" />
+                <img className='w-full rounded-lg h-[70%]' src={kasmita1} alt="" />
               </div>
               <div className="mt-[30px]">
-                <img className='w-full mb-[30px] ' src={heroImg02} alt="" />
-                <img className='w-full' src={heroImg03} alt="" />
+                <img className='w-full mb-[30px] 'src={prajwal}  alt="" />
+                <img className='w-full ' src={doctor2} alt="" />
               </div>
 
             </div>
@@ -203,18 +203,18 @@ const Home = () => {
             </div>
             {/* feature image */}
             <div className="relative z-10 xl:w-[770px] flex justify-end mt-[50px] lg:mt-0">
-              <img src={featureImg} className="w-3/4" alt="" />
+              <img src={kasmita2} className="w-3/4" alt="" />
               <div className="w-[150px] lg:w-[248px] bg-[#f6f6f6] shadow-xl absolute bottom-[50px] left-0 md:bottom-[100px] md:left-5 z-20 p-2 pb-3 lg:px-4 lg:pt-4 lg:pb-[26px] rounded-[10px]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-[6px] lg:gap-3">
                     <p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-5 text-headingColor font-[600]">
                       Thu, 24
                     </p>
-                    <p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-5 text-textColor font-[400]"> 09:00AM</p>
+                    <p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-5 text-textColor font-[500]"> 09:00AM</p>
 
                   </div>
-                  <span className="w-5 h-5 lg:w-[34px] lg:h-[34px] flex items-center justify-center bg-yellowColor rounded py-1 px-[6px] lg:py-3 lg:px-[9px]">
-                    <img src={videoIcon} />
+                  <span className="w-5 h-5 lg:w-[40px] lg:h-[40px] flex items-center justify-center bg-yellowColor rounded px-1">
+                    <img src={kasmita2}  className="rounded-lg"/>
 
                   </span>
 
@@ -223,9 +223,9 @@ const Home = () => {
                   Consultaiton
                 </div>
                 <div className="flex items-center gap-[6px] lg:gap-[10px] mt-2 lg:mt-[16px]">
-                  <img src={avatarIcon} alt="" />
+                  <img src={kasmita2} alt=""  className="w-8 h-8 lg:w-[38px] lg:h-[38px] flex items-center justify-center rounded-full"/>
                   <h4 className="text-[10px] leading-3 lg:text-[16px] lg:leading-[22px] font-[700] text-headingColor">
-                    Dr. Ranjitha Nair
+                    Dr. Kasmita Ghimire
                   </h4>
                 </div>
               </div>
@@ -258,8 +258,8 @@ const Home = () => {
 {/* FAQ section start */}
 <div className="container">
   <div className="flex justify-between gap-[50px] lg:gap-0">
-    <div className="w-1/2 hidden md:block">
-    <img src={faqImg} alt="" />
+    <div className="w-1/2 hidden   md:block">
+    <img src={kasmita3}  alt="" className="h-[680px] w-[85%] rounded-2xl" />
     </div>
     <div className="w-full md:w-1/2">
       <h2 className="heading ">Most questions by our beloved patients.</h2>

@@ -22,7 +22,7 @@ const DoctorDetails = () => {
   const {name='',
     email='',
     password="",
-    phon= "",
+    phone= "",
     bio= "",
     gender= '',
     reviews='',
@@ -64,7 +64,6 @@ const DoctorDetails = () => {
                   </span>
                 </div>
                 <p className="text__para textl-[14px] leading-5 md-text-[15px] lg:max-w-[390px] " >{bio}</p>
-                <p className="mt-1">&#x2756; NMC Number- 1234</p>
               </div>
             </div>
 
@@ -72,7 +71,7 @@ const DoctorDetails = () => {
               <button
                 onClick={() => setTab('about')}
                 className={` ${tab === 'about' && 'border-b border-solid border-[rgb(0,126,105)]'} py-2 px-5 mr-5 text-[16px] leading-7 text-headingColor font-semibold`}>
-                About
+                About 
               </button>
               <button
                 onClick={() => setTab('feedback')}
@@ -84,7 +83,7 @@ const DoctorDetails = () => {
 
             <div className="mt-[50px]">
               {
-                tab === 'about' && <DoctorAbout name={name} about={about} qualifications={qualifications} experiences={experiences}  />
+                tab === 'about' && <DoctorAbout name={name} about={about} qualifications={qualifications} experiences={experiences} phone={phone} />
               }
               {
                 tab === 'feedback' && <Feedback  reviews={reviews} totalRating={totalRating} />
