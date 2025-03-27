@@ -1,5 +1,5 @@
-import prajwal from "../assets/images/prajwal.png";
-import kasmita1 from "../assets/images/kasmita1.jpg";
+import shree from "../assets/images/shree.png";
+import kasmitapng from "../assets/images/kasmitapng.png";
 import doctor2 from "../assets/images/doctor2.avif";
 import icon01 from "../assets/images/icon01.png";
 import icon02 from "../assets/images/icon02.png";
@@ -12,7 +12,7 @@ import { BsArrowRight } from "react-icons/bs"
 import About from "../components/About/About";
 import ServicesList from "../components/Services/ServicesList";
 import DoctorList from "../components/Doctors/DoctorList";
-import kasmita3 from "../assets/images/kasmita3.jpg";
+import kasmita1 from "../assets/images/kasmita1.jpg";
 import FaqList from "../components/Faq/FaqList";
 import Testimonial from "../components/Testimonial/Testimonial";
 
@@ -73,13 +73,13 @@ const Home = () => {
               </div>
             </div>
             {/* hero content */}
-            <div className=" gap-[60px] justify-end grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+            <div className=" gap-[40px] justify-end grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
               <div>
-                <img className='w-full rounded-lg h-[70%]' src={kasmita1} alt="" />
+                <img className='w-full rounded-lg h-[70%]' src={kasmitapng} alt="" />
               </div>
-              <div className="mt-[30px]">
-                <img className='w-full mb-[30px] 'src={prajwal}  alt="" />
-                <img className='w-full ' src={doctor2} alt="" />
+              <div className="">
+                <img className='w-full mb-[10px] h-[60%] 'src={shree}  alt="" />
+                <img className='w-full rounded-lg' src={doctor2} alt="" />
               </div>
 
             </div>
@@ -257,11 +257,11 @@ const Home = () => {
     
 {/* FAQ section start */}
 <div className="container">
-  <div className="flex justify-between gap-[50px] lg:gap-0">
-    <div className="w-1/2 hidden   md:block">
-    <img src={kasmita3}  alt="" className="h-[680px] w-[85%] rounded-2xl" />
+  <div className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-5 lg:gap-[30px] ]">
+    <div className="w-full md:block">
+    <img src={kasmita1}  alt="" className="h-[680px] w-[85%] rounded-2xl" />
     </div>
-    <div className="w-full md:w-1/2">
+    <div className="w-full md:w-full sm:1/2 ">
       <h2 className="heading ">Most questions by our beloved patients.</h2>
       < FaqList/>
     </div>

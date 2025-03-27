@@ -1,14 +1,14 @@
-import nepalidoctor from "../../assets/images/nepalidoctor.jpg";
+import shree from "../../assets/images/shree.png";
 import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
    <section>
         <div className="container">
-            <div className="flex justify-between gap-[50px] lg:gap-[130px] xl:gap-0 flex-col lg:flex-row">
-                <div className="relative w-3/4 lg:w-1/2 xl:w-[770px] z-10 order-1" >
+            <div className="flex justify-between gap-[50px] lg:gap-[100px] xl:gap-0 flex-col lg:flex-row">
+                <div className="relative w-3/4 h-[500px] lg:w-1/2 xl:w-[500px] z-10 order-1" >
                 {/* image  */}
-                <img src={nepalidoctor} alt="" />
+                <img src={shree} alt="" className="h-[550px]" />
                 
 
                 </div>
@@ -20,7 +20,7 @@ const About = () => {
         </p>
         <p className='text__para mt-[30px] '> Our best is something we strive for each day, caring for our patients—not looking back at what we accomplished but towards what we can do tomorrow. Providing the best care, compassion, innovation, excellence, dedication, integrity, empathy, trust, teamwork, and growth.
         </p>
-            <Link to='/'>
+            <Link to='/Services'>
             <button className='btn bg-[#007e69] rounded-[50px] hover:bg-[#37d892]  hover:text-white hover:border-[#007e69] border-[1px]'>Learn More...</button></Link>
         </div>
 

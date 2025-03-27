@@ -81,7 +81,7 @@ const Header = () => {
                 <figure className='w-[45px] h-[45px] rounded-full cursor-pointer '>
                   <img src={user?.photo} className='w-full rounded-full h-full ' alt="" />
                 </figure>
-          <h1 className='text-base font-semibold text-[rgb(0,126,106)] '>{user?.name}</h1>
+          <h1 className='text-base font-semibold text-[rgb(0,126,106)] '>Dr.{user?.name}</h1>
 
               </Link>
             </div>
