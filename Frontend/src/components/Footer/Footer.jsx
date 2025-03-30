@@ -39,7 +39,7 @@ const quickLinks01 = [
     display: "Services",
   },
   {
-    path: "/",
+     path: "https://shreekrishnapudasaini.com.np/",
     display: "Blog",
   },
 
@@ -47,11 +47,11 @@ const quickLinks01 = [
 
 const quickLinks02 = [
   {
-    path: "/find-a-doctor",
+    path: "/doctors",
     display: "Find a Doctor",
   },
   {
-    path: "/",
+    path: "/doctors",
     display: "Request an Appointment",
   },
   {
@@ -59,7 +59,7 @@ const quickLinks02 = [
     display: "Find a Location",
   },
   {
-    path: "/",
+    path: "/contact",
     display: "Get a Opinion",
   },
 ];

@@ -58,11 +58,14 @@ const Dashboard = () => {
 
                       </div>
                     </div>
-                    <DoctorAbout name={data.name} phone={data.phone} about={data.about} qualifications={data.qualifications} experiences={data.experiences}  />
+                    <DoctorAbout name={data.name} phone={data.phone} about={data.about} qualifications={data.qualifications} experiences={data.experiences} />
 
                   </div>)}
 
-                  {tab === "appointments" && <Appointments appointments={data.appointments} />}
+                  {tab === "appointments" && (
+                    <Appointments appointments={data?.appointments || []} />
+                  )}
+
                   {tab === "settings" && <Profile doctorData={data} />}
                 </div>
               </div>

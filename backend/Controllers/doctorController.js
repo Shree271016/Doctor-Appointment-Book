@@ -80,12 +80,18 @@ export const getDoctorProfile = async (req, res) => {
 
     try {
         const doctor = await Doctor.findById(doctorId)
-        .select("-password")
-        .populate("appointments");
+            .select("-password")
+            .populate({
+                path: 'appointments',
+                populate: {
+                    path: 'user',
+                    select: 'name email photo gender'
+                }
+            });
         if (!doctor) {
             return res.status(404).json({ success: false, message: 'Doctor not found' });
         }
-     
+
 
         return res.status(200).json({
             success: true,
@@ -96,5 +102,17 @@ export const getDoctorProfile = async (req, res) => {
     } catch (err) {
         return res.status(500).json({ success: false, message: "Something went wrong,Cannot get" });
 
+    }
+};
+
+export const getDoctorAppointments = async (req, res) => {
+    try {
+        const doctorId = req.userId;
+        const appointments = await Booking.find({ doctor: doctorId })
+            .populate("user", "name email photo gender") 
+            .sort({ createdAt: -1 }); 
+        res.status(200).json({ success: true, appointments });
+    } catch (err) {
+        res.status(500).json({ success: false, message: err.message });
     }
 };

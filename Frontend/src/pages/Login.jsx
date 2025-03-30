@@ -4,6 +4,7 @@ import { BASE_URL } from "../utils/config";
 import { toast } from "react-toastify";
 import { authContext } from "../context/authContext";
 import HashLoader from "react-spinners/HashLoader";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
 const Login = () => {
@@ -13,6 +14,7 @@ const Login = () => {
     password: "",
 
   })
+  const [showPassword, setShowPassword] = useState(false);
   // lets define loader
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -79,16 +81,25 @@ const Login = () => {
             className="w-full px-4 py-3 border-b-2 border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 text-headingColor placeholder:text-textColor rounded-md cursor-pointer"
             required
           />
-        </div>
-        <div className="mb-5">
-          <input type="password"
-            placeholder="Password"
-            name="password"
-            value={formData.password}
-            onChange={handleInputChange}
-            className="w-full px-4 py-3 border-b-2 border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7  text-headingColor placeholder:text-textColor rounded-md cursor-pointer"
-            required
-          />
+        </div> 
+        <div className="mb-5 relative">
+        
+          <input
+              type={showPassword ? "text" : "password"}
+              placeholder="Password"
+              name="password"
+              value={formData.password}
+              onChange={handleInputChange}
+              className="w-full px-4 py-3 border-b-2 border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 text-headingColor placeholder:text-textColor rounded-md cursor-pointer"
+              required
+            />
+              <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-4 top-3 text-gray-500"
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
         </div>
         <div className="mt-7">
           <button type="submit" className="w-full bg-[#007e69] font-bold border-solid border-2 border-[#007e69] text-white text-[20px] leading-[30px] rounded-lg px-4 py-3 hover:bg-white hover:border-[#007e69] hover:border-solid  hover:text-[#007e69]">

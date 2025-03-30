@@ -4,9 +4,7 @@ import doctor2 from "../assets/images/doctor2.avif";
 import icon01 from "../assets/images/icon01.png";
 import icon02 from "../assets/images/icon02.png";
 import icon03 from "../assets/images/icon03.png";
-import videoIcon from "../assets/images/video-icon.png";
 import kasmita2 from "../assets/images/kasmita2.jpg";
-import avatarIcon  from "../assets/images/avatar-icon.png";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs"
 import About from "../components/About/About";
@@ -17,12 +15,12 @@ import FaqList from "../components/Faq/FaqList";
 import Testimonial from "../components/Testimonial/Testimonial";
 
 const Home = () => {
-  return ( 
-  <>
-    {/* hero section */}
-    
+  return (
+    <>
+      {/* hero section */}
 
-      <section className="hero__section pt-[60px] 2xl:h-[800px]">
+
+      <section className="hero__section pt-[60px] 2xl:h-[1000px]">
         <div className='container'>
           <div className="flex flex-col lg:flex-row gap-[90px] items-center justify-between">
 
@@ -32,11 +30,31 @@ const Home = () => {
             <div>
               <div className="lg:w-[570px]">
                 <h1 className='text-[36px] leading-[46px] text-[#B63E96] font-[800] md:text-[60px] md:leading-[70px]'> We help patients live a healthy, longer life.</h1>
-                <p className='text__para'>
-                  MEDICAREplus is Kathmandu’s leading preventive clinic, offering top-quality care for all ages. With skilled professionals and advanced facilities, we focus on wellness, prevention, and patient comfort—whether at our clinic or your home.
-                </p>
+                <p className='text__para '>
+                  <span className="text-center pl-56 font-bold text-emerald-700">Welcome !</span>
+                  <br />
+                  With the <strong>MEDICARE+</strong> app, you can easily access top-quality medical care at your fingertips.
+                  Our platform allows you to:
+                  <br />
+                  ✅ <strong>Book Appointments Instantly</strong> – Schedule an appointment with top doctors for today.
+                  More features are coming soon to enhance your booking experience.
+                  <br />
+                  ✅ <strong>Explore Doctor Profiles</strong> – View detailed doctor portfolios, including their experience,
+                  qualifications, and specialties, so you can make an informed choice.
+                  <br />
+                  ✅ <strong>Seamless Online Payments</strong> – Securely pay for your appointments and
+                  check payment status directly from the app.
+                  <br />
+                  ✅ <strong>Stay Informed</strong> – Get real-time updates about your bookings,
+                  upcoming appointments, and doctor availability.
+                  <br />
 
-                <button className='btn bg-[#007e69]  hover:bg-[#37d892] hover:text-white hover:border-[#007e69] border-[1px]'> Request an Appointment</button>
+
+                  <strong className="text-green-600 ">Your health, our priority!</strong>
+                </p>
+                <Link to="/doctors" className="pl-44 ">
+                  <button to="/doctors" className='btn bg-[#007e69]  hover:bg-[#37d892] hover:text-white hover:border-[#007e69] border-[1px]'> Request an Appointment</button>
+                </Link>
 
                 {/* hero counter */}
                 <div className='mt-[30px] lg:mt-[70px] flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-[30px]'>
@@ -78,7 +96,7 @@ const Home = () => {
                 <img className='w-full rounded-lg h-[70%]' src={kasmitapng} alt="" />
               </div>
               <div className="">
-                <img className='w-full mb-[10px] h-[60%] 'src={shree}  alt="" />
+                <img className='w-full mb-[10px] h-[60%] ' src={shree} alt="" />
                 <img className='w-full rounded-lg' src={doctor2} alt="" />
               </div>
 
@@ -91,7 +109,7 @@ const Home = () => {
       </section>
 
       {/* hero section end */}
-      
+
       <section>
         <div className="container bg-[#f6f6f6]">
           <div className="lg:w-[470px] mx-auto">
@@ -125,12 +143,18 @@ const Home = () => {
 
               <div className="mt-[30px]">
                 <h2 className="text-[26px] landing-9 text-headingColor font-[700] text-center"> Find a Location</h2>
-                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center ">MedicarePlus, Duwakot 2,Bhaktapur, Nepal  01-1234567<br />
-                  <span className="text-blue-600 cursor-pointer">shreekrishnapudasaini.com.np</span>  <br />
+                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center ">MedicarePlus Hospital pvt.ltd. <br />
+                  <span className="text-blue-600 cursor-pointer">Duwakot 2, Bhaktapur, Nepal  01-1234567</span>  <br />
                   <span className="text-xl cursor-pointer"> &#9877; View on Map &#10132; </span></p>
-                <Link to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[30px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none">
+               
+                <a
+                  href="https://www.shreekrishnapudasaini.com.np/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[30px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none"
+                >
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
-                </Link>
+                </a>
 
               </div>
 
@@ -197,7 +221,7 @@ const Home = () => {
                   3. View our physicians who are accepting new patients, use the online scheduling tool to select an appointmet time.
                 </li>
               </ul>
-              <Link to="/">
+              <Link to="/doctors/67e57087e4429f939241421e">
                 <button className="btn">Learn More...</button>
               </Link>
             </div>
@@ -214,7 +238,7 @@ const Home = () => {
 
                   </div>
                   <span className="w-5 h-5 lg:w-[40px] lg:h-[40px] flex items-center justify-center bg-yellowColor rounded px-1">
-                    <img src={kasmita2}  className="rounded-lg"/>
+                    <img src={kasmita2} className="rounded-lg" />
 
                   </span>
 
@@ -223,7 +247,7 @@ const Home = () => {
                   Consultaiton
                 </div>
                 <div className="flex items-center gap-[6px] lg:gap-[10px] mt-2 lg:mt-[16px]">
-                  <img src={kasmita2} alt=""  className="w-8 h-8 lg:w-[38px] lg:h-[38px] flex items-center justify-center rounded-full"/>
+                  <img src={kasmita2} alt="" className="w-8 h-8 lg:w-[38px] lg:h-[38px] flex items-center justify-center rounded-full" />
                   <h4 className="text-[10px] leading-3 lg:text-[16px] lg:leading-[22px] font-[700] text-headingColor">
                     Dr. Kasmita Ghimire
                   </h4>
@@ -249,41 +273,41 @@ const Home = () => {
 
 
           </div>
-       <DoctorList/>
+          <DoctorList />
         </div>
       </section>
       {/* our great doctors end*/}
-      
-    
-{/* FAQ section start */}
-<div className="container">
-  <div className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-5 lg:gap-[30px] ]">
-    <div className="w-full md:block">
-    <img src={kasmita1}  alt="" className="h-[680px] w-[85%] rounded-2xl" />
-    </div>
-    <div className="w-full md:w-full sm:1/2 ">
-      <h2 className="heading ">Most questions by our beloved patients.</h2>
-      < FaqList/>
-    </div>
-  </div>
-</div>
-{/* FAQ section end */}
 
 
-{/* testimonial  */}
-      <section>
+      {/* FAQ section start */}
       <div className="container">
+        <div className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-5 lg:gap-[30px] ]">
+          <div className="w-full md:block">
+            <img src={kasmita1} alt="" className="h-[680px] w-[85%] rounded-2xl" />
+          </div>
+          <div className="w-full md:w-full sm:1/2 ">
+            <h2 className="heading ">Most questions by our beloved patients.</h2>
+            < FaqList />
+          </div>
+        </div>
+      </div>
+      {/* FAQ section end */}
+
+
+      {/* testimonial  */}
+      <section>
+        <div className="container">
           <div className="xl:w[470px] mx-auto">
             <h2 className="heading text-center "> Our Patients Speak</h2>
             <p className="text__para text-center"> World-class care for everyone. Experience compassionate, personalized health care tailored to your needs.</p>
 
           </div>
-          <Testimonial/>
-          </div>
+          <Testimonial />
+        </div>
 
       </section>
-{/* testimonial end */}
-  </>
+      {/* testimonial end */}
+    </>
   )
 }
 

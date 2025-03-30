@@ -5,6 +5,7 @@ import uploadImageToCloudinary from '../utils/uploadCloudinary';
 import { BASE_URL } from '../utils/config';
 import { toast } from "react-toastify";
 import HashLoader from "react-spinners/HashLoader";
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 
 
@@ -12,6 +13,7 @@ const Signup = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewURL, setPreviewURL] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
 
   const [formData, setFormData] = useState({
@@ -107,16 +109,24 @@ const Signup = () => {
                 required
               />
             </div>
-            <div className="mb-5">
-              <input type="password"
-                placeholder="Password"
-                name="password"
-                value={formData.password}
-                onChange={handleInputChange}
-                className="w-full px-4 pr-4 py-3 border-b-2 border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 text-headingColor placeholder:text-textColor rounded-md cursor-pointer"
-                required
-              />
-            </div>
+            <div className="mb-5 relative">
+            <input
+              type={showPassword ? "text" : "password"}
+              placeholder="Password"
+              name="password"
+              value={formData.password}
+              onChange={handleInputChange}
+              className="w-full px-4 py-3 border-b-2 border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 text-headingColor placeholder:text-textColor rounded-md cursor-pointer"
+              required
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-4 top-3 text-gray-500"
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
+          </div>
             <div className='mb-5 flex items-center justify-between'>
               <label className='text-headingColor font-bold text-[16px] leading-7 '>
                 Are You a : <select value={formData.role} name="role"
