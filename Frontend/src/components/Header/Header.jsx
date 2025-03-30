@@ -1,8 +1,8 @@
 
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import logo from "../../assets/images/logo.png";
 import { NavLink, Link } from "react-router-dom";
-import { MdMenu } from 'react-icons/md';
+import { MdMenu, MdDarkMode, MdLightMode } from 'react-icons/md';
 import { authContext } from '../../context/authContext';
 
 
@@ -28,6 +28,25 @@ const Header = () => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
   const { user, role, token } = useContext(authContext)
+
+  const [darkMode, setDarkMode] = useState(localStorage.getItem("theme") === "dark");
+
+  // Toggle dark mode
+  const toggleDarkMode = () => {
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    localStorage.setItem("theme", newMode ? "dark" : "light");
+    document.documentElement.classList.toggle("dark", newMode);
+  };
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
 
   const handleStickyHeader = () => {
     window.addEventListener('scroll', () => {
@@ -73,8 +92,11 @@ const Header = () => {
         </div>
 
         {/* nav right */}
+          <button onClick={toggleDarkMode} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition">
+            {darkMode ? <MdLightMode className="w-7 h-7 text-yellow-400 border rounded-full hover:border-none" /> : <MdDarkMode className="w-7 h-7 text-gray-800 dark:text-white border rounded-full" />}
+          </button>
         <div className="flex items-center gap-4">
-
+          {/* Dark Mode Toggle */}
           {token && user ? (
             <div>
               <Link to={`${role === "doctor" ? "/doctors/profile/me" : "/users/profile/me"}`}>
