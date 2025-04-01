@@ -175,57 +175,86 @@ const Home = () => {
           <ServicesList />
         </div>
       </section>
-      <section>
-        <div className="container">
-          <div className="flex items-center justify-between flex-col lg:flex-row">
-            <div className="xl:w-[670px]">
-              <h2 className="heading">
-                Get Virtual Treatment <br /> Anytime
-              </h2>
-              <ul>
-                <li className="text__para">
-                  1. Schedule the appointment durectly.
-                </li>
-                <li className="text__para">
-                  2. Search for your physician here, and content their office.
-                </li>
-                <li className="text__para">
-                  3. View our physicians who are accepting new patients, use the online scheduling tool to select an appointmet time.
-                </li>
-              </ul>
-              <Link to="/doctors/67e57087e4429f939241421e">
-                <button className="btn">Learn More...</button>
-              </Link>
-            </div>
-            <div className="relative z-10 xl:w-[770px] flex justify-end mt-[50px] lg:mt-0">
-              <img src={kasmita2} className="w-3/4" alt="" />
-              <div className="w-[150px] lg:w-[248px] bg-[#f6f6f6] shadow-xl absolute bottom-[50px] left-0 md:bottom-[100px] md:left-5 z-20 p-2 pb-3 lg:px-4 lg:pt-4 lg:pb-[26px] rounded-[10px]">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-[6px] lg:gap-3">
-                    <p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-5 text-headingColor font-[600]">
-                      Thu, 24
-                    </p>
-                    <p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-5 text-textColor font-[500]"> 09:00AM</p>
-
-                  </div>
-                  <span className="w-5 h-5 lg:w-[40px] lg:h-[40px] flex items-center justify-center bg-yellowColor rounded px-1">
-                    <img src={kasmita2} className="rounded-lg" />
-                  </span>
-                </div>
-                <div className="w-[65px] lg:w-[96px] bg-[#CCF0F3] py-1 px-2 lg:py-[6px] lg:px-[10px] text-[8px] leading-[8px] lg:text-[12px] lg:leading-4 text-irisBlueColor font-[500] mt-2 lg:mt-3 rounded-full cursor-pointer">
-                  Consultaiton
-                </div>
-                <div className="flex items-center gap-[6px] lg:gap-[10px] mt-2 lg:mt-[16px]">
-                  <img src={kasmita2} alt="" className="w-8 h-8 lg:w-[38px] lg:h-[38px] flex items-center justify-center rounded-full" />
-                  <h4 className="text-[10px] leading-3 lg:text-[16px] lg:leading-[22px] font-[700] text-headingColor">
-                    Dr. Kasmita Ghimire
-                  </h4>
-                </div>
+      <section className="relative py-16 bg-gradient-to-br from-[#f8fcff] to-[#e6f4fe]">
+  <div className="container max-w-7xl px-4 mx-auto">
+    <div className="flex flex-col lg:flex-row items-center gap-12 xl:gap-24">
+      {/* Left Content Section */}
+      <div className="xl:w-[670px] relative z-10 order-2 lg:order-1">
+        <h2 className="text-4xl md:text-5xl font-bold text-[#003366] mb-8 leading-tight">
+          Get Virtual Treatment <br />
+          <span className="bg-gradient-to-r from-[#007e69] to-[#00a88b] bg-clip-text text-transparent">
+            Anytime
+          </span>
+        </h2>
+        
+        <ul className="space-y-6 mb-10">
+          {[1, 2, 3].map((item) => (
+            <li key={item} className="flex items-start gap-4 group">
+              <div className="w-8 h-8 bg-[#007e69] rounded-full flex items-center justify-center text-white font-bold shrink-0">
+                {item}
               </div>
+              <p className="text-lg text-[#4a5957] leading-relaxed transition-all group-hover:text-[#003366]">
+                {item === 1 && "Schedule the appointment directly."}
+                {item === 2 && "Search for your physician here, and contact their office."}
+                {item === 3 && "View our physicians who are accepting new patients, use the online scheduling tool to select an appointment time."}
+              </p>
+            </li>
+          ))}
+        </ul>
+
+        <Link to="/doctors/67e57087e4429f939241421e">
+          <button className="px-8 py-4 bg-gradient-to-r from-[#007e69] to-[#00a88b] text-white rounded-full font-semibold hover:from-[#00a88b] hover:to-[#007e69] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-3">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+            </svg>
+          </button>
+        </Link>
+      </div>
+
+    
+      <div className="relative xl:w-[770px] order-1 lg:order-2">
+        <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.01] transition-all duration-300">
+          <img 
+            src={kasmita2} 
+            alt="Virtual Treatment" 
+            className="w-full h-[600px] object-cover" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#007e69]/30 to-transparent" />
+        </div>
+
+      
+        <div className="absolute -bottom-8 left-8 w-[280px] bg-white shadow-2xl rounded-2xl p-4 transform hover:-translate-y-2 transition-all duration-300 z-20">
+          <div className="flex items-center justify-between mb-3">
+            <div className="space-y-1">
+              <p className="text-lg font-bold text-[#003366]">Thu, 24</p>
+              <p className="text-sm text-[#4a5957]">09:00 AM</p>
+            </div>
+            <div className="w-12 h-12 rounded-lg overflow-hidden">
+              <img src={kasmita2} className="w-full h-full object-cover" alt="profile" />
             </div>
           </div>
+
+          <div className="mb-4">
+            <span className="inline-block bg-[#e6f4fe] text-[#007e69] px-3 py-1 rounded-full text-sm font-semibold">
+              Consultation
+            </span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-[#007e69]">
+              <img src={kasmita2} alt="Dr. Kasmita Ghimire" className="w-full h-full object-cover" />
+            </div>
+            <h4 className="text-lg font-bold text-[#003366]">Dr. Kasmita Ghimire</h4>
+          </div>
         </div>
-      </section>
+
+        <div className="absolute -top-8 -right-8 w-32 h-32 bg-[#007e69]/10 rounded-full blur-xl" />
+        <div className="absolute -bottom-12 right-12 w-24 h-24 bg-[#00a88b]/20 rounded-full rotate-45 blur-lg" />
+      </div>
+    </div>
+  </div>
+</section>
       <section>
         <div className="container">
           <div className="xl:w[470px] mx-auto">

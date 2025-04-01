@@ -8,8 +8,8 @@ const navLinks = [
   { path: '/home', display: 'Home' },
   { path: '/doctors', display: 'Find a Doctor' },
   { path: '/Services', display: 'Services' },
-  { path: '/contact', display: 'Contact' },
   { path: '/blog', display: 'Blog' },
+  { path: '/contact', display: 'Contact' },
 ];
 
 const Header = () => {
