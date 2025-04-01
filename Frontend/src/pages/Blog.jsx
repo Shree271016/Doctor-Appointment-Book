@@ -15,11 +15,11 @@ const Blog = () => {
                     Discover a complete healthcare solution serving <span className="font-bold">1M+ patients</span> across <span className="font-bold">50+ specialties</span>
                 </p>
             </div>
-            <div className='text-center px-28'>
+            <div className='text-center '>
 
                 <img src={medicareplus}
                     alt="Healthcare Technology"
-                    className="w-full   rounded-lg mb-6 shadow-xl h-[85vh]" />
+                    className="w-full sm:px-3 rounded-lg mb-6 shadow-xl h-[85vh]" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -104,7 +104,7 @@ const Blog = () => {
                             <a href="https://www.shreekrishnapudasaini.com.np/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-blue-600 text-white px-4 py-2 rounded-lg text-center hover:bg-blue-700 transition">
+                                className="bg-[rgb(0,126,105)] text-white px-4 py-2 rounded-lg text-center hover:bg-white hover:text-[rgb(0,126,105)] hover:border-[rgb(0,126,105)] hover:border transition">
                                 View My Portfolio
                             </a>
                             <a
@@ -215,17 +215,17 @@ const Blog = () => {
                 </div>
             </div>
 
-            <div className="mt-12 bg-blue-900 text-white p-8 rounded-xl text-center">
+            <div className="mt-12 bg-[rgb(0,126,105,0.8)] text-white p-8 rounded-xl text-center">
                 <h2 className="text-2xl font-bold mb-4">Ready to Transform Your Healthcare Experience?</h2>
                 <p className="mb-6">Join 500,000+ users and 20,000+ healthcare providers</p>
                 <div className="flex flex-col md:flex-row justify-center gap-4">
                     <Link to="/register">
-                        <button className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
+                        <button className="bg-white text-[rgb(0,126,105)] px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
                             I&apos;m a Patient
                         </button>
                     </Link>
                     <Link to="/login">
-                        <button className="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition">
+                        <button className="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-[rgb(0,126,105)] transition">
                             I&apos;m a Doctor
                         </button>
                     </Link>
@@ -262,13 +262,13 @@ const Blog = () => {
                             <a href="https://www.shreekrishnapudasaini.com.np/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                                className="bg-[rgb(0,126,105)] text-white px-4 py-2 rounded-lg hover:bg-[rgb(0,126,105)] transition">
                                 Get a Free Consultation
                             </a>
                             <a href="https://www.shreekrishnapudasaini.com.np/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition">
+                                className="border border-[rgb(0,126,105)] text-[rgb(0,126,105)] px-4 py-2 rounded-lg hover:bg-blue-50 transition">
                                 View Case Studies
                             </a>
                         </div>
