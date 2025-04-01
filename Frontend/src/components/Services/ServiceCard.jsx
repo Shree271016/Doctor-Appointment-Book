@@ -1,36 +1,38 @@
 /* eslint-disable react/prop-types */
-
-
-
+// ServiceCard.jsx
 import { BsArrowRight } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
-const ServiceCard = ({item, index}) => {
-
-    const {name,desc, bgColor, textcolor} = item
+const ServiceCard = ({ item, index }) => {
+  const { name, desc, bgColor, textcolor } = item;
 
   return (
-  <div className="py-[30px] px-3 lg:px-5">
-    <h2 className='text-[26px] leading-9 text-headingColor font-[700] '>{name}</h2>
-    <p className='text-[16px] leading-7 font-[400] text-textColor mt-4' > {desc}</p>
-        <div className='flex items-center justify-between mt-[30px]'>
-        <Link  to="/doctors" className="w-[50px] h-[50px] rounded-full border-[1px] border-solid border-[#007e69]  text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none "><BsArrowRight className="group-hover:text-white w-6 h-5" />
-        </Link>
-        <span className='w-[44px] h-[44px] flex items items-center justify-center text-[18px] leading-[30px] font-[600]' 
-        style={{
-            background:`${bgColor}`,
-            color:`${{textcolor}}`,
-            borderRadius:"6px 0 0 6px",
-        }}
-        
+    <div className="group relative p-6 lg:p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+      <div 
+        className="absolute -top-4 right-4 w-12 h-12 flex items-center justify-center text-lg font-bold rounded-full shadow-md"
+        style={{ background: bgColor, color: textcolor }}
+      >
+        {String(index + 1).padStart(2, '0')}
+      </div>
+
+      <div className="space-y-4">
+        <h3 className="text-2xl font-bold text-gray-800 group-hover:text-[#007e69] transition-colors">
+          {name}
+        </h3>
+        <p className="text-gray-600 leading-relaxed">{desc}</p>
+      </div>
+
+      <div className="mt-6 flex items-center justify-between">
+        <Link
+          to="/doctors"
+          className="flex items-center gap-2 text-[#007e69] hover:text-[#005a4d] font-semibold transition-colors"
         >
-            {index +1}
-        </span>
-
-        </div>
-
-  </div>
-  )
+          Explore Service
+          <BsArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        </Link>
+      </div>
+    </div>
+  );
 };
 
 export default ServiceCard;

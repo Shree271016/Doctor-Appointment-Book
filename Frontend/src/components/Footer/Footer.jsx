@@ -31,7 +31,7 @@ const quickLinks01 = [
     display: "Home",
   },
   {
-    path: "/",
+    path: "/blog",
     display: "About Us",
   },
   {
@@ -39,7 +39,7 @@ const quickLinks01 = [
     display: "Services",
   },
   {
-     path: "https://shreekrishnapudasaini.com.np/",
+     path: "/blog",
     display: "Blog",
   },
 
@@ -55,7 +55,7 @@ const quickLinks02 = [
     display: "Request an Appointment",
   },
   {
-    path: "/",
+    path: "/home",
     display: "Find a Location",
   },
   {
@@ -65,7 +65,7 @@ const quickLinks02 = [
 ];
 const quickLinks03 = [
   {
-    path: "/",
+    path: "/home",
     display: "Donate",
   },
   {
@@ -84,7 +84,16 @@ const Footer = () => {
       <div className="container ">
         <div className="flex justify-between flex-col md:flex-row flex-wrap gap-[30px]">
           <div>
-            <img src={logo} alt="" />
+            <Link to="/home">
+            
+          <div className="flex items-center">
+            <span className="text-2xl md:text-3xl font-extrabold text-red-600 
+            drop-shadow-[0_2px_4px_rgba(101,163,13,0.4)] hover:drop-shadow-[0_4px_6px_rgba(101,163,13,0.6)]
+            transition-all duration-300 hover:scale-105">
+              Medicare+
+            </span>
+          </div>
+            </Link>
             <p className="text-[16px] leading-7 font-[400] font-textColor mt-4">
               Copyright &#xa9; {year} developed by Shree krishna pudasaini all right reserved.
             </p>
