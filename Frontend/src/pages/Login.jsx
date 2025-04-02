@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { authContext } from "../context/authContext";
 import HashLoader from "react-spinners/HashLoader";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import AnimateOnScroll from "../components/AnimateOnScroll";
 
 
 const Login = () => {
@@ -67,9 +68,14 @@ const Login = () => {
   return <section className='px-5 lg:px-0'>
 
     <div className='w-full max-w-[570px] mx-auto rounded-lg shadow-lg bg-white md:p-10 '>
+    <AnimateOnScroll delay={0.1} >
+      
       <h3 className='text-headingColor text-[22px] leading-9 font-bold mb-10'>
         Hello ! <span className='text-[#007e69]'> Welcome</span> Back 💐
       </h3>
+      </AnimateOnScroll>
+    <AnimateOnScroll delay={0.2} >
+
       <form className="py-4 md:py-0" onSubmit={submitHandler}>
 
         <div className="mb-5">
@@ -114,6 +120,7 @@ const Login = () => {
 
         </p>
       </form>
+      </AnimateOnScroll>
 
 
     </div>

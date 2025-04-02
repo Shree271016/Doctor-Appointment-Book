@@ -1,10 +1,12 @@
 import medicareplus from "../assets/images/medicareplus.png";
+import AnimateOnScroll from "../components/AnimateOnScroll";
 
 const Contact = () => {
   return (
     <section className='py-2 pt-28'>
+      <AnimateOnScroll delay={0.1} >
+
       <div className='flex flex-col md:flex-row items-center justify-between  px-10 mx-auto max-w-screen-2xl gap-8'>
-        {/* Left Side - Image */}
         <div className='w-full  mb-6 md:mb-0 mr-6 '>
           <img 
            src={medicareplus} 
@@ -13,7 +15,6 @@ const Contact = () => {
           />
         </div>
 
-        {/* Right Side - Contact Form */}
         <div className='w-full '>
           <h2 className='heading text-center md:text-center'>Contact Us</h2>
           <p className='mb-6 lg:mb-10 font-light text-center md:text-left text__para'>
@@ -38,6 +39,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      </AnimateOnScroll>
     </section>
   );
 };

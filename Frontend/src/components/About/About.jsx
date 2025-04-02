@@ -1,12 +1,13 @@
 import medicareplus from "../../assets/images/medicareplus.png";
 import { Link } from 'react-router-dom';
+import AnimateOnScroll from "../AnimateOnScroll";
 
 const About = () => {
     return (
         <section className="py-20 bg-gradient-to-br from-[#f7fdfc] to-[#e6faf8]">
             <div className="container max-w-7xl px-4 mx-auto">
+            <AnimateOnScroll  delay={0.1} yOffset={40} >
                 <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-20">
-                   
                     <div className="w-full lg:w-1/2 relative group">
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl transform group-hover:scale-[1.01] transition-all duration-300">
                             <img 
@@ -64,6 +65,8 @@ const About = () => {
                         </div>
                     </div>
                 </div>
+                </AnimateOnScroll>
+
             </div>
         </section>
     )
