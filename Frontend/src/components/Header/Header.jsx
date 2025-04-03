@@ -70,11 +70,11 @@ const Header = () => {
     <header
       ref={headerRef}
       className={`fixed w-full z-50 py-4 ${isScrolled
-        ? 'bg-white dark:bg-gray-900 bg-opacity-25 backdrop-blur-sm shadow-md'
+        ? 'bg-white dark:bg-gray-600 bg-opacity-25 backdrop-blur-sm shadow-md'
         : 'bg-transparent'
         }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 ">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/home">

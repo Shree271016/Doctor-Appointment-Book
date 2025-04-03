@@ -32,7 +32,7 @@ const Doctors = () => {
 
     <>
       <section className='bg-[#fff9ea]'>
-        <div className='container text-center'>
+        <div className='container text-center mt-6'>
           <AnimateOnScroll delay={0.1} >
 
             <h2 className='heading'>Find a Doctor</h2>

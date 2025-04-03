@@ -73,7 +73,7 @@ const Blog = () => {
                     <div className="bg-white p-6 rounded-xl shadow-md">
                         <img src="https://media.istockphoto.com/id/824219356/photo/ai-concept-3d-rendering-abstract-image-visual.jpg?s=1024x1024&w=is&k=20&c=nx_7MRiZxoXB1g1JRckXeg4qWax4Z9zsRn37Yzx10_c=" alt="AI-Powered Healthcare" className="w-full rounded-lg mt-4" />
                         <h2 className="text-2xl font-semibold mb-4 text-blue-900 text-center mt-4">Advanced Features</h2>
-                        <AnimateOnScroll delay={0.2} >
+                        <AnimateOnScroll delay={0.1} >
 
                             <ul className="list-decimal list-inside text-gray-700 mb-4">
                                 <li>AI-powered doctor recommendations based on medical history.</li>
@@ -88,7 +88,7 @@ const Blog = () => {
                     <div className="bg-white p-6 rounded-xl shadow-md">
                         <img src="https://media.istockphoto.com/id/1404179486/photo/anesthetist-working-in-operating-theatre-wearing-protecive-gear-checking-monitors-while.jpg?s=1024x1024&w=is&k=20&c=FIjd0v71G2Mq_3fSUX490N1dMnHwX6ZsFCf9GU2G2ds=" alt="How It Works" className="w-full rounded-lg mt-4" />
                         <h2 className="text-2xl font-semibold mb-4 text-blue-900 text-center mt-4">How It Works</h2>
-                        <AnimateOnScroll delay={0.2} >
+                        <AnimateOnScroll delay={0.1} >
 
                             <ul className="list-decimal list-inside text-gray-700 mb-4">
                                 <li>Sign up and create a profile.</li>

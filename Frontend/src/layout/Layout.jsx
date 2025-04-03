@@ -31,13 +31,12 @@ const Layout = () => {
 
   return (
     <>
-      <Header />
-      <main>
+      <Header/>
+      <main >
         <Routers />
       </main>
       <Footer />
       
-      {/* Scroll to top button - visible in entire app */}
       {isVisible && (
         <button
           onClick={scrollToTop}

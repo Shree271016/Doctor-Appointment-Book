@@ -9,6 +9,7 @@ import Error from "../../components/Error/Error";
 import { BASE_URL } from "./../../utils/config";
 import { useFetchData } from "./../../hooks/useFetchData";
 import { useParams } from "react-router-dom";
+import AnimateOnScroll from "../../components/AnimateOnScroll";
 
 const DoctorDetails = () => {
 
@@ -47,10 +48,14 @@ const DoctorDetails = () => {
         {!loading && !error && (<div className="grid md:grid-cols-3 gap-[50px]">
           <div className="md:col-span-2">
             <div className="flex items-center gap-5 mb-28">
+              <AnimateOnScroll>
               <figure className='max-w-[300px] max-h-[300px] mt-2 ' >
                 <img src={photo} alt="" className='w-full rounded-xl' />
 
               </figure>
+              </AnimateOnScroll>
+              <AnimateOnScroll delay={0.2}>
+
               <div className="max-h-[200px] ]">
                 <span className='bg-[#CCF0F3] text-irisBlueColor py-1 px-6 lg:py-2 lg:px-6 text-[12px] leading-4 lg:text-[16px] lg:leading-7 font-semibold rounded '>{specialization}
                 </span>
@@ -65,8 +70,11 @@ const DoctorDetails = () => {
                 </div>
                 <p className="text__para textl-[14px] leading-5 md-text-[15px] lg:max-w-[390px] " >{bio}</p>
               </div>
-            </div>
+              </AnimateOnScroll>
 
+              
+            </div>
+<AnimateOnScroll delay={0.3}>
             <div className="mt-[50px] border-b border-solid border-[#0066ff34] ">
               <button
                 onClick={() => setTab('about')}
@@ -80,6 +88,7 @@ const DoctorDetails = () => {
                 Feedback
               </button>
             </div>
+            </AnimateOnScroll>
 
             <div className="mt-[50px]">
               {
@@ -91,7 +100,9 @@ const DoctorDetails = () => {
             </div>
           </div>
           <div>
+            <AnimateOnScroll>
             <SidePanel  doctorId={doctor._id} ticketPrice={doctor.ticketPrice} timeSlots={timeSlots}/>
+            </AnimateOnScroll>
           </div>
         </div>)}
 

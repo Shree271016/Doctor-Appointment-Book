@@ -36,7 +36,6 @@ reviewSchema.pre(/^find/, function (next) {
 
 reviewSchema.statics.calcAverageRating = async function (doctorId) {
 
-  // this points the current review
   const stats = await this.aggregate([{
     $match: { doctor: doctorId }
   },

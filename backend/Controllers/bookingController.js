@@ -6,7 +6,6 @@ import Stripe from 'stripe';
 export const getCheckoutSession = async (req, res) => {
     try {
 
-        // get currently booked doctor
         const doctor = await Doctor.findById(req.params.doctorId);
         if (!doctor) return res.status(404).json({ success: false, message: "Doctor not found" });
         const user = await User.findById(req.userId);
@@ -18,7 +17,6 @@ export const getCheckoutSession = async (req, res) => {
         }
 
         const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
-        // creat stripe session
 
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
@@ -45,7 +43,6 @@ export const getCheckoutSession = async (req, res) => {
             ],
         });
 
-        // create new booking
         const booking = new Booking({
             doctor: doctor._id,
             user: user._id,
@@ -72,7 +69,6 @@ export const updatePaymentStatus = async (req, res) => {
     try {
         const { bookingId, paymentStatus } = req.body;
 
-        // Find and update the appointment
         const updatedBooking = await Booking.findByIdAndUpdate(
             bookingId,
             { isPaid: paymentStatus === "success" },

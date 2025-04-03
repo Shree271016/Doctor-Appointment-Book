@@ -2,10 +2,13 @@
 
 // export default Appointments;
 /* eslint-disable react/prop-types */
+import AnimateOnScroll from "../../components/AnimateOnScroll";
 import { formateDate } from "../../utils/formateDate";
 
 const Appointments = ({ appointments }) => {
     return (
+        <AnimateOnScroll delay={0.1} >
+
         <table className="w-full text-left text-sm text-gray-500">
             <thead className="text-xs text-gray-700 uppercase bg-blue-100">
                 <tr>
@@ -68,6 +71,7 @@ const Appointments = ({ appointments }) => {
                 )}
             </tbody>
         </table>
+        </AnimateOnScroll>
     );
 };
 

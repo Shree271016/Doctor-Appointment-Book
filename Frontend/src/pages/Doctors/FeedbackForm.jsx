@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { BASE_URL } from '../../utils/config';
 import { toast } from 'react-toastify';
 import HashLoader from 'react-spinners/HashLoader';
+import AnimateOnScroll from '../../components/AnimateOnScroll';
 
 const FeedbackForm = () => {
     const [rating, setRating] = useState(0);
@@ -54,6 +55,7 @@ const FeedbackForm = () => {
     }
 
     return (
+                <AnimateOnScroll>
         <form action="">
             <div>
                 <h3 className='text-headingColor text-[16px] leading-6 font-semibold mb-4 mt-0'>
@@ -99,6 +101,7 @@ const FeedbackForm = () => {
                 {loading ? <HashLoader size={25} color='#fff' /> : 'Submit Feedback'}
             </button>
         </form>
+        </AnimateOnScroll>
     )
 }
 

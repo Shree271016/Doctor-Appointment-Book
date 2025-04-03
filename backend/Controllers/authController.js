@@ -22,12 +22,10 @@ export const register = async (req, res) => {
             user = await Doctor.findOne({ email })
         }
 
-        // check if user is exit
         if (user) {
             return res.status(400).json({ message: "User already Exit" })
         }
 
-        // Hash password
         const salt = await bcrypt.genSalt(10)
         const hashPassword = await bcrypt.hash(password, salt)
 
@@ -76,19 +74,16 @@ export const login = async (req, res) => {
             user = doctor
         }
 
-        // check if user exit or not
         if (!user) {
             return res.status(404).json({ message: "User Not Found" });
         }
 
-        // Compare Password
         const isPasswordMatch = await bcrypt.compare(req.body.password, user.password)
 
         if (!isPasswordMatch) {
             return res.status(400).json({ status: false, message: "Invalid Credientials" });
         }
 
-        // get Token
         const token = generateToken(user);
 
         const { password, role, appointment, ...rest } = user._doc

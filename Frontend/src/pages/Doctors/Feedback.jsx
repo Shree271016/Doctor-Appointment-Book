@@ -3,6 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 import { formateDate } from "../../utils/formateDate";
 import FeedbackForm from "./FeedbackForm";
 import { useState } from "react";
+import AnimateOnScroll from "../../components/AnimateOnScroll";
 
 const Feedback = ({ reviews, totalRating }) => {
 
@@ -11,9 +12,13 @@ const Feedback = ({ reviews, totalRating }) => {
   return (
     <div>
       <div className='mb-[50px]'>
+        <AnimateOnScroll>
         <h4 className='text-[20px] leading-[30px] font-bold text-headingColor mb-[30px] '>
           All review ({totalRating})
         </h4>
+        </AnimateOnScroll>
+        <AnimateOnScroll delay={0.1}>
+
         {reviews?.map((review, index) => 
          ( <div key={index} className='flex justify-between gap-10 mb-[30px]'>
             <div className="flex gap-3">
@@ -37,10 +42,15 @@ const Feedback = ({ reviews, totalRating }) => {
             </div>
           </div>)
         )}
+        </AnimateOnScroll>
+
       </div>
       {!showFeedbackForm && <div className="text-center">
+        <AnimateOnScroll delay={0.1}>
         <button className="btn mb-3" onClick={() => setShowFeedbackForm(true)}>Give Feedback</button>
+        </AnimateOnScroll>
       </div>}
+
       {showFeedbackForm && <FeedbackForm />}
 
     </div>

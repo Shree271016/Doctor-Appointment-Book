@@ -5,6 +5,7 @@ import uploadImageToCloudinary from '../../utils/uploadCloudinary';
 import { BASE_URL,token } from "../../utils/config";
 import { toast } from "react-toastify";
 import HashLoader from "react-spinners/HashLoader";
+import AnimateOnScroll from '../../components/AnimateOnScroll';
 
 const Profile = ({user}) => {
 
@@ -71,9 +72,11 @@ const Profile = ({user}) => {
     }
   };
   return (
+    <AnimateOnScroll>
     <div className='pt-3'>
       
       <form onSubmit={submitHandler}>
+        <AnimateOnScroll>
             <div className="mb-5">
               <input type="text"
                 placeholder="Full Name"
@@ -117,6 +120,7 @@ const Profile = ({user}) => {
                 readOnly
               />
             </div>
+            </AnimateOnScroll>
             <div className='mb-5 flex items-center justify-between'>
              
               <label className='text-headingColor font-bold text-[16px] leading-7 '>
@@ -161,6 +165,7 @@ const Profile = ({user}) => {
           </form>
 
     </div>
+    </AnimateOnScroll>
   )
 }
 

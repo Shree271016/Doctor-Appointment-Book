@@ -28,7 +28,7 @@ const Home = () => {
             <div className="lg:w-[570px] space-y-6">
               <div className="space-y-6 ">
                 <AnimateOnScroll yOffset={60}>
-                  <h1 className='text-4xl md:text-5xl bg-gradient-to-r from-[#B63E96] to-[#007e69] bg-clip-text text-transparent font-bold leading-tight'>
+                  <h1 className='text-4xl md:text-5xl bg-gradient-to-r from-[#B63E96] to-[#007e69] mt-4 bg-clip-text text-transparent font-bold leading-tight'>
                     Empowering Your Health Journey
                   </h1>
                 </AnimateOnScroll>
