@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-undef */
-import shree from "../assets/images/shree.png";
+import myAi2 from "../assets/images/myAi2.png";
 import kasmitapng from "../assets/images/kasmitapng.png";
 import doctor2 from "../assets/images/doctor2.avif";
 import medicareplus from "../assets/images/medicareplus.png";
@@ -102,7 +102,7 @@ const Home = () => {
                   <img className='w-full rounded-lg h-[70%]' src={kasmitapng} alt="" />
                 </div>
                 <div className="">
-                  <img className='w-full mb-[10px] h-[60%] ' src={shree} alt="" />
+                  <img className='w-full mb-[10px] h-[60%] rounded-2xl ' src={myAi2} alt="" />
                   <img className='w-full rounded-lg' src={doctor2} alt="" />
                 </div>
               </div>
