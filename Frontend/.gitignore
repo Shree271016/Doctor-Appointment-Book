@@ -14,12 +14,7 @@ dist-ssr
 *.local
 .env.local
 
-/assets/images
-/assets/data
-/assets/doctors
-.services.js
-images
-data
+
 .env.local
 
 
