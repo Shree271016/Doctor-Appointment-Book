@@ -8,7 +8,7 @@ import starIcon from "../../assets/images/Star.png";
 import DoctorAbout from '../../pages/Doctors/DoctorAbout';
 import Profile from "./Profile";
 import Appointments from './Appointments';
-import AnimateOnScroll from '../../components/AnimateOnScroll';
+import AnimateOnScroll from "../../components/Animation/AnimateOnScroll";
 
 const Dashboard = () => {
   const { data, loading, error } = useFetchData(`${BASE_URL}/doctors/profile/me`);

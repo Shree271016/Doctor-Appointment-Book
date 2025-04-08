@@ -3,7 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 import { formateDate } from "../../utils/formateDate";
 import FeedbackForm from "./FeedbackForm";
 import { useState } from "react";
-import AnimateOnScroll from "../../components/AnimateOnScroll";
+import AnimateOnScroll from "../../components/Animation/AnimateOnScroll";
 
 const Feedback = ({ reviews, totalRating }) => {
 

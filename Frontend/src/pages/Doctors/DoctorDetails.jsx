@@ -9,7 +9,7 @@ import Error from "../../components/Error/Error";
 import { BASE_URL } from "./../../utils/config";
 import { useFetchData } from "./../../hooks/useFetchData";
 import { useParams } from "react-router-dom";
-import AnimateOnScroll from "../../components/AnimateOnScroll";
+import AnimateOnScroll from "../../components/Animation/AnimateOnScroll";
 
 const DoctorDetails = () => {
 

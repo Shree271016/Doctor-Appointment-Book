@@ -9,7 +9,7 @@ import { BASE_URL } from "../../utils/config";
 import Loading from "../../components/Loader/Loading";
 import Error from "../../components/Error/Error";
 import { authContext } from "../../context/AuthContext";
-import AnimateOnScroll from "../../components/AnimateOnScroll";
+import AnimateOnScroll from "../../components/Animation/AnimateOnScroll";
 
 
 const MyAccount = () => {

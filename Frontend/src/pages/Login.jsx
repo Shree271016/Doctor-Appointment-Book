@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { authContext } from "../context/AuthContext";
 import HashLoader from "react-spinners/HashLoader";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import AnimateOnScroll from "../components/AnimateOnScroll";
+import AnimateOnScroll from '../components/Animation/AnimateOnScroll';
 
 
 const Login = () => {

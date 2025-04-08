@@ -7,7 +7,7 @@ import Error from "../../components/Error/Error";
 import { BASE_URL } from "./../../utils/config";
 import { useFetchData } from "./../../hooks/useFetchData";
 import { useEffect, useState } from "react";
-import AnimateOnScroll from "../../components/AnimateOnScroll";
+import AnimateOnScroll from "../../components/Animation/AnimateOnScroll";
 
 
 const Doctors = () => {

@@ -5,7 +5,7 @@ import { AiOutlineDelete } from 'react-icons/ai';
 import uploadImageToCloudinary from "./../../utils/uploadCloudinary";
 import { toast } from "react-toastify";
 import { BASE_URL, token } from '../../utils/config';
-import AnimateOnScroll from '../../components/AnimateOnScroll';
+import AnimateOnScroll from "../../components/Animation/AnimateOnScroll";
 
 
 const Profile = ({ doctorData }) => {

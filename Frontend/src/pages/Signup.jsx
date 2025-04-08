@@ -6,8 +6,7 @@ import { BASE_URL } from '../utils/config';
 import { toast } from "react-toastify";
 import HashLoader from "react-spinners/HashLoader";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import AnimateOnScroll from '../components/AnimateOnScroll';
-
+import AnimateOnScroll from '../components/Animation/AnimateOnScroll';
 
 
 const Signup = () => {

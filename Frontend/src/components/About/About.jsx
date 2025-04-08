@@ -1,6 +1,6 @@
 import medicareplus from "../../assets/images/medicareplus.png";
 import { Link } from 'react-router-dom';
-import AnimateOnScroll from "../AnimateOnScroll";
+import AnimateOnScroll from "../../components/Animation/AnimateOnScroll";
 
 const About = () => {
     return (

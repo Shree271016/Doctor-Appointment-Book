@@ -5,7 +5,7 @@ import uploadImageToCloudinary from '../../utils/uploadCloudinary';
 import { BASE_URL,token } from "../../utils/config";
 import { toast } from "react-toastify";
 import HashLoader from "react-spinners/HashLoader";
-import AnimateOnScroll from '../../components/AnimateOnScroll';
+import AnimateOnScroll from "../../components/Animation/AnimateOnScroll";
 
 const Profile = ({user}) => {
 

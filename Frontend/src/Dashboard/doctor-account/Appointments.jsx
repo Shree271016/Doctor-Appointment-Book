@@ -2,7 +2,7 @@
 
 // export default Appointments;
 /* eslint-disable react/prop-types */
-import AnimateOnScroll from "../../components/AnimateOnScroll";
+import AnimateOnScroll from "../../components/Animation/AnimateOnScroll";
 import { formateDate } from "../../utils/formateDate";
 
 const Appointments = ({ appointments }) => {

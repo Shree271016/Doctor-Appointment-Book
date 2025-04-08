@@ -12,7 +12,7 @@ import DoctorList from "../components/Doctors/DoctorList";
 import kasmita1 from "../assets/images/kasmita1.jpg";
 import FaqList from "../components/Faq/FaqList";
 import Testimonial from "../components/Testimonial/Testimonial";
-import AnimateOnScroll from '../components/AnimateOnScroll';
+import AnimateOnScroll from '../components/Animation/AnimateOnScroll';
 import {
   CheckCircleIcon,
   UserCircleIcon,

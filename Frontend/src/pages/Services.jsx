@@ -1,6 +1,6 @@
 
 import { services } from '../assets/data/services';
-import AnimateOnScroll from '../components/AnimateOnScroll';
+import AnimateOnScroll from '../components/Animation/AnimateOnScroll';
 import ServiceCard from '../components/Services/ServiceCard';
 
 
