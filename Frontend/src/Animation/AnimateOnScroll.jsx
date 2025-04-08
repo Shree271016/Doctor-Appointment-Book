@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const AnimateOnScroll = ({ children, delay = 0, yOffset = 80, className }) => {
   return (
