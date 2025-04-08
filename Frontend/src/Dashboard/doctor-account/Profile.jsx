@@ -5,7 +5,7 @@ import { AiOutlineDelete } from 'react-icons/ai';
 import uploadImageToCloudinary from "./../../utils/uploadCloudinary";
 import { toast } from "react-toastify";
 import { BASE_URL, token } from '../../utils/config';
-import AnimateOnScroll from "../../components/Animation/AnimateOnScroll";
+
 
 
 const Profile = ({ doctorData }) => {
@@ -167,12 +167,12 @@ const Profile = ({ doctorData }) => {
 
   return (
     <div>
-      <AnimateOnScroll delay={0.1} >
 
-        <h2 className='text-headingColor font-bold text-[24px] leading-9 mb-10'>Profile Information</h2>
-      </AnimateOnScroll>
+
+      <h2 className='text-headingColor font-bold text-[24px] leading-9 mb-10'>Profile Information</h2>
+
       <form >
-      <AnimateOnScroll delay={0.1} >
+
 
         <div className='mb-2'>
           <p className="form__label">Name*</p>
@@ -226,8 +226,7 @@ const Profile = ({ doctorData }) => {
             </div>
           </div>
         </div>
-        </AnimateOnScroll>
-        <AnimateOnScroll>
+
         <div className='mb-5'>
           <p className='form__label font-bold text-xl text-[rgb(0,126,105)]'>Qualificaitons:*</p>
           {formData.qualifications?.map((item, index) => (
@@ -261,8 +260,7 @@ const Profile = ({ doctorData }) => {
           ))}
           <button onClick={addQualification} className='bg-[rgb(0,126,5)] px-2 py-3 rounded text-white h-fit cursor-pointer'>Add Qualification</button>
         </div>
-        </AnimateOnScroll>
-        <AnimateOnScroll>
+
         <div className='mb-5'>
           <p className='form__label font-bold text-xl  text-[rgb(0,126,105)]'>Experiences:*</p>
           {formData.experiences?.map((item, index) => (
@@ -296,8 +294,7 @@ const Profile = ({ doctorData }) => {
           ))}
           <button onClick={addExperience} className='bg-[rgb(0,126,5)] px-2 py-3 rounded text-white h-fit cursor-pointer'>Add Experience</button>
         </div>
-        </AnimateOnScroll>
-        <AnimateOnScroll>
+
         <div className='mb-5'>
           <p className='form__label font-bold text-xl  text-[rgb(0,126,105)]'>Time Slots:*</p>
           {formData.timeSlots?.map((item, index) => (
@@ -335,14 +332,12 @@ const Profile = ({ doctorData }) => {
           ))}
           <button onClick={addTimeSlot} className='bg-[rgb(0,126,5)] px-2 py-3 rounded text-white h-fit cursor-pointer'>Add TimeSlots</button>
         </div>
-        </AnimateOnScroll>
-        <AnimateOnScroll>
+
         <div className='mb-5'>
           <p className='form__label font-bold text-xl text-center text-[rgb(0,126,105)]'>About:*</p>
           <textarea name="about" rows={5} value={formData.about} placeholder='Write about you ...' onChange={handleInputChange} className='form__input'></textarea>
         </div>
-        </AnimateOnScroll>
-        <AnimateOnScroll>
+
         <div className='mb-5 flex items-center gap-3'>
           {formData.photo && (
             <figure className='w-[60px] h-[60px] rounded-full border-2 border-solid border-[#007e69] flex items-center justify-center'>
@@ -368,7 +363,7 @@ const Profile = ({ doctorData }) => {
           <button type='submit' onClick={updateProfileHandler} className='bg-[rgb(0,126,105)] text-white text-[20px] leading-[30px] w-full py-3 px-4 rounded-lg'>Update Profile</button>
 
         </div>
-        </AnimateOnScroll>
+
       </form>
 
     </div>

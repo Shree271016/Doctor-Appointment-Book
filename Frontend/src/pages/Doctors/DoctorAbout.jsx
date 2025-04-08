@@ -1,28 +1,28 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
-import AnimateOnScroll from "../../components/Animation/AnimateOnScroll";
+
 import { formateDate } from "../../utils/formateDate";
 const DoctorAbout = ({ name, about, qualifications, experiences, phone }) => {
     return (
         <div >
             <div>
-                <AnimateOnScroll delay={0.1} >
+              
 
                     <h3 className='text-[20px]  text-headingColor font-semibold flex items-center gap-2'>
                         <span className='text-blue-700 font-bold text-[18px] leading-5 '>
                             &quot; {about} &quot;
                         </span>
                     </h3>
-                </AnimateOnScroll>
+              
 
 
             </div>
-            <AnimateOnScroll delay={0.1} >
+          
 
                 <p className='text__para font-[15px] lg:max-w-[390px] leading-6'>Phone Number :{phone}</p>
-            </AnimateOnScroll>
-            <AnimateOnScroll delay={0.2} >
+     
+      
 
                 <div className="mt-12">
                     <h3 className="text-[20px] leading-[30px] text-headingColor font-semibold border-b border-solid border-[#0066ff34]">
@@ -45,8 +45,7 @@ const DoctorAbout = ({ name, about, qualifications, experiences, phone }) => {
                     </ul>
 
                 </div>
-            </AnimateOnScroll>
-            <AnimateOnScroll delay={0.1}>
+         
                 <div className="mt-12">
                     <h3 className="text-[20px] leading-[30px] text-headingColor font-semibold border-b border-solid border-[#0066ff34] ">
                         Experience :
@@ -69,7 +68,7 @@ const DoctorAbout = ({ name, about, qualifications, experiences, phone }) => {
 
                     </ul>
                 </div>
-            </AnimateOnScroll>
+          
         </div>
     )
 }

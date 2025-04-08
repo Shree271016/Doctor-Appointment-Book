@@ -4,13 +4,13 @@ import DoctorCard from "../../components/Doctors/DoctorCard";
 import Loading from "../../components/Loader/Loading";
 import Error from "../../components/Error/Error";
 import { useFetchData } from "../../hooks/useFetchData.jsx";
-import AnimateOnScroll from "../../components/Animation/AnimateOnScroll";
+
 
 const MyBookings = () => {
   const { data: appointments, loading, error, } = useFetchData(`${BASE_URL}/users/appointments/my-appointments`)
 
   return (
-      <AnimateOnScroll >
+
     <div>
       {loading && !error && <Loading />}
       {error && !loading && <Error errMessage={error} />}
@@ -30,7 +30,7 @@ const MyBookings = () => {
         )
       }
     </div>
-    </AnimateOnScroll>
+
   )
 }
 export default MyBookings;

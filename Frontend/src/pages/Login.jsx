@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { authContext } from "../context/AuthContext";
 import HashLoader from "react-spinners/HashLoader";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import AnimateOnScroll from '../components/Animation/AnimateOnScroll';
+
 
 
 const Login = () => {
@@ -68,13 +68,12 @@ const Login = () => {
   return <section className='px-5 lg:px-0'>
 
     <div className='w-full max-w-[570px] mx-auto rounded-lg shadow-lg bg-white md:p-10 '>
-    <AnimateOnScroll delay={0.1} >
-      
+
+
       <h3 className='text-headingColor text-[22px] leading-9 font-bold mb-10'>
         Hello ! <span className='text-[#007e69]'> Welcome</span> Back 💐
       </h3>
-      </AnimateOnScroll>
-    <AnimateOnScroll delay={0.2} >
+
 
       <form className="py-4 md:py-0" onSubmit={submitHandler}>
 
@@ -87,25 +86,25 @@ const Login = () => {
             className="w-full px-4 py-3 border-b-2 border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 text-headingColor placeholder:text-textColor rounded-md cursor-pointer"
             required
           />
-        </div> 
+        </div>
         <div className="mb-5 relative">
-        
+
           <input
-              type={showPassword ? "text" : "password"}
-              placeholder="Password"
-              name="password"
-              value={formData.password}
-              onChange={handleInputChange}
-              className="w-full px-4 py-3 border-b-2 border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 text-headingColor placeholder:text-textColor rounded-md cursor-pointer"
-              required
-            />
-              <button
-              type="button"
-              onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-4 top-3 text-gray-500"
-            >
-              {showPassword ? <FaEyeSlash /> : <FaEye />}
-            </button>
+            type={showPassword ? "text" : "password"}
+            placeholder="Password"
+            name="password"
+            value={formData.password}
+            onChange={handleInputChange}
+            className="w-full px-4 py-3 border-b-2 border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 text-headingColor placeholder:text-textColor rounded-md cursor-pointer"
+            required
+          />
+          <button
+            type="button"
+            onClick={() => setShowPassword(!showPassword)}
+            className="absolute right-4 top-3 text-gray-500"
+          >
+            {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </button>
         </div>
         <div className="mt-7">
           <button type="submit" className="w-full bg-[#007e69] font-bold border-solid border-2 border-[#007e69] text-white text-[20px] leading-[30px] rounded-lg px-4 py-3 hover:bg-white hover:border-[#007e69] hover:border-solid  hover:text-[#007e69]">
@@ -120,7 +119,7 @@ const Login = () => {
 
         </p>
       </form>
-      </AnimateOnScroll>
+
 
 
     </div>

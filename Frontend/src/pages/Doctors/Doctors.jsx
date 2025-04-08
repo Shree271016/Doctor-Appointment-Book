@@ -7,7 +7,7 @@ import Error from "../../components/Error/Error";
 import { BASE_URL } from "./../../utils/config";
 import { useFetchData } from "./../../hooks/useFetchData";
 import { useEffect, useState } from "react";
-import AnimateOnScroll from "../../components/Animation/AnimateOnScroll";
+
 
 
 const Doctors = () => {
@@ -33,52 +33,49 @@ const Doctors = () => {
     <>
       <section className='bg-[#fff9ea]'>
         <div className='container text-center mt-6'>
-          <AnimateOnScroll delay={0.1} >
 
-            <h2 className='heading'>Find a Doctor</h2>
-          </AnimateOnScroll>
-          <AnimateOnScroll delay={0.2} >
 
-            <div className='max-w-[570px] mt-[30px] mx-auto bg-[#0066ff2c] rounded-md flex items-center justify-between'>
-              <input type="search" className='py-4 pl-4 pr-2 bg-transparent w-full focus:outline-none cursor-pointer placeholder:text-textColor' placeholder='Search Doctor Dr by Name or Specification'
-                value={query} onChange={e => setQuery(e.target.value)} />
-              <button className='btn mt-0 rounded-[0px] rounded-r-md' onClick={handleSearch}>Search
-              </button>
-            </div>
-          </AnimateOnScroll>
+          <h2 className='heading'>Find a Doctor</h2>
+
+
+          <div className='max-w-[570px] mt-[30px] mx-auto bg-[#0066ff2c] rounded-md flex items-center justify-between'>
+            <input type="search" className='py-4 pl-4 pr-2 bg-transparent w-full focus:outline-none cursor-pointer placeholder:text-textColor' placeholder='Search Doctor Dr by Name or Specification'
+              value={query} onChange={e => setQuery(e.target.value)} />
+            <button className='btn mt-0 rounded-[0px] rounded-r-md' onClick={handleSearch}>Search
+            </button>
+          </div>
+
 
         </div>
       </section>
       <section >
-        <AnimateOnScroll delay={0.3} >
-          <div className="container">
 
-            {loading && <Loader />}
-            {error && <Error />}
+        <div className="container">
 
-            {!loading && !error && (<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 '>{doctors.map((doctor) => <DoctorCard key={doctor.id} doctor={doctor} />)}</div>)}
-          </div>
-        </AnimateOnScroll>
+          {loading && <Loader />}
+          {error && <Error />}
+
+          {!loading && !error && (<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 '>{doctors.map((doctor) => <DoctorCard key={doctor.id} doctor={doctor} />)}</div>)}
+        </div>
+
 
       </section>
 
       <section>
         <div className="container">
           <div className="xl:w-[470px] mx-auto">
-            <AnimateOnScroll delay={0.1} >
 
-              <h2 className="heading text-center "> Our Patients Speak</h2>
-            </AnimateOnScroll>
-            <AnimateOnScroll delay={0.2} >
+            <h2 className="heading text-center "> Our Patients Speak</h2>
 
-              <p className="text__para text-center"> World-class care for everyone. Experience compassionate, personalized health care tailored to your needs.</p>
-            </AnimateOnScroll>
+
+            <p className="text__para text-center"> World-class care for everyone. Experience compassionate, personalized health care tailored to your needs.</p>
+
 
           </div>
-          <AnimateOnScroll delay={0.3} >
 
-            <Testimonial />
-          </AnimateOnScroll>
+
+          <Testimonial />
+
 
         </div>
 

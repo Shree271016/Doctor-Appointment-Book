@@ -1,17 +1,17 @@
 import medicareplus from "../assets/images/medicareplus.png";
-import AnimateOnScroll from "../AnimateOnScroll";
+
 
 const Contact = () => {
   return (
     <section className='py-2 pt-28'>
-      <AnimateOnScroll delay={0.1} >
+
 
       <div className='flex flex-col md:flex-row items-center justify-between  px-10 mx-auto max-w-screen-2xl gap-8'>
         <div className='w-full  mb-6 md:mb-0 mr-6 '>
-          <img 
-           src={medicareplus} 
-            alt='Contact Us' 
-            className='w-full rounded-lg shadow-lg' 
+          <img
+            src={medicareplus}
+            alt='Contact Us'
+            className='w-full rounded-lg shadow-lg'
           />
         </div>
 
@@ -20,7 +20,7 @@ const Contact = () => {
           <p className='mb-6 lg:mb-10 font-light text-center md:text-left text__para'>
             Encountering a technical issue? Feedback on a beta feature? We&apos;d love to hear from you!
           </p>
-          <form action="#" className='space-y-6'> 
+          <form action="#" className='space-y-6'>
             <div>
               <label htmlFor="email" className='form__label'>Your Email : </label>
               <input type="email" id='email' placeholder='example@gmail.com' className='form__input ' />
@@ -39,7 +39,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      </AnimateOnScroll>
+
     </section>
   );
 };

@@ -3,7 +3,7 @@ import { BiMenu } from "react-icons/bi";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../../context/AuthContext";
-import AnimateOnScroll from "../../components/Animation/AnimateOnScroll";
+
 
 const Tabs = ({ tab, setTab }) => {
 
@@ -16,7 +16,7 @@ const Tabs = ({ tab, setTab }) => {
   }
 
   return (
-      <AnimateOnScroll >
+
     <div>
       <span className="lg:hidden">
         <BiMenu className="w-6 h-6 cursor-pointer" />
@@ -26,8 +26,8 @@ const Tabs = ({ tab, setTab }) => {
         <button
           onClick={() => setTab("overview")}
           className={`${tab === "overview"
-              ? "bg-indigo-100 text-[rgb(0,126,105)]"
-              : "bg-transparent text-headingColor"
+            ? "bg-indigo-100 text-[rgb(0,126,105)]"
+            : "bg-transparent text-headingColor"
             } w-full btn mt-0 rounded-md`}
         >
           Overview
@@ -36,8 +36,8 @@ const Tabs = ({ tab, setTab }) => {
         <button
           onClick={() => setTab("appointments")}
           className={`${tab === "appointments"
-              ? "bg-indigo-100 text-[rgb(0,126,105)]"
-              : "bg-transparent text-headingColor"
+            ? "bg-indigo-100 text-[rgb(0,126,105)]"
+            : "bg-transparent text-headingColor"
             } w-full btn mt-0 rounded-md`}
         >
           Appointments
@@ -46,8 +46,8 @@ const Tabs = ({ tab, setTab }) => {
         <button
           onClick={() => setTab("settings")}
           className={`${tab === "settings"
-              ? "bg-indigo-100 text-[rgb(0,126,105)]"
-              : "bg-transparent text-headingColor"
+            ? "bg-indigo-100 text-[rgb(0,126,105)]"
+            : "bg-transparent text-headingColor"
             } w-full btn mt-0 rounded-md`}
         >
           Profile
@@ -66,7 +66,7 @@ const Tabs = ({ tab, setTab }) => {
         </div>
       </div>
     </div>
-    </AnimateOnScroll>
+
   )
 }
 

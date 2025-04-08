@@ -6,7 +6,7 @@ import { BASE_URL } from '../utils/config';
 import { toast } from "react-toastify";
 import HashLoader from "react-spinners/HashLoader";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import AnimateOnScroll from '../components/Animation/AnimateOnScroll';
+
 
 
 const Signup = () => {
@@ -85,13 +85,13 @@ const Signup = () => {
         </div>
         {/* sign up form */}
         <div className='rounded-l-lg lg:pl-16 py-10'>
-    <AnimateOnScroll delay={0.1} >
+   
 
           <h3 className='text-headingColor text-[22px] leading-9 font-bold mb-10'>
             Create an <span className='text-[#007e69] '>Account</span>
           </h3>
-          </AnimateOnScroll>
-    <AnimateOnScroll delay={0.2} >
+     
+   
 
           <form onSubmit={submitHandler}>
             <div className="mb-5">
@@ -188,7 +188,7 @@ const Signup = () => {
             </p>
 
           </form>
-          </AnimateOnScroll>
+         
         </div>
       </div>
     </div>
