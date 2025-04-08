@@ -19,7 +19,8 @@ const port = process.env.PORT || 5000;
 
 
 const corsOptions = {
-    origin: true,
+    origin: ["https://medicareplus-nine.vercel.app"],
+    methods: ["POST", "GET"],
     credentials: true,
   };
 
