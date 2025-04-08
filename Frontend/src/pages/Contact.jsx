@@ -1,5 +1,5 @@
 import medicareplus from "../assets/images/medicareplus.png";
-import AnimateOnScroll from "../Animation/AnimateOnScroll";
+import AnimateOnScroll from "../AnimateOnScroll";
 
 const Contact = () => {
   return (

@@ -4,7 +4,7 @@ import medicareplus from "../assets/images/medicareplus.png";
 import shree from "../assets/images/shree.png";
 import kasmita2 from "../assets/images/kasmita2.jpg";
 import homeImage from "../assets/images/homeImage.webp";
-import AnimateOnScroll from '../Animation/AnimateOnScroll';
+import AnimateOnScroll from '../AnimateOnScroll';
 
 const Blog = () => {
     return (
