@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { BASE_URL } from "../utils/config";
 import { toast } from "react-toastify";
-import { authContext } from "../context/authContext";
+import { authContext } from "../context/AuthContext";
 import HashLoader from "react-spinners/HashLoader";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import AnimateOnScroll from "../components/AnimateOnScroll";

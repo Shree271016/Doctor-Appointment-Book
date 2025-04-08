@@ -2,7 +2,7 @@
 import { BiMenu } from "react-icons/bi";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { authContext } from "../../context/authContext";
+import { authContext } from "../../context/AuthContext";
 import AnimateOnScroll from "../../components/AnimateOnScroll";
 
 const Tabs = ({ tab, setTab }) => {

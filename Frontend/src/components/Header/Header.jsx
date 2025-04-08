@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import { NavLink, Link } from "react-router-dom";
 import { MdMenu, MdDarkMode, MdLightMode, MdClose } from 'react-icons/md';
-import { authContext } from '../../context/authContext';
+import { authContext } from '../../context/AuthContext';
 
 const navLinks = [
   { path: '/home', display: 'Home' },
