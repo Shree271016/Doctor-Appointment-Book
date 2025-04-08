@@ -1,24 +1,24 @@
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react/prop-types */
 
 import { useEffect, createContext, useReducer } from "react";
 
 const initialState = {
-    user: localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')):null,
+    user: localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null,
     role: localStorage.getItem('role') || null,
-    token:localStorage.getItem('token') || null,
-    
+    token: localStorage.getItem('token') || null,
 };
- export const authContext = createContext(initialState);
+
+
+export const authContext = createContext(initialState);
 
 const authReducer = (state, action) => {
-
     switch (action.type) {
         case 'LOGIN_START':
-
             return {
                 user: null,
                 role: null,
                 token: null,
-
             };
         case "LOGIN_SUCCESS":
             return {
@@ -26,32 +26,30 @@ const authReducer = (state, action) => {
                 token: action.payload.token,
                 role: action.payload.role,
             };
-
         case 'LOGOUT':
             return {
                 user: null,
                 role: null,
                 token: null,
-
             };
         default:
             return state;
     }
-
 };
 
 
-export const AuthContextProvider = ({children})=>{
-    const [state,dispatch] = useReducer(authReducer,initialState)
+export const AuthContextProvider = ({ children }) => {
+    const [state, dispatch] = useReducer(authReducer, initialState);
 
-    useEffect(()=>{
-        localStorage.setItem("user",JSON.stringify(state.user));
-        localStorage.setItem("token",state.token);
-        localStorage.setItem("role",state.role);
-    },[state]);
+    useEffect(() => {
+        localStorage.setItem("user", JSON.stringify(state.user));
+        localStorage.setItem("token", state.token);
+        localStorage.setItem("role", state.role);
+    }, [state]);
 
-
-    return <authContext.Provider value={{user:state.user, token:state.token,role:state.role,dispatch}}>
-        {children}
-    </authContext.Provider>
+    return (
+        <authContext.Provider value={{ user: state.user, token: state.token, role: state.role, dispatch }}>
+            {children}
+        </authContext.Provider>
+    );
 };
