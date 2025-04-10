@@ -35,7 +35,7 @@ const Doctors = () => {
         <div className='container text-center mt-6'>
 
 
-          <h2 className='heading'>Find a Doctor</h2>
+          <h2 className='heading animate-rotate-bounce'>Find a Doctor</h2>
 
 
           <div className='max-w-[570px] mt-[30px] mx-auto bg-[#0066ff2c] rounded-md flex items-center justify-between'>

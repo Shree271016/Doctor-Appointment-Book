@@ -11,7 +11,7 @@ const Contact = () => {
           <img
             src={medicareplus}
             alt='Contact Us'
-            className='w-full rounded-lg shadow-lg'
+            className='w-full rounded-lg shadow-lg animate-scale-up'
           />
         </div>
 

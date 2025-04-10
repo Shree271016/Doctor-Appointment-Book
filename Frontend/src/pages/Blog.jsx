@@ -11,7 +11,7 @@ const Blog = () => {
         <div className="container mx-auto p-6 pt-32">
 
 
-            <h1 className="text-3xl font-bold text-center mb-6 leading-tight slide-in-text">Revolutionizing Healthcare with Our Doctor Appointment Booking App</h1>
+            <h1 className="text-3xl font-bold text-center mb-6 leading-tight animate-slide-in">Revolutionizing Healthcare with Our Doctor Appointment Booking App</h1>
 
 
 

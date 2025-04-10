@@ -5,12 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   safelist: [
-    'slide-in-text',
-    'continuous-scale-text',
-    'rotate-bounce',
-    'hover-animate-text',
+    'animate-slide-in',
+    'animate-scale-up',
+    'animate-rotate-bounce',
+    'animate-hover-pulse',
   ],
-  darkMode: 'class', 
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -18,21 +18,32 @@ export default {
         yellowColor: '#FEB60D',
         purpleColor: '#9771FF',
         irisBlueColor: '#01B5C5',
-        headingColor : '#181A1E',
-        textColor : '#4E545F',
+        headingColor: '#181A1E',
+        textColor: '#4E545F',
       },
-
-      boxShadow:{
-        planeShadow:"rgba(17,12,46,0.15) 0px 48px 100px 0px",
-        },
-        keyframes: {
-          slideIn: {
-            '0%': { transform: 'translateX(-100%)' },
-            '100%': { transform: 'translateX(0)' },
+      boxShadow: {
+        planeShadow: "rgba(17,12,46,0.15) 0px 48px 100px 0px",
+      },
+      keyframes: {
+        slideIn: {
+          '0%': {
+            transform: 'translateX(-100%)',
+            opacity: 0,
+            color: '#B63E96', // Start with color #B63E96 (Purple)
           },
+          '50%': {
+            transform: 'translateX(0)',
+            opacity: 0.5, // Partially faded in
+            color: '#FEB60D', // Transition to color #FEB60D (Yellow)
+          },
+          '100%': {
+            transform: 'translateX(0)',
+            opacity: 1, // Fully visible
+            color: '#007e69', // End with color #007e69 (Green)
+          },},
           continuousScaleUp: {
-            '0%, 100%': { transform: 'scale(1)', opacity: '1' },
-            '50%': { transform: 'scale(1.1)', opacity: '1' },
+            '0%, 100%': { transform: 'scale(1)' },
+            '50%': { transform: 'scale(1.1)' },
           },
           rotateAndBounce: {
             '0%': { transform: 'rotate(0deg) scale(0.8)', opacity: '0' },
@@ -50,15 +61,9 @@ export default {
           'slide-in': 'slideIn 3s ease-out infinite',
           'scale-up': 'continuousScaleUp 3s ease-in-out infinite',
           'rotate-bounce': 'rotateAndBounce 3s ease-out infinite',
-          'hover-pulse': 'hoverPulse 0.6s ease-in-out',
+          'hover-pulse': 'hoverPulse 1s ease-in-out',
         }
-
-
-
+      },
     },
-
-
-  },
-  plugins: [],
-}
-
+    plugins: [],
+  }
