@@ -3,25 +3,20 @@ import { AiOutlineArrowUp } from 'react-icons/ai';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Routers from '../routes/Routers';
+import ScrollToTop from '../components/ScrollTop/ScrollToTop';
 
 const Layout = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show button when page is scrolled down
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(window.pageYOffset > 300);
     };
 
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  // Scroll to top handler
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -31,12 +26,13 @@ const Layout = () => {
 
   return (
     <>
-      <Header/>
-      <main >
+      <ScrollToTop /> 
+      <Header />
+      <main>
         <Routers />
       </main>
       <Footer />
-      
+
       {isVisible && (
         <button
           onClick={scrollToTop}
