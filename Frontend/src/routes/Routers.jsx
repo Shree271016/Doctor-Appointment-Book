@@ -9,7 +9,6 @@ import DoctorDetails from '../pages/Doctors/DoctorDetails';
 import MyAccount from '../Dashboard/user-account/MyAccount';
 import Dashboard from '../Dashboard/doctor-account/Dashboard';
 import CheckoutSuccess from '../pages/Doctors/CheckoutSuccess';
-
 import { Routes, Route } from 'react-router-dom';
 import ProtectedRoute from './ProtectedRoute';
 import Blog from '../pages/Blog';

@@ -21,10 +21,7 @@ createRoot(document.getElementById('root')).render(
           pauseOnHover={false}
           closeButton={true}
         />
-   
         <App />
-
-     
       </AuthContextProvider>
     </BrowserRouter>
   </React.StrictMode>

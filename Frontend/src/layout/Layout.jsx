@@ -33,7 +33,7 @@ const Layout = () => {
     <>
       <Header />
       <main>
-        <ScrollToTop />
+        <ScrollToTop /> 
         <Routers />
       </main>
       <Footer />
