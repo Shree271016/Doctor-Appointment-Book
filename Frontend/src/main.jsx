@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContextProvider } from './context/AuthContext.jsx'; 
 
+
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
@@ -20,7 +21,10 @@ createRoot(document.getElementById('root')).render(
           pauseOnHover={false}
           closeButton={true}
         />
+   
         <App />
+
+     
       </AuthContextProvider>
     </BrowserRouter>
   </React.StrictMode>
