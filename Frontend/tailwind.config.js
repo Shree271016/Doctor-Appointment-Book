@@ -58,9 +58,9 @@ export default {
           }
         },
         animation: {
-          'slide-in': 'slideIn 3s ease-out infinite',
-          'scale-up': 'continuousScaleUp 3s ease-in-out infinite',
-          'rotate-bounce': 'rotateAndBounce 3s ease-out infinite',
+          'slide-in': 'slideIn 4s ease-out infinite',
+          'scale-up': 'continuousScaleUp 4s ease-in-out infinite',
+          'rotate-bounce': 'rotateAndBounce 4s ease-out infinite',
           'hover-pulse': 'hoverPulse 1s ease-in-out',
         }
       },
