@@ -8,7 +8,7 @@ const FaqItem = ({ item }) => {
     return (
       <div className={`group p-6 lg:p-7 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 ${isOpen ? 'border-[#007e69]' : 'border-transparent'}`}>
         <div 
-          className="flex items-center justify-between gap-5 cursor-pointer"
+          className="flex items-center justify-between gap-5 cursor-pointer  hover:animate-hover-pulse"
           onClick={() => setIsOpen(!isOpen)}
         >
           <h4 className="text-lg lg:text-xl font-semibold text-[#003a33] transition-colors group-hover:text-[#007e69]">

@@ -29,13 +29,13 @@ const Dashboard = () => {
               <div className="lg:col-span-2 bg-[rgb(255,255,255)]">
 
 
-                <h1 className="text-2xl font-bold">Welcome, Dr. {data.name}</h1>
+                <h1 className="text-2xl font-bold animate-rotate-bounce">Welcome, Dr. {data.name}</h1>
 
 
 
                 {data.isApproved === "pending" && (
                   <div className="flex p-4 mb-4 text-yellow-800 bg-yellow-50 rounded-lg">
-                    <div className="ml-3 text-sm font-bold"> &#10162; 👆  To get approval please complete your profile. We&apos;ll review manually and approve within 3 days.
+                    <div className="ml-3 text-sm font-bold animate-scale-up"> &#10162; 👆  To get approval please complete your profile. We&apos;ll review manually and approve within 3 days.
                     </div>
                   </div>
                 )}

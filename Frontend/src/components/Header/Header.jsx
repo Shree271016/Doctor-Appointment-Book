@@ -94,9 +94,9 @@ const Header = () => {
                 key={index}
                 to={link.path}
                 className={({ isActive }) =>
-                  `text-lg font-medium transition-colors ${isActive
+                  `text-lg font-medium transition-colors  ${isActive
                     ? 'text-[#007e69] dark:text-emerald-400'
-                    : 'text-gray-600 dark:text-gray-300 hover:text-[#007e69] dark:hover:text-emerald-400'
+                    : 'text-gray-600 dark:text-gray-300 hover:text-[#007e69] dark:hover:text-emerald-400 hover:animate-hover-pulse'
                   }`
                 }
               >
@@ -123,7 +123,7 @@ const Header = () => {
             {token && user ? (
               <Link
                 to={`${role === "doctor" ? "/doctors/profile/me" : "/users/profile/me"}`}
-                className="hidden sm:flex items-center gap-2 hover:opacity-80 transition-opacity"
+                className="hidden sm:flex items-center gap-2 hover:opacity-80 transition-opacity hover:animate-hover-pulse"
               >
                 <img
                   src={user?.photo}

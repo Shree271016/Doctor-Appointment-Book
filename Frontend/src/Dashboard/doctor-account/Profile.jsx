@@ -228,7 +228,7 @@ const Profile = ({ doctorData }) => {
         </div>
 
         <div className='mb-5'>
-          <p className='form__label font-bold text-xl text-[rgb(0,126,105)]'>Qualificaitons:*</p>
+          <p className='form__label font-bold text-xl text-[rgb(0,126,105)] animate-scale-up'>Qualificaitons:*</p>
           {formData.qualifications?.map((item, index) => (
             <div key={index}>
               <div>
@@ -262,7 +262,7 @@ const Profile = ({ doctorData }) => {
         </div>
 
         <div className='mb-5'>
-          <p className='form__label font-bold text-xl  text-[rgb(0,126,105)]'>Experiences:*</p>
+          <p className='form__label font-bold text-xl  text-[rgb(0,126,105)] animate-scale-up'>Experiences:*</p>
           {formData.experiences?.map((item, index) => (
             <div key={index}>
               <div>
@@ -292,7 +292,7 @@ const Profile = ({ doctorData }) => {
               </div>
             </div>
           ))}
-          <button onClick={addExperience} className='bg-[rgb(0,126,5)] px-2 py-3 rounded text-white h-fit cursor-pointer'>Add Experience</button>
+          <button onClick={addExperience} className='bg-[rgb(0,126,5)] px-2 py-3 rounded text-white h-fit cursor-pointer '>Add Experience</button>
         </div>
 
         <div className='mb-5'>
@@ -330,11 +330,11 @@ const Profile = ({ doctorData }) => {
               </div>
             </div>
           ))}
-          <button onClick={addTimeSlot} className='bg-[rgb(0,126,5)] px-2 py-3 rounded text-white h-fit cursor-pointer'>Add TimeSlots</button>
+          <button onClick={addTimeSlot} className='bg-[rgb(0,126,5)] px-2 py-3 rounded text-white h-fit cursor-pointer animate-scale-up'>Add TimeSlots</button>
         </div>
 
         <div className='mb-5'>
-          <p className='form__label font-bold text-xl text-center text-[rgb(0,126,105)]'>About:*</p>
+          <p className='form__label font-bold text-xl text-center text-[rgb(0,126,105)] animate-scale-up'>About:*</p>
           <textarea name="about" rows={5} value={formData.about} placeholder='Write about you ...' onChange={handleInputChange} className='form__input'></textarea>
         </div>
 
@@ -360,7 +360,7 @@ const Profile = ({ doctorData }) => {
           </div>
         </div>
         <div className='mt-7'>
-          <button type='submit' onClick={updateProfileHandler} className='bg-[rgb(0,126,105)] text-white text-[20px] leading-[30px] w-full py-3 px-4 rounded-lg'>Update Profile</button>
+          <button type='submit' onClick={updateProfileHandler} className='bg-[rgb(0,126,105)] text-white text-[20px] leading-[30px] w-full py-3 px-4 rounded-lg animate-scale-up'>Update Profile</button>
 
         </div>
 

@@ -42,21 +42,21 @@ const Home = () => {
                     </p>
                     <div className="space-y-3">
 
-                      <div className="flex items-start gap-3">
+                      <div className="flex items-start gap-3 hover:animate-hover-pulse">
                         <CheckCircleIcon className="w-6 h-6 text-green-600 flex-shrink-0" />
                         <div>
                           <h3 className="font-semibold text-gray-800">Instant Appointments</h3>
                           <p className="text-sm">Book same-day consultations with top specialists</p>
                         </div>
                       </div>
-                      <div className="flex items-start gap-3">
+                      <div className="flex items-start gap-3 hover:animate-hover-pulse">
                         <UserCircleIcon className="w-6 h-6 text-blue-600 flex-shrink-0" />
                         <div>
                           <h3 className="font-semibold text-gray-800">Verified Doctors</h3>
                           <p className="text-sm">Detailed profiles with qualifications and reviews</p>
                         </div>
                       </div>
-                      <div className="flex items-start gap-3">
+                      <div className="flex items-start gap-3 hover:animate-hover-pulse">
                         <CreditCardIcon className="w-6 h-6 text-purple-600 flex-shrink-0" />
                         <div>
                           <h3 className="font-semibold text-gray-800">Secure Payments</h3>
@@ -79,15 +79,15 @@ const Home = () => {
                   </Link>
                 </div>
                 <div className="grid grid-cols-3 divide-x divide-gray-200 border border-gray-200 rounded-lg py-4">
-                  <div className="text-center px-4">
+                  <div className="text-center px-4 hover:animate-hover-pulse">
                     <p className="text-3xl font-bold text-[#007e69]">30+</p>
                     <p className="text-sm font-medium text-gray-600">Years Experience</p>
                   </div>
-                  <div className="text-center px-4">
+                  <div className="text-center px-4 hover:animate-hover-pulse">
                     <p className="text-3xl font-bold text-[#B63E96]">15+</p>
                     <p className="text-sm font-medium text-gray-600">Clinics Nationwide</p>
                   </div>
-                  <div className="text-center px-4">
+                  <div className="text-center px-4 hover:animate-hover-pulse">
                     <p className="text-3xl font-bold text-[#37d892]">100%</p>
                     <p className="text-sm font-medium text-gray-600">Patient Satisfaction</p>
                   </div>
@@ -117,7 +117,7 @@ const Home = () => {
               Providing the best medical services
             </h2>
 
-            <p className="text__para text-center">World-class care for everyone. Our health System offers unmatched,expert health care</p>
+            <p className="text__para text-center hover:animate-hover-pulse">World-class care for everyone. Our health System offers unmatched,expert health care</p>
 
           </div>
 
@@ -125,18 +125,18 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px] pb-10">
             <div className=" px-5">
               <div className="flex items-center justify-center h-[200px]">
-                <img src="https://media.istockphoto.com/id/489779612/photo/doctor-holding-stethoscope-in-hand.jpg?s=1024x1024&w=is&k=20&c=Fk5QEzwe4Daa5UB1PZFXUY36fxJ8TACun_VcUGcqnSg=" alt="" className="w-full max-w-[200px] h-auto rounded-lg shadow-lg object-cover" />
+                <img src="https://media.istockphoto.com/id/489779612/photo/doctor-holding-stethoscope-in-hand.jpg?s=1024x1024&w=is&k=20&c=Fk5QEzwe4Daa5UB1PZFXUY36fxJ8TACun_VcUGcqnSg=" alt="" className="w-full max-w-[200px] h-auto rounded-lg shadow-lg object-cover animate-scale-up" />
               </div>
               <div className="mt-[30px]">
-                <h2 className="text-[26px] landing-9 text-headingColor font-[700] text-center"> Find a Doctor</h2>
+                <h2 className="text-[26px] landing-9 text-headingColor font-[700] text-center hover:animate-hover-pulse"> Find a Doctor</h2>
                 <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center "> World class care for everyone. Our health offers unmatched,expert health care. </p>
-                <Link to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[35px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none ">
+                <Link to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[35px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none animate-scale-up">
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </Link>
               </div>
             </div>
             <div className=" px-5">
-              <div className="flex items-center justify-center h-[200px]">
+              <div className="flex items-center justify-center h-[200px] animate-scale-up">
                 <img
                   src={medicareplus}
                   alt="Medicare+ Hospital"
@@ -144,7 +144,7 @@ const Home = () => {
                 />
               </div>
               <div className="mt-[30px]">
-                <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">Find a Location</h2>
+                <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center hover:animate-hover-pulse">Find a Location</h2>
                 <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
                   MedicarePlus Hospital Pvt. Ltd.<br />
                   <span className="text-[16px] cursor-pointer inline-block mt-3">
@@ -155,7 +155,7 @@ const Home = () => {
                   href="https://www.shreekrishnapudasaini.com.np/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[30px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none continuous-scale-text"
+                  className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[30px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none t animate-scale-up"
                 >
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </a>
@@ -164,12 +164,12 @@ const Home = () => {
 
             <div className=" pt-1 px-5">
               <div className="flex items-center justify-center h-[200px]">
-                <img src="https://media.istockphoto.com/id/2147709938/photo/doctor-working-on-laptop-computer-and-tablet-and-medical-stethoscope-on-clipboard-on-desk.jpg?s=1024x1024&w=is&k=20&c=RyXhH87EF18FgqOeKjfKwPIjRKoo7k-wtvujetnZl88=" alt="" className="w-full max-w-[200px] h-[200px] rounded-lg shadow-lg object-cover" />
+                <img src="https://media.istockphoto.com/id/2147709938/photo/doctor-working-on-laptop-computer-and-tablet-and-medical-stethoscope-on-clipboard-on-desk.jpg?s=1024x1024&w=is&k=20&c=RyXhH87EF18FgqOeKjfKwPIjRKoo7k-wtvujetnZl88=" alt="" className="w-full max-w-[200px] h-[200px] rounded-lg shadow-lg object-cover animate-scale-up" />
               </div>
               <div className="mt-[30px]">
-                <h2 className="text-[26px] landing-9 text-headingColor font-[700] text-center"> Book an Appointment</h2>
+                <h2 className="text-[26px] landing-9 text-headingColor font-[700] text-center hover:animate-hover-pulse"> Book an Appointment</h2>
                 <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center "> Experience expert care at Medicare+ with skilled professionals and advanced facilities.</p>
-                <Link to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[30px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none">
+                <Link to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[30px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none animate-scale-up">
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </Link>
               </div>
@@ -188,7 +188,7 @@ const Home = () => {
             <h2 className="heading text-center animate-slide-in"> Our Medical Services</h2>
 
 
-            <p className="text__para text-center">
+            <p className="text__para text-center ">
               World-class care for everyone. Our helath System offers unmatched,expert health care.
             </p>
 
@@ -208,7 +208,7 @@ const Home = () => {
           <div className="flex flex-col lg:flex-row items-center gap-12 xl:gap-24">
 
             <div className="xl:w-[670px] relative z-10 order-2 lg:order-1">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#003366] mb-8 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#003366] mb-8 leading-tight animate-slide-in">
                 Get Virtual Treatment <br />
                 <span className="bg-gradient-to-r from-[#007e69] to-[#00a88b] bg-clip-text text-transparent">
                   Anytime
@@ -221,7 +221,7 @@ const Home = () => {
                     <div className="w-8 h-8 bg-[#007e69] rounded-full flex items-center justify-center text-white font-bold shrink-0">
                       {item}
                     </div>
-                    <p className="text-lg text-[#4a5957] leading-relaxed transition-all group-hover:text-[#003366]">
+                    <p className="hover:animate-hover-pulse  text-lg text-[#4a5957] leading-relaxed transition-all group-hover:text-[#003366]">
                       {item === 1 && "Schedule the appointment directly."}
                       {item === 2 && "Search for your physician here, and contact their office."}
                       {item === 3 && "View our physicians who are accepting new patients, use the online scheduling tool to select an appointment time."}
@@ -231,7 +231,7 @@ const Home = () => {
               </ul>
 
               <Link to="/doctors/67e57087e4429f939241421e">
-                <button className="px-8 py-4 bg-gradient-to-r from-[#007e69] to-[#00a88b] text-white rounded-full font-semibold hover:from-[#00a88b] hover:to-[#007e69] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-3">
+                <button className="px-8 py-4 bg-gradient-to-r from-[#007e69] to-[#00a88b] text-white rounded-full font-semibold hover:from-[#00a88b] hover:to-[#007e69] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-3 animate-scale-up">
                   Learn More
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
@@ -252,7 +252,7 @@ const Home = () => {
               </div>
 
 
-              <div className="absolute -bottom-8 left-8 w-[280px] bg-white shadow-2xl rounded-2xl p-4 transform hover:-translate-y-2 transition-all duration-300 z-20">
+              <div className="absolute -bottom-8 left-8 w-[280px] bg-white shadow-2xl rounded-2xl p-4 transform hover:-translate-y-2 transition-all duration-300 z-20 animate-scale-up">
                 <div className="flex items-center justify-between mb-3">
                   <div className="space-y-1">
                     <p className="text-lg font-bold text-[#003366]">Thu, 24</p>
@@ -293,7 +293,7 @@ const Home = () => {
 
 
 
-            <p className="text__para text-center"> World-class care for everyone. Dedicated to providing expert care with compassion and precision.</p>
+            <p className="text__para text-center hover:animate-hover-pulse"> World-class care for everyone. Dedicated to providing expert care with compassion and precision.</p>
 
 
           </div>
@@ -317,14 +317,14 @@ const Home = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#007e69]/40 to-transparent" />
             <div className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold text-[#003a33] mb-2">Have Questions?</h3>
-              <p className="text-[#4a5957]">Our team is always ready to help with any inquiries</p>
+              <h3 className="text-2xl font-bold text-[#003a33] mb-2 animate-scale-up">Have Questions?</h3>
+              <p className="text-[#4a5957] animate-scale-up">Our team is always ready to help with any inquiries</p>
             </div>
           </div>
 
 
           <div className="w-full space-y-8">
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#003a33] mb-8 leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold text-[#003a33] mb-8 leading-tight animate-rotate-bounce">
               Most questions by our<br className="hidden lg:block" /> beloved patients
             </h2>
 
@@ -340,7 +340,7 @@ const Home = () => {
         <div className="container">
           <div className="xl:w[470px] mx-auto">
             <h2 className="heading text-center animate-slide-in "> Our Patients Speak</h2>
-            <p className="text__para text-center"> World-class care for everyone. Experience compassionate, personalized health care tailored to your needs.</p>
+            <p className="text__para text-center hover:animate-hover-pulse"> World-class care for everyone. Experience compassionate, personalized health care tailored to your needs.</p>
 
 
           </div>

@@ -9,7 +9,7 @@ const Appointments = ({ appointments }) => {
     return (
 
 
-        <table className="w-full text-left text-sm text-gray-500">
+        <table className="w-full text-left text-sm text-gray-500 hover:animate-hover-pulse">
             <thead className="text-xs text-gray-700 uppercase bg-blue-100">
                 <tr>
                     <th className="px-6 py-3 border border-black">Patient Name</th>

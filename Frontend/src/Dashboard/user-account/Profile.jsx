@@ -77,7 +77,7 @@ const Profile = ({ user }) => {
 
       <form onSubmit={submitHandler}>
 
-        <div className="mb-5">
+        <div className="mb-5 hover:animate-hover-pulse">
           <input type="text"
             placeholder="Full Name"
             name="name"
@@ -87,7 +87,7 @@ const Profile = ({ user }) => {
             required
           />
         </div>
-        <div className="mb-5">
+        <div className="mb-5 hover:animate-hover-pulse">
           <input type="email"
             placeholder="Enter your email address"
             name="email"
@@ -98,7 +98,7 @@ const Profile = ({ user }) => {
             readOnly
           />
         </div>
-        <div className="mb-5">
+        <div className="mb-5 hover:animate-hover-pulse">
           <input type="password"
             placeholder="Password"
             name="password"
@@ -109,7 +109,7 @@ const Profile = ({ user }) => {
 
           />
         </div>
-        <div className="mb-5">
+        <div className="mb-5 hover:animate-hover-pulse">
           <input type="text"
             placeholder="Blood type"
             name="bloodType"
@@ -121,7 +121,7 @@ const Profile = ({ user }) => {
           />
         </div>
 
-        <div className='mb-5 flex items-center justify-between'>
+        <div className='mb-5 flex items-center justify-between hover:animate-hover-pulse'>
 
           <label className='text-headingColor font-bold text-[16px] leading-7 '>
             Gender : <select name="gender" value={formData.gender}
@@ -142,7 +142,7 @@ const Profile = ({ user }) => {
               />
             </figure>
           )}
-          <div className='relative w-[130px] h-[50px]'>
+          <div className='relative w-[130px] h-[50px] hover:animate-hover-pulse' >
             <input type="file"
               name='Photo'
               id='customFile'
@@ -155,7 +155,7 @@ const Profile = ({ user }) => {
           </div>
         </div>
 
-        <div className="mt-7">
+        <div className="mt-7 animate-scale-up">
           <button disabled={loading && true} type="submit" className="w-full bg-[#007e69] font-bold border-solid border-2 border-[#007e69] text-white text-[20px] leading-[30px] rounded-lg px-4 py-3  ">
             {loading ? <HashLoader size={25} color='#ffffff' /> : 'Update'}
           </button>

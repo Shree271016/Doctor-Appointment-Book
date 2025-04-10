@@ -16,7 +16,7 @@ const MyBookings = () => {
       {error && !loading && <Error errMessage={error} />}
 
       {!loading && !error && (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 hover:animate-hover-pulse">
           {appointments.map(doctor => (
             <DoctorCard doctor={doctor} key={doctor._id} />
           ))}
@@ -24,7 +24,7 @@ const MyBookings = () => {
       )}
       {
         !loading && !error && appointments.length === 0 && (
-          <h2 className="mt-5 text-center  leading-7 text-[22px] font-bold text-[rgb(0,126,108)]">
+          <h2 className="mt-5 text-center  leading-7 text-[22px] font-bold text-[rgb(0,126,108)] animate-scale-up">
             You did not book any doctor yet!
           </h2>
         )

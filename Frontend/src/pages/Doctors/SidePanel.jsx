@@ -41,24 +41,24 @@ const SidePanel = ({ doctorId, ticketPrice, timeSlots }) => {
     }
 
     return (
-        <div className="shadow-planeShadow p-3 mt-3 lg:p-5 rounded-md bg-white">
+        <div className="shadow-planeShadow p-3 mt-3 lg:p-5 rounded-md bg-white animate-scale-up">
             <div className="flex items-center justify-between">
                 <p className="text__para mt-0 font-semibold ">
                     Ticket Price
                 </p>
-                <span className="text-[16px] leading-7 lg:leading-8 text-headingColor font-bold ">Rs. {ticketPrice} |-
+                <span className="text-[16px] leading-7 lg:leading-8 text-headingColor font-bold hover:animate-hover-pulse">Rs. {ticketPrice} |-
                 </span>
             </div>
             <div className="mt-[30px]">
                 <p className="text__para mt-0 font-semibold text-headingColor">Available Time Slots:</p>
                 <ul className="mt-3">
                     {timeSlots?.map((item, index) =>
-                    (<li key={index} className="flex items-center justify-between mb-2">
+                    (<li key={index} className="flex items-center justify-between mb-2 hover:animate-hover-pulse">
                         <p className="text-[15px] leading-6 text-textColor font-semibold">
                             {item.day.charAt(0).toUpperCase() + item.day.slice(1)}
 
                         </p>
-                        <p className="text-[15px] leading-6 text-textColor font-semibold">
+                        <p className="text-[15px] leading-6 text-textColor font-semibold ">
                             {convertTime(item.startingTime)} - {convertTime(item.endingTime)}
 
                         </p>
@@ -70,15 +70,15 @@ const SidePanel = ({ doctorId, ticketPrice, timeSlots }) => {
 
             </div>
             {userRole !== "doctor" && (
-                <p className="text-red-600 font-bold">
+                <p className="text-red-600 font-bold ">
                     Now You Can Book for{" "}
-                    &nbsp;&nbsp; <span className="text-green-600 font-bold border-b border-green-500">
+                    &nbsp;&nbsp; <span className="text-green-600 font-bold border-b border-green-500 animate-scale-up">
                         {new Date(Date.now() + 86400000).toLocaleDateString()}
                     </span>
                 </p>
             )}
 
-            <button onClick={bookingHandler} className="btn px-2 w-full rounded-md">Book Appointment</button>
+            <button onClick={bookingHandler} className="btn px-2 w-full rounded-md animate-scale-up">Book Appointment</button>
 
         </div>
     )

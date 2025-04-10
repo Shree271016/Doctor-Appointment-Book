@@ -13,7 +13,7 @@ const Feedback = ({ reviews, totalRating }) => {
     <div>
       <div className='mb-[50px]'>
 
-        <h4 className='text-[20px] leading-[30px] font-bold text-headingColor mb-[30px] '>
+        <h4 className='text-[20px] leading-[30px] font-bold text-headingColor mb-[30px] animate-scale-up'>
           All review ({totalRating})
         </h4>
 
@@ -33,7 +33,7 @@ const Feedback = ({ reviews, totalRating }) => {
               <p className="text__ para mt-3 font-medium text-[15px]">{review.reviewText}</p>
             </div>
           </div>
-          <div className="flex gap-1">
+          <div className="flex gap-1 hover:animate-hover-pulse">
             {[...Array(review?.rating).keys()].map((_, index) => (
               <AiFillStar key={index} color='#0067FF' />
             ))}
@@ -46,7 +46,7 @@ const Feedback = ({ reviews, totalRating }) => {
       </div>
       {!showFeedbackForm && <div className="text-center">
 
-        <button className="btn mb-3" onClick={() => setShowFeedbackForm(true)}>Give Feedback</button>
+        <button className="btn mb-3 animate-scale-up" onClick={() => setShowFeedbackForm(true)}>Give Feedback</button>
 
       </div>}
 

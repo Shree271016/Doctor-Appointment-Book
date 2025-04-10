@@ -15,10 +15,11 @@ import testimonial8 from '../../assets/images/testimonial8.jpg'
 
 const Testimonial = () => {
     return (
-        <div className='mt-[30px] lg:mt-[55px] '>
+        <div className='mt-[30px] lg:mt-[55px] hover:animate-hover-pulse'>
             <Swiper modules={[Pagination, Autoplay]} spaceBetween={30} slidesPerView={1} pagination={{ clickable: true }} autoplay={{
                 delay: 2000,
                 disableOnInteraction: false,
+                
             }} breakpoints={{
                 640: {
                     slidesPerView: 1,

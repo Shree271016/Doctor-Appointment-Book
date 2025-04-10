@@ -9,7 +9,7 @@ const About = () => {
  
                 <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-20">
                     <div className="w-full lg:w-1/2 relative group">
-                        <div className="relative rounded-2xl overflow-hidden shadow-2xl transform group-hover:scale-[1.01] transition-all duration-300">
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl transform group-hover:scale-[1.01] transition-all duration-300 animate-scale-up">
                             <img 
                                 src={medicareplus} 
                                 alt="Medical Facility" 
@@ -17,7 +17,7 @@ const About = () => {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#007e69] to-transparent opacity-20" />
                         </div>
-                        <div className="absolute -bottom-6 -right-6 hidden lg:block">
+                        <div className="absolute -bottom-6 -right-6 hidden lg:block animate-scale-up">
                             <div className="bg-[#007e69] text-white px-8 py-4 rounded-full shadow-lg font-medium">
                                 Since 1994
                             </div>
@@ -35,7 +35,7 @@ const About = () => {
                             </div>
                             
                             <div className="space-y-6">
-                                <h2 className="text-4xl lg:text-5xl font-bold text-[#003a33] leading-tight">
+                                <h2 className="text-4xl lg:text-5xl font-bold text-[#003a33] leading-tight hover:animate-hover-pulse">
                                     Proud to be one of the nations best
                                 </h2>
                                 
@@ -51,7 +51,7 @@ const About = () => {
 
                                 <Link 
                                     to='/Services'
-                                    className="inline-flex items-center gap-3 px-8 py-4 bg-[#007e69] text-white rounded-full font-semibold hover:bg-[#00a88b] transition-all duration-300 shadow-md hover:shadow-lg group"
+                                    className="animate-scale-up inline-flex items-center gap-3 px-8 py-4 bg-[#007e69] text-white rounded-full font-semibold hover:bg-[#00a88b] transition-all duration-300 shadow-md hover:shadow-lg group"
                                 >
                                     <span>Learn More</span>
                                     <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">

@@ -93,10 +93,10 @@ const Footer = () => {
             </span>
           </div>
             </Link>
-            <p className="text-[16px] leading-7 font-[400] font-textColor mt-4">
+            <p className="text-[16px] leading-7 font-[400] font-textColor mt-4 hover:animate-hover-pulse">
               Copyright &#xa9; {year} developed by Shree krishna pudasaini all right reserved.
             </p>
-            <div className="flex items-center gap-3 mt-4">
+            <div className="flex items-center gap-3 mt-4 hover:animate-hover-pulse">
               {socialLinks.map((link, index) => (
                 <Link to={link.path} key={index} className="w-9 h-9 border border-solid border-[rgb(0,126,105)] rounded-full flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none">
                   {link.icon}
@@ -108,7 +108,7 @@ const Footer = () => {
 
 
           <div>
-            <h2 className="text-[20px] leading-[30px] font-[700] mb-6 text-headingColor">
+            <h2 className="text-[20px] leading-[30px] font-[700] mb-6 text-headingColor animate-scale-up">
               Quick Links
             </h2>
             <ul>
@@ -123,7 +123,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="text-[20px] leading-[30px] font-[700] mb-6 text-headingColor">
+            <h2 className="text-[20px] leading-[30px] font-[700] mb-6 text-headingColor animate-scale-up">
               I want to:
             </h2>
             <ul>
@@ -138,7 +138,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="text-[20px] leading-[30px] font-[700] mb-6 text-headingColor">
+            <h2 className="text-[20px] leading-[30px] font-[700] mb-6 text-headingColor animate-scale-up">
               Support
             </h2>
             <ul>

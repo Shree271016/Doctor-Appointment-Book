@@ -44,8 +44,8 @@ const MyAccount = () => {
 
 
               <div className="text-center mt-4 ">
-                <h3 className="text-[18px] leading-[30px] text-headingColor font-bold">{userData.name} </h3>
-                <p className="text-textColor text-[15px] leading-6 font-medium">{userData.email}</p>
+                <h3 className="text-[18px] leading-[30px] text-headingColor font-bold animate-rotate-bounce">{userData.name} </h3>
+                <p className="text-textColor text-[15px] leading-6 font-medium hover:animate-hover-pulse">{userData.email}</p>
                 <p className="text-textColor text-[15px] leading-6 font-medium">Blood Group : <span className="ml-2 text-headingColor text-[22px] leading-8">{userData.bloodType}
 
                 </span>
@@ -55,7 +55,7 @@ const MyAccount = () => {
 
 
               <div className="mt-[50px] md:mt[100px]">
-                <button onClick={handleLogout} className="w-full bg-[#181A1E] font-bold shadow-sm shadow-black p-3 text-[16px] leading-7 rounded-md text-white hover:text-[#181A1E] hover:bg-white hover:border border-solid hover:border-[#181A1E]">Logout
+                <button onClick={handleLogout} className="w-full bg-[#181A1E] font-bold shadow-sm shadow-black p-3 text-[16px] leading-7 rounded-md text-white hover:text-[#181A1E] hover:bg-white hover:border border-solid hover:border-[#181A1E] animate-scale-up">Logout
                 </button>
                 <button className="w-full font-bold shadow-sm shadow-red-600 bg-red-600 p-3 mt-3 text-[16px] leading-7 rounded-md text-white hover:text-red-600 hover:bg-white border-red-600 border-solid hover:border hover:border-red-600 ">Delete
                 </button>

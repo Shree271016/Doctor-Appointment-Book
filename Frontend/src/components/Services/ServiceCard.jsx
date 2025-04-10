@@ -16,16 +16,16 @@ const ServiceCard = ({ item, index }) => {
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-2xl font-bold text-gray-800 group-hover:text-[#007e69] transition-colors">
+        <h3 className="text-2xl font-bold text-gray-800 group-hover:text-[#007e69] transition-colors animate-scale-up">
           {name}
         </h3>
-        <p className="text-gray-600 leading-relaxed">{desc}</p>
+        <p className="text-gray-600 leading-relaxed hover:animate-hover-pulse">{desc}</p>
       </div>
 
       <div className="mt-6 flex items-center justify-between">
         <Link
           to="/doctors"
-          className="flex items-center gap-2 text-[#007e69] hover:text-[#005a4d] font-semibold transition-colors"
+          className="animate-scale-up flex items-center gap-2 text-[#007e69] hover:text-[#005a4d] font-semibold transition-colors"
         >
           Explore Service
           <BsArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
