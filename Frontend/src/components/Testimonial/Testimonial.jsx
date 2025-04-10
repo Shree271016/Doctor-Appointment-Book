@@ -3,8 +3,16 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import patientAvatar from '../../assets/images/patient-avatar.png'
 import { HiStar } from 'react-icons/hi'
+import testimonial1 from '../../assets/images/testimonial1.jpg'
+import testimonial2 from '../../assets/images/testimonial2.jpg'
+import testimonial13 from '../../assets/images/testimonial13.jpg'
+import testimonial14 from '../../assets/images/testimonial14.jpg'
+import testimonial15 from '../../assets/images/testimonial15.jpg'
+import testimonial6 from '../../assets/images/testimonial6.jpg'
+import testimonial7 from '../../assets/images/testimonial7.jpg'
+import testimonial8 from '../../assets/images/testimonial8.jpg'
+
 const Testimonial = () => {
     return (
         <div className='mt-[30px] lg:mt-[55px] '>
@@ -27,8 +35,8 @@ const Testimonial = () => {
             }}  >
                 <SwiperSlide>
                     <div className="py-[30px] px-5 rounded-3">
-                        <div className="flex items-center gap-[13px]">
-                            <img src={patientAvatar} alt="" />
+                        <div className="flex items-center gap-[13px] ">
+                            <img src={testimonial1} alt="" className='w-[50px] h-[40px]' />
                             <div ><h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>Anita Sharma</h4>
                                 <div className='flex items-center gap-[2px] '>
                                     <HiStar className='text-yellowColor w-[18px] h-5' />
@@ -51,7 +59,7 @@ const Testimonial = () => {
                 <SwiperSlide>
                     <div className="py-[30px] px-5 rounded-3">
                         <div className="flex items-center gap-[13px]">
-                            <img src={patientAvatar} alt="" />
+                            <img src={testimonial2} alt="" className='w-[50px] h-[40px]'/>
                             <div ><h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>Ravi Patel</h4>
                                 <div className='flex items-center gap-[2px] '>
                                     <HiStar className='text-yellowColor w-[18px] h-5' />
@@ -74,7 +82,7 @@ const Testimonial = () => {
                 <SwiperSlide>
                     <div className="py-[30px] px-5 rounded-3">
                         <div className="flex items-center gap-[13px]">
-                            <img src={patientAvatar} alt="" />
+                            <img src={testimonial13} alt="" className='w-[50px] h-[40px]'/>
                             <div ><h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>Sophia Khan</h4>
                                 <div className='flex items-center gap-[2px] '>
                                     <HiStar className='text-yellowColor w-[18px] h-5' />
@@ -97,7 +105,7 @@ const Testimonial = () => {
                 <SwiperSlide>
                     <div className="py-[30px] px-5 rounded-3">
                         <div className="flex items-center gap-[13px]">
-                            <img src={patientAvatar} alt="" />
+                            <img src={testimonial8} alt="" className='w-[50px] h-[40px]' />
                             <div ><h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>John Williams</h4>
                                 <div className='flex items-center gap-[2px] '>
                                     <HiStar className='text-yellowColor w-[18px] h-5' />
@@ -120,7 +128,7 @@ const Testimonial = () => {
                 <SwiperSlide>
                     <div className="py-[30px] px-5 rounded-3">
                         <div className="flex items-center gap-[13px]">
-                            <img src={patientAvatar} alt="" />
+                            <img src={testimonial14} alt="" className='w-[50px] h-[40px]' />
                             <div ><h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>Priya Mehta</h4>
                                 <div className='flex items-center gap-[2px] '>
                                     <HiStar className='text-yellowColor w-[18px] h-5' />
@@ -143,7 +151,7 @@ const Testimonial = () => {
                 <SwiperSlide>
                     <div className="py-[30px] px-5 rounded-3">
                         <div className="flex items-center gap-[13px]">
-                            <img src={patientAvatar} alt="" />
+                            <img src={testimonial15} alt="" className='w-[50px] h-[40px]' />
                             <div ><h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>Daniel Kim</h4>
                                 <div className='flex items-center gap-[2px] '>
                                     <HiStar className='text-yellowColor w-[18px] h-5' />
@@ -166,7 +174,7 @@ const Testimonial = () => {
                 <SwiperSlide>
                     <div className="py-[30px] px-5 rounded-3">
                         <div className="flex items-center gap-[13px]">
-                            <img src={patientAvatar} alt="" />
+                            <img src={testimonial6} alt="" className='w-[50px] h-[40px]' />
                             <div ><h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>Ayesha Siddiqui</h4>
                                 <div className='flex items-center gap-[2px] '>
                                     <HiStar className='text-yellowColor w-[18px] h-5' />
@@ -189,7 +197,7 @@ const Testimonial = () => {
                 <SwiperSlide>
                     <div className="py-[30px] px-5 rounded-3">
                         <div className="flex items-center gap-[13px]">
-                            <img src={patientAvatar} alt="" />
+                            <img src={testimonial7} alt="" className='w-[50px] h-[40px]' />
                             <div ><h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>Rajesh Bhandari</h4>
                                 <div className='flex items-center gap-[2px] '>
                                     <HiStar className='text-yellowColor w-[18px] h-5' />

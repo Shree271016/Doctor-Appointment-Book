@@ -28,16 +28,16 @@ const Home = () => {
             <div className="lg:w-[570px] space-y-6">
               <div className="space-y-6 ">
 
-                <h1 className='text-4xl md:text-5xl bg-gradient-to-r from-[#B63E96] to-[#007e69] mt-4 bg-clip-text text-transparent font-bold leading-tight'>
+                <h1 className="text-4xl md:text-5xl mt-4 font-bold leading-tight slide-in-text">
                   Empowering Your Health Journey
                 </h1>
 
                 <div className="space-y-6">
-                  <p className="text-lg font-semibold text-emerald-700 text-center md:text-left">
+                  <p className="text-lg font-semibold text-emerald-700 text-center md:text-left  scale-up-text  hover-animate-text">
                     Welcome to Medicare+
                   </p>
                   <div className="space-y-4 text-gray-600">
-                    <p className="text-lg">
+                    <p className="text-lg  hover-animate-text">
                       Discover a new era of healthcare with our comprehensive digital platform
                     </p>
                     <div className="space-y-3">
@@ -73,7 +73,7 @@ const Home = () => {
               <div className="flex flex-col gap-6">
                 <div className="flex justify-center md:justify-start">
                   <Link to="/doctors" className="inline-block">
-                    <button className="px-8 py-3 bg-gradient-to-r from-[#007e69] to-[#B63E96] text-white rounded-lg font-semibold hover:scale-105 transition-transform">
+                    <button className=" continuous-scale-text px-8 py-3 bg-gradient-to-r from-[#007e69] to-[#B63E96] text-white rounded-lg font-semibold hover:scale-105 transition-transform">
                       Book Your Consultation Now
                     </button>
                   </Link>
@@ -98,11 +98,11 @@ const Home = () => {
 
             <div className=" gap-[40px] justify-end grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
               <div>
-                <img className='w-full rounded-lg h-[70%]' src={kasmitapng} alt="" />
+                <img className='w-full rounded-lg h-[70%] continuous-scale-text' src={kasmitapng} alt="" />
               </div>
               <div className="">
-                <img className='w-full mb-[10px] h-[60%] rounded-2xl ' src={myAi2} alt="" />
-                <img className='w-full rounded-lg' src={doctor2} alt="" />
+                <img className='w-full mb-[10px] h-[60%] rounded-2xl continuous-scale-text' src={myAi2} alt="" />
+                <img className='w-full rounded-lg continuous-scale-text' src={doctor2} alt="" />
               </div>
             </div>
 
@@ -113,7 +113,7 @@ const Home = () => {
         <div className="container bg-[#f6f6f6]">
           <div className="lg:w-[470px] mx-auto">
 
-            <h2 className="heading text-center">
+            <h2 className="heading text-center slide-in-text">
               Providing the best medical services
             </h2>
 
@@ -130,7 +130,7 @@ const Home = () => {
               <div className="mt-[30px]">
                 <h2 className="text-[26px] landing-9 text-headingColor font-[700] text-center"> Find a Doctor</h2>
                 <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center "> World class care for everyone. Our health offers unmatched,expert health care. </p>
-                <Link to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[35px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none">
+                <Link to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[35px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none ">
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </Link>
               </div>
@@ -155,7 +155,7 @@ const Home = () => {
                   href="https://www.shreekrishnapudasaini.com.np/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[30px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none"
+                  className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[30px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none continuous-scale-text"
                 >
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </a>
@@ -185,7 +185,7 @@ const Home = () => {
           <div className="xl:w-[470px] mx-auto">
 
 
-            <h2 className="heading text-center "> Our Medical Services</h2>
+            <h2 className="heading text-center slide-in-text"> Our Medical Services</h2>
 
 
             <p className="text__para text-center">
@@ -289,7 +289,7 @@ const Home = () => {
           <div className="xl:w[470px] mx-auto">
 
 
-            <h2 className="heading text-center "> Meet Our Exceptional Doctors</h2>
+            <h2 className="heading text-center slide-in-text"> Meet Our Exceptional Doctors</h2>
 
 
 
@@ -339,11 +339,7 @@ const Home = () => {
       <section>
         <div className="container">
           <div className="xl:w[470px] mx-auto">
-
-
-            <h2 className="heading text-center "> Our Patients Speak</h2>
-
-
+            <h2 className="heading text-center slide-in-text "> Our Patients Speak</h2>
             <p className="text__para text-center"> World-class care for everyone. Experience compassionate, personalized health care tailored to your needs.</p>
 
 
