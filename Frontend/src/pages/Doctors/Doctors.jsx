@@ -32,7 +32,7 @@ const Doctors = () => {
   return (
 
     <>
-      <section className='relative min-h-screen overflow-hidden bg-fixed bg-no-repeat bg-center'>
+      <section className='relative py-20 overflow-hidden bg-fixed bg-no-repeat bg-center'>
         <div className="fixed inset-0 z-[-1] w-full h-full">
                   <img
                     className="w-full h-full object-cover object-top"
@@ -52,8 +52,7 @@ const Doctors = () => {
         </div>
       </section>
       <section >
-
-        <div className="container relative z-10">
+        <div className="relative -mt-24 z-10">
 
           {loading && <Loader />}
           {error && <Error />}

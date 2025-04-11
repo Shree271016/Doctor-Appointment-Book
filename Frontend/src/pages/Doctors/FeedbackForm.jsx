@@ -92,12 +92,12 @@ const FeedbackForm = () => {
                 <h3 className='text-headingColor text-[16px] leading-6 font-semibold mb-4 mt-0'>
                     Share your feedback or suggestions*
                 </h3>
-                <textarea name="" id="" className='border border-solid border-[#0066ff34] focus:outline outline-primaryColor w-full px-4 py-3 rounded-md' rows="5"
+                <textarea name="" id="" className='border border-solid border-[#0066ff34] bg-[#404c49]/40 text  focus:outline outline-primaryColor w-full px-4 py-3 rounded-md' rows="5"
                     placeholder='Write Your Message'
                     onChange={e => setReviewText(e.target.value)}
                 ></textarea>
             </div>
-            <button type='' className='btn mb-3' onClick={handleSubmitReview}>
+            <button type='' className='btn mb-3 text-headingColor' onClick={handleSubmitReview}>
                 {loading ? <HashLoader size={25} color='#fff' /> : 'Submit Feedback'}
             </button>
         </form>

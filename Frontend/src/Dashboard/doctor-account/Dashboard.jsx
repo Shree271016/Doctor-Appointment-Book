@@ -75,7 +75,7 @@ const Dashboard = () => {
                             ({data.totalRating})
                           </span>
                         </div >
-                        <p className='text__para font-[15px] lg:max-w-[390px] leading-6 text-headingColor'>{data?.bio}</p>
+                        <p className='text__para font-[15px] lg:max-w-[390px] leading-6 text-irisBlueColor'>{data?.bio}</p>
 
                       </div>
 

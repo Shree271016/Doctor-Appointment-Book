@@ -30,13 +30,7 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Dark mode toggle
-  // const toggleDarkMode = () => {
-  //   const newMode = !darkMode;
-  //   setDarkMode(newMode);
-  //   localStorage.setItem("theme", newMode ? "dark" : "light");
-  //   document.documentElement.classList.toggle("dark", newMode);
-  // };
+
 
   // Menu toggle
   const toggleMenu = () => {
@@ -107,17 +101,7 @@ const Header = () => {
 
           {/* Right Section */}
           <div className="flex items-center gap-6">
-            {/* Dark Mode Toggle */}
-            {/* <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            >
-              {darkMode ? (
-                <MdLightMode className="w-6 h-6 text-yellow-400" />
-              ) : (
-                <MdDarkMode className="w-6 h-6 text-gray-800 dark:text-gray-200" />
-              )}
-            </button> */}
+          
 
             {/* Profile/Login */}
             {token && user ? (
@@ -159,7 +143,7 @@ const Header = () => {
         {/* Transparent Mobile Navigation */}
         <div
           ref={menuRef}
-          className={`md:hidden fixed top-20 left-0 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg shadow-lg transition-all duration-300 ease-in-out ${menuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}
+          className={`md:hidden fixed top-20 left-0 w-full text-headingColor dark:bg-gray-900/90 backdrop-blur-lg shadow-lg transition-all duration-300 ease-in-out ${menuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}
         >
           <div className="container mx-auto px-4 py-4">
             <ul className="flex flex-col space-y-4">
