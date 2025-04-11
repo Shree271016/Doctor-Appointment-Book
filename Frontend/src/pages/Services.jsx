@@ -2,11 +2,20 @@
 import { services } from '../assets/data/services';
 
 import ServiceCard from '../components/Services/ServiceCard';
-
+import medicareplus from "../assets/images/medicareplus.png";
 
 const Services = () => {
   return (
-    <section>
+    <section className="relative min-h-screen overflow-hidden bg-fixed bg-no-repeat bg-center">
+            {/* Fixed Background Image with Overlay */}
+            <div className="fixed inset-0 z-[-1] w-full h-full">
+              <img
+                className="w-full h-full object-cover object-top"
+                src={medicareplus}
+                alt="Medical background"
+              />
+              <div className="absolute inset-0 bg-black/60"></div>
+            </div>
       <div className='container'>
 
 

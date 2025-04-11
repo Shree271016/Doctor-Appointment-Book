@@ -9,8 +9,8 @@ const Appointments = ({ appointments }) => {
     return (
 
 
-        <table className="w-full text-left text-sm text-gray-500 hover:animate-hover-pulse">
-            <thead className="text-xs text-gray-700 uppercase bg-blue-100">
+        <table className="w-full text-left text-sm text-headingColor hover:animate-hover-pulse">
+            <thead className="text-xs text-headingColor uppercase bg-[#404c49]">
                 <tr>
                     <th className="px-6 py-3 border border-black">Patient Name</th>
                     <th className="px-6 py-3 border border-black">Email</th>
@@ -25,7 +25,7 @@ const Appointments = ({ appointments }) => {
                     appointments.map((item) => (
                         <tr key={item._id} className="border border-black">
 
-                            <td className="px-6 py-4 text-gray-900 whitespace-nowrap border-b border-black">
+                            <td className="px-6 py-4 text-headingColor whitespace-nowrap border-b border-black">
 
                                 <div className="pl-3">
                                     <div className="text-base font-semibold">
@@ -35,10 +35,10 @@ const Appointments = ({ appointments }) => {
                             </td>
 
 
-                            <td className="px-6 py-4 border border-black">{item.user?.email || "N/A"}</td>
+                            <td className="px-6 py-4 border border-black text-headingColor">{item.user?.email || "N/A"}</td>
 
 
-                            <td className="px-6 py-4 border border-black">
+                            <td className="px-6 py-4 border border-black text-headingColor">
                                 {item.user?.gender?.toUpperCase() || "N/A"}
                             </td>
 
@@ -52,19 +52,19 @@ const Appointments = ({ appointments }) => {
                             </td>
 
 
-                            <td className="px-6 py-4 border border-black">
+                            <td className="px-6 py-4 border text-headingColor border-black">
                                 ${Number(item.ticketPrice || 0).toFixed(2)}
                             </td>
 
 
-                            <td className="px-6 py-4 border border-black">
+                            <td className="px-6 py-4 border text-headingColor border-black">
                                 {formateDate(item.createdAt)}
                             </td>
                         </tr>
                     ))
                 ) : (
                     <tr>
-                        <td colSpan="6" className="text-center py-4">
+                        <td colSpan="6" className="text-center py-4 text-headingColor">
                             No Appointments Found
                         </td>
                     </tr>

@@ -26,16 +26,16 @@ const Dashboard = () => {
             <div className='grid lg:grid-cols-3 gap-[30px] lg:gap-[50px]'>
               <Tabs tab={tab} setTab={setTab} />
 
-              <div className="lg:col-span-2 bg-[rgb(255,255,255)]">
+              <div className="lg:col-span-2 bg-[#404c49]">
 
 
-                <h1 className="text-2xl font-bold animate-rotate-bounce">Welcome, Dr. {data.name}</h1>
+                <h1 className="text-2xl font-bold animate-rotate-bounce text-headingColor">Welcome, Dr. {data.name}</h1>
 
 
 
                 {data.isApproved === "pending" && (
                   <div className="flex p-4 mb-4 text-yellow-800 bg-yellow-50 rounded-lg">
-                    <div className="ml-3 text-sm font-bold animate-scale-up"> &#10162; 👆  To get approval please complete your profile. We&apos;ll review manually and approve within 3 days.
+                    <div className="ml-3 text-sm font-bold animate-scale-up text-headingColor"> &#10162; 👆  To get approval please complete your profile. We&apos;ll review manually and approve within 3 days.
                     </div>
                   </div>
                 )}
@@ -60,11 +60,11 @@ const Dashboard = () => {
                           <span className='flex items-center gap-[6px] text-headingColor text-[14px] leading-5 lg:text-[16px] font-semibold'>
                             <img src={starIcon} alt="" />{data.averageRating}
                           </span>
-                          <span className=' text-headingColor text-[14px] leading-5 lg:text-[16px] font-semibold'>
+                          <span className='  text-[14px] leading-5 lg:text-[16px] font-semibold'>
                             ({data.totalRating})
                           </span>
                         </div >
-                        <p className='text__para font-[15px] lg:max-w-[390px] leading-6'>{data?.bio}</p>
+                        <p className='text__para font-[15px] lg:max-w-[390px] leading-6 text-headingColor'>{data?.bio}</p>
 
                       </div>
 

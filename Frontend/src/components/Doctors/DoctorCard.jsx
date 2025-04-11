@@ -8,7 +8,7 @@ const DoctorCard = ({ doctor }) => {
 
     const { name, avgRating, photo, specialization,experiences, totalRating } = doctor;
     return (
-        <div className='p-3 lg:p-5 bg-[#f6f6f6] rounded-2xl'>
+        <div className='p-3 lg:p-5 bg-[#404c49] rounded-2xl'>
             <div>
                 <img src={photo} className='w-full rounded-md hover:animate-hover-pulse' alt="" />
             </div>
@@ -20,7 +20,7 @@ const DoctorCard = ({ doctor }) => {
                         <img src={starIcon} alt="" />{avgRating}
 
                     </span>
-                    <span className="text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-[400] text-textColor">({totalRating})</span>
+                    <span className="text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-[400] text-headingColor">({totalRating})</span>
 
                 </div>
 
@@ -29,11 +29,11 @@ const DoctorCard = ({ doctor }) => {
                 <div>
 
                 
-                    <p className="text-[14px] leading-6 font-[500] text-textColor animate-scale-up" >
+                    <p className="text-[14px] leading-6 font-[500] text-headingColor animate-scale-up" >
                         At {experiences && experiences[0]?.hospital}
                     </p>
                 </div>
-                <Link to={`/doctors/${doctor._id}`} className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69]  text-[#007e69] inline-flex  items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none hover:animate-hover-pulse">
+                <Link to={`/doctors/${doctor._id}`} className="w-[50px] h-[50px] rounded-full border border-solid border-headingColor  text-[#007e69] inline-flex  items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none hover:animate-hover-pulse">
                     <BsArrowRight className="group-hover:text-white w-6 h-6 " />
                 </Link>
             </div>

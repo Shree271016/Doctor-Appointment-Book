@@ -41,7 +41,7 @@ const SidePanel = ({ doctorId, ticketPrice, timeSlots }) => {
     }
 
     return (
-        <div className="shadow-planeShadow p-3 mt-3 lg:p-5 rounded-md bg-white animate-scale-up">
+        <div className="shadow-planeShadow p-3 mt-3 lg:p-5 rounded-md bg-[#404c49] animate-scale-up">
             <div className="flex items-center justify-between">
                 <p className="text__para mt-0 font-semibold ">
                     Ticket Price
@@ -78,7 +78,7 @@ const SidePanel = ({ doctorId, ticketPrice, timeSlots }) => {
                 </p>
             )}
 
-            <button onClick={bookingHandler} className="btn px-2 w-full rounded-md animate-scale-up">Book Appointment</button>
+            <button onClick={bookingHandler} className="btn px-2 w-full rounded-md animate-scale-up text-headingColor">Book Appointment</button>
 
         </div>
     )

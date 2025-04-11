@@ -22,11 +22,11 @@ import {
 const Home = () => {
   return (
     <>
-      <section className="hero__section relative  min-h-[900px] md:min-h-[1100px] 2xl:min-h-[1600px] overflow-hidden">
+      <section className="relative min-h-screen overflow-hidden bg-fixed bg-no-repeat bg-center">
         {/* Fixed Background Image with Overlay */}
-        <div className="fixed inset-0 z-0 h-screen">
+        <div className="fixed inset-0 z-[-1] w-full h-full">
           <img
-            className="w-full h-[1500px] object-cover"
+            className="w-full h-full object-cover object-top"
             src={medicareplus}
             alt="Medical background"
           />
@@ -186,14 +186,14 @@ const Home = () => {
       </section>
       <About />
       <section>
-        <div className="container bg-[#f6f6f6]">
+        <div className="container">
           <div className="xl:w-[470px] mx-auto">
 
 
             <h2 className="heading text-center animate-slide-in"> Our Medical Services</h2>
 
 
-            <p className="text__para text-center ">
+            <p className="text__para text-center text-headingColor">
               World-class care for everyone. Our helath System offers unmatched,expert health care.
             </p>
 
@@ -298,7 +298,7 @@ const Home = () => {
 
 
 
-            <p className="text__para text-center hover:animate-hover-pulse"> World-class care for everyone. Dedicated to providing expert care with compassion and precision.</p>
+            <p className="text__para text-center text-headingColor hover:animate-hover-pulse"> World-class care for everyone. Dedicated to providing expert care with compassion and precision.</p>
 
 
           </div>

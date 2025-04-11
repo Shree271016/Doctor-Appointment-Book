@@ -166,37 +166,31 @@ const Profile = ({ doctorData }) => {
 
 
   return (
+    <section>
     <div>
-
-
       <h2 className='text-headingColor font-bold text-[24px] leading-9 mb-10'>Profile Information</h2>
-
       <form >
-
-
         <div className='mb-2'>
           <p className="form__label">Name*</p>
-          <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder='Full Name' className='form__input' />
-
+          <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder='Full Name' className='form__input text-headingColor bg-[#404c49]' />
         </div>
         <div className='mb-2'>
           <p className="form__label">Email*</p>
-          <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder='Email' className='form__input' readOnly aria-readonly disabled="true" />
-
+          <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder='Email' className='form__input text-headingColor bg-[#404c49]' readOnly aria-readonly disabled="true" />
         </div>
         <div className='mb-2'>
           <p className="form__label">Phone*</p>
-          <input type="number" name="phone" value={formData.phone} onChange={handleInputChange} placeholder='Phone Number' className='form__input' />
+          <input type="number" name="phone" value={formData.phone} onChange={handleInputChange} placeholder='Phone Number' className='form__input text-headingColor bg-[#404c49]' />
         </div>
         <div className='mb-2'>
           <p className="form__label">Bio*</p>
-          <input type="text" name="bio" value={formData.bio} onChange={handleInputChange} placeholder='Bio' className='form__input' maxLength={100} rows={3} />
+          <input type="text" name="bio" value={formData.bio} onChange={handleInputChange} placeholder='Bio' className='form__input text-headingColor bg-[#404c49]' maxLength={100} rows={3} />
         </div>
         <div className='mb-2'>
           <div className='grid grid-cols-3 gap-6 mb-[30px] '>
             <div>
               <p className='form__label '>Gender*</p>
-              <select name="gender" value={formData.gender} onChange={handleInputChange} className='form__input py-3.5'>
+              <select name="gender" value={formData.gender} onChange={handleInputChange} className='form__input py-3.5 text-headingColor bg-[#404c49]'>
                 <option value="">Select</option>
                 <option value="male ">Male</option>
                 <option value="female">Female</option>
@@ -205,7 +199,7 @@ const Profile = ({ doctorData }) => {
             </div>
             <div>
               <p className='form__label '>Specialization*</p>
-              <select name="specialization" value={formData.specialization} onChange={handleInputChange} className='form__input py-3.5'>
+              <select name="specialization" value={formData.specialization} onChange={handleInputChange} className='form__input py-3.5 text-headingColor bg-[#404c49]'>
                 <option value="">Select</option>
                 <option value="Surgeon ">Surgeon</option>
                 <option value="Neurologist">Neurologist</option>
@@ -222,11 +216,10 @@ const Profile = ({ doctorData }) => {
             </div>
             <div>
               <p className='form__label '>Ticket Price</p>
-              <input type="number" placeholder='RS.600' name='ticketPrice' value={formData.ticketprice} className='form__input' onChange={handleInputChange} />
+              <input type="number" placeholder='RS.600' name='ticketPrice' value={formData.ticketprice} className='form__input text-headingColor bg-[#404c49]' onChange={handleInputChange} />
             </div>
           </div>
         </div>
-
         <div className='mb-5'>
           <p className='form__label font-bold text-xl text-[rgb(0,126,105)] animate-scale-up'>Qualificaitons:*</p>
           {formData.qualifications?.map((item, index) => (
@@ -235,32 +228,29 @@ const Profile = ({ doctorData }) => {
                 <div className='grid grid-cols-2 gap-5'>
                   <div>
                     <p className='form__label'>Starting Date*</p>
-                    <input onChange={e => handleQualificationChange(e, index)} type="date" name='startingDate' value={item.startingDate} className='form__input' />
+                    <input onChange={e => handleQualificationChange(e, index)} type="date" name='startingDate' value={item.startingDate} className='form__input text-headingColor bg-[#404c49]' />
                   </div>
                   <div>
                     <p className='form__label'>Ending Date*</p>
-                    <input onChange={e => handleQualificationChange(e, index)} type="date" name='endingDate' value={item.endingDate} className='form__input' />
+                    <input onChange={e => handleQualificationChange(e, index)} type="date" name='endingDate' value={item.endingDate} className='form__input text-headingColor bg-[#404c49]' />
                   </div>
-
                 </div>
                 <div className='grid grid-cols-2 gap-5 mt-5'>
                   <div>
                     <p className='form__label'>Degree*</p>
-                    <input onChange={e => handleQualificationChange(e, index)} type="text" name='degree' value={item.degree} className='form__input' />
+                    <input onChange={e => handleQualificationChange(e, index)} type="text" name='degree' value={item.degree} className='form__input text-headingColor bg-[#404c49]' />
                   </div>
                   <div>
                     <p className='form__label'>University*</p>
-                    <input onChange={e => handleQualificationChange(e, index)} type="text" name='university' value={item.university} className='form__input' />
+                    <input onChange={e => handleQualificationChange(e, index)} type="text" name='university' value={item.university} className='form__input text-headingColor bg-[#404c49]' />
                   </div>
-
                 </div>
                 <button onClick={e => deleteQualificaition(e, index)} className='bg-red-600 p-2 rounded-full text-white text-[22px] mt-2 mb-[30px] cursor-pointer '><AiOutlineDelete /> </button>
               </div>
             </div>
           ))}
-          <button onClick={addQualification} className='bg-[rgb(0,126,5)] px-2 py-3 rounded text-white h-fit cursor-pointer'>Add Qualification</button>
+          <button onClick={addQualification} className=' px-2 py-3 rounded  h-fit cursor-pointer text-headingColor bg-[#404c49]'>Add Qualification</button>
         </div>
-
         <div className='mb-5'>
           <p className='form__label font-bold text-xl  text-[rgb(0,126,105)] animate-scale-up'>Experiences:*</p>
           {formData.experiences?.map((item, index) => (
@@ -269,13 +259,12 @@ const Profile = ({ doctorData }) => {
                 <div className='grid grid-cols-2 gap-5'>
                   <div>
                     <p className='form__label'>Starting Date*</p>
-                    <input onChange={e => handleExperienceChange(e, index)} type="date" name='startingDate' value={item.startingDate} className='form__input' />
+                    <input onChange={e => handleExperienceChange(e, index)} type="date" name='startingDate' value={item.startingDate} className='form__input text-headingColor bg-[#404c49]' />
                   </div>
                   <div>
                     <p className='form__label'>Ending Date*</p>
-                    <input onChange={e => handleExperienceChange(e, index)} type="date" name='endingDate' value={item.endingDate} className='form__input' />
+                    <input onChange={e => handleExperienceChange(e, index)} type="date" name='endingDate' value={item.endingDate} className='form__input text-headingColor bg-[#404c49]' />
                   </div>
-
                 </div>
                 <div className='grid grid-cols-2 gap-5 mt-5'>
                   <div>
@@ -286,24 +275,22 @@ const Profile = ({ doctorData }) => {
                     <p className='form__label'>Hospital*</p>
                     <input type="text" name='hospital' value={item.hospital} className='form__input' onChange={e => handleExperienceChange(e, index)} />
                   </div>
-
                 </div>
                 <button className='bg-red-600 p-2 rounded-full text-white text-[22px] mt-2 mb-[30px] cursor-pointer ' onClick={e => deleteExperience(e, index)}><AiOutlineDelete /> </button>
               </div>
             </div>
           ))}
-          <button onClick={addExperience} className='bg-[rgb(0,126,5)] px-2 py-3 rounded text-white h-fit cursor-pointer '>Add Experience</button>
+          <button onClick={addExperience} className='text-headingColor bg-[#404c49] px-2 py-3 rounded  h-fit cursor-pointer '>Add Experience</button>
         </div>
-
         <div className='mb-5'>
           <p className='form__label font-bold text-xl  text-[rgb(0,126,105)]'>Time Slots:*</p>
           {formData.timeSlots?.map((item, index) => (
             <div key={index}>
               <div>
-                <div className='grid grid-cols-2 md:grid-cols-4 mb-[30px] gap-5'>
+                <div className='grid grid-cols-2 md:grid-cols-4 mb-[30px] gap-5 text-headingColor bg-[#404c49]'>
                   <div>
                     <p className='form__label'>Days*</p>
-                    <select name="day" value={item.day} className='form__input py-3.5' onChange={e => handleTimeSlotChange(e, index)}>
+                    <select name="day" value={item.day} className='form__input py-3.5 text-headingColor' onChange={e => handleTimeSlotChange(e, index)}>
                       <option value="">Select</option>
                       <option value="sunday">Sunday</option>
                       <option value="monday">Monday</option>
@@ -322,7 +309,6 @@ const Profile = ({ doctorData }) => {
                     <p className='form__label'>Ending Time*</p>
                     <input type="time" name='endingTime' value={item.endingTime} className='form__input' onChange={e => handleTimeSlotChange(e, index)} />
                   </div>
-
                   <div className='flex items-center'>
                     <button onClick={e => deleteTimeSlot(e, index)} className='bg-red-600 p-2 rounded-full text-white text-[22px]  mt-9 cursor-pointer '><AiOutlineDelete /> </button>
                   </div>
@@ -330,14 +316,12 @@ const Profile = ({ doctorData }) => {
               </div>
             </div>
           ))}
-          <button onClick={addTimeSlot} className='bg-[rgb(0,126,5)] px-2 py-3 rounded text-white h-fit cursor-pointer animate-scale-up'>Add TimeSlots</button>
+          <button onClick={addTimeSlot} className='bg-[rgb(0,126,5)] px-2 py-3 rounded text-headingColor h-fit cursor-pointer animate-scale-up'>Add TimeSlots</button>
         </div>
-
         <div className='mb-5'>
           <p className='form__label font-bold text-xl text-center text-[rgb(0,126,105)] animate-scale-up'>About:*</p>
           <textarea name="about" rows={5} value={formData.about} placeholder='Write about you ...' onChange={handleInputChange} className='form__input'></textarea>
         </div>
-
         <div className='mb-5 flex items-center gap-3'>
           {formData.photo && (
             <figure className='w-[60px] h-[60px] rounded-full border-2 border-solid border-[#007e69] flex items-center justify-center'>
@@ -360,13 +344,11 @@ const Profile = ({ doctorData }) => {
           </div>
         </div>
         <div className='mt-7'>
-          <button type='submit' onClick={updateProfileHandler} className='bg-[rgb(0,126,105)] text-white text-[20px] leading-[30px] w-full py-3 px-4 rounded-lg animate-scale-up'>Update Profile</button>
-
+          <button type='submit' onClick={updateProfileHandler} className='bg-[rgb(0,126,105)] text-headingColor text-[20px] leading-[30px] w-full py-3 px-4 rounded-lg animate-scale-up'>Update Profile</button>
         </div>
-
       </form>
-
     </div>
+    </section>
   )
 }
 

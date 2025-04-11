@@ -73,7 +73,7 @@ const Profile = ({ user }) => {
   };
   return (
 
-    <div className='pt-3'>
+    <div className='pt-3 bg-black/60'>
 
       <form onSubmit={submitHandler}>
 
@@ -83,7 +83,7 @@ const Profile = ({ user }) => {
             name="name"
             value={formData.name}
             onChange={handleInputChange}
-            className="w-full px-4 pr-4 pt-3 border-b-2 border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 text-headingColor placeholder:text-textColor rounded-md cursor-pointer"
+            className="w-full px-4 pr-4 pt-3 border-b-2 border-solid border-headingColor focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 bg-[#404c49] text-headingColor placeholder:text-headingColor rounded-md cursor-pointer"
             required
           />
         </div>
@@ -93,7 +93,7 @@ const Profile = ({ user }) => {
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            className="w-full px-4 pr-4 py-1 border-b-2 border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 text-headingColor placeholder:text-textColor rounded-md cursor-pointer"
+            className="w-full px-4 pr-4 py-1 border-b-2 border-solid border-headingColor focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 bg-[#404c49] text-headingColor placeholder:text-headingColor rounded-md cursor-pointer"
             aria-readonly
             readOnly
           />
@@ -104,28 +104,28 @@ const Profile = ({ user }) => {
             name="password"
             value={formData.password}
             onChange={handleInputChange}
-            className="w-full px-4 pr-4 py-1 border-b-2 border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 text-headingColor placeholder:text-textColor rounded-md cursor-pointer" aria-readonly
+            className="w-full px-4 pr-4 py-1 border-b-2 border-solid border-headingColor focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 bg-[#404c49] text-headingColor placeholder:text-headingColor rounded-md cursor-pointer" aria-readonly
             readOnly
 
           />
         </div>
-        <div className="mb-5 hover:animate-hover-pulse">
+        <div className="mb-5 ">
           <input type="text"
             placeholder="Blood type"
             name="bloodType"
             value={formData.bloodType}
             onChange={handleInputChange}
-            className="w-full px-4 pr-4 py-1 border-b-2 border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 text-headingColor placeholder:text-textColor rounded-md cursor-pointer"
+            className="w-full px-4 pr-4 py-1 border-b-2 border-solid border-headingColor focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 bg-[#404c49] text-headingColor placeholder:text-headingColor rounded-md cursor-pointer"
             aria-readonly
             readOnly
           />
         </div>
 
-        <div className='mb-5 flex items-center justify-between hover:animate-hover-pulse'>
+        <div className='mb-5 flex items-center justify-between '>
 
           <label className='text-headingColor font-bold text-[16px] leading-7 '>
             Gender : <select name="gender" value={formData.gender}
-              onChange={handleInputChange} className='text-textColor font-bold  text-[15px] leading-7 px-4 py-3 focus:outline-none'>
+              onChange={handleInputChange} className=' font-bold  text-[15px] leading-7 px-4 py-3 focus:outline-none bg-[#404c49] text-headingColor hover:animate-hover-pulse'>
               <option value="">Select</option>
               <option value="male">Male</option>
               <option value="female">Female</option>

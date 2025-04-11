@@ -23,7 +23,7 @@
     @apply text-[44px] leading-[54px] font-[700] text-black;
   }
   .text__para {
-    @apply text-[18px] leading-[30px] font-[400] text-black mt-[18px];
+    @apply text-[18px] leading-[30px] font-[400] text-headingColor mt-[18px];
   }
   .header{
     @apply bg-[url('./assets/images/mask.png')] bg-no-repeat bg-center bg-cover w-full h-[100px] leading-[100px];
@@ -36,7 +36,7 @@
     @apply text-white font-semibold text-[16px] leading-7 mb-2;
   }
   .form__input{
-    @apply w-full px-4 py-3 border border-solid border-[rgb(0,126,105)] focus:outline-none focus:border-[rgb(0,126,105)] text-[16px]  leading-7 text-headingColor placeholder:text-black cursor-pointer focus:shadow-emerald-600 rounded-md focus:shadow-sm ;
+    @apply w-full px-4 py-3 border border-solid border-[rgb(0,126,105)] focus:outline-none focus:border-[rgb(0,126,105)] text-[16px]  leading-7 text-headingColor placeholder:text-headingColor cursor-pointer focus:shadow-emerald-600 rounded-md focus:shadow-sm ;
   }
 
 }

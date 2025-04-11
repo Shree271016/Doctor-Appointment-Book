@@ -85,7 +85,7 @@ const Footer = () => {
           <div>
             <Link to="/home">
             
-          <div className="flex items-center">
+          <div className="flex items-center ">
             <span className="text-2xl md:text-3xl font-extrabold text-red-600 
             drop-shadow-[0_2px_4px_rgba(101,163,13,0.4)] hover:drop-shadow-[0_4px_6px_rgba(101,163,13,0.6)]
             transition-all duration-300 hover:scale-105 animate-scale-up">
@@ -98,7 +98,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-5 mt-4 ">
               {socialLinks.map((link, index) => (
-                <Link to={link.path} key={index} className="relative w-12 h-12 border border-solid border-headingColor rounded-full flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none animate-scale-up">
+                <Link to={link.path} key={index} className="relative w-11 h-11 border border-solid border-headingColor rounded-full flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none animate-scale-up">
                   {link.icon}
                 </Link>
               ))}

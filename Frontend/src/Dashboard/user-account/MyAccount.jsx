@@ -9,6 +9,7 @@ import { BASE_URL } from "../../utils/config";
 import Loading from "../../components/Loader/Loading";
 import Error from "../../components/Error/Error";
 import { authContext } from "../../context/AuthContext";
+import medicareplus from "../../assets/images/medicareplus.png";
 
 
 
@@ -25,7 +26,16 @@ const MyAccount = () => {
     dispatch({ type: "LOGOUT" });
   }
   return (
-    <section>
+    <section className="relative min-h-screen overflow-hidden bg-fixed bg-no-repeat bg-center">
+      {/* Fixed Background Image with Overlay */}
+      <div className="fixed inset-0 z-[-1] w-full h-full">
+        <img
+          className="w-full h-full object-cover object-top "
+          src={medicareplus}
+          alt="Medical background"
+        />
+        <div className="absolute inset-0 bg-black/60"></div>
+      </div>
       <div className='max-w-[1170px] px-5 mx-auto '>
         {loading && !error && <Loading />}
         {error && !loading && <Error errMessage={error} />}
@@ -33,7 +43,7 @@ const MyAccount = () => {
 
         {!loading && !error &&
           (<div className='grid md:grid-cols-3 gap-10 '>
-            <div className='pb-[50px] px-[30px] rounded-md bg-[#f6f6f6] mt-2 mb-2  shadow-md'>
+            <div className='pb-[50px] px-[30px] rounded-md bg-[#404c49] mt-2 mb-2  shadow-md'>
 
               <div className='flex items-center justify-center mt-3'>
                 <figure className='w-[100px] h-[100px] rounded-full  border-solid border-primaryColor'>
@@ -45,15 +55,12 @@ const MyAccount = () => {
 
               <div className="text-center mt-4 ">
                 <h3 className="text-[18px] leading-[30px] text-headingColor font-bold animate-rotate-bounce">{userData.name} </h3>
-                <p className="text-textColor text-[15px] leading-6 font-medium hover:animate-hover-pulse">{userData.email}</p>
+                <p className="text-headingColor text-[15px] leading-6 font-medium hover:animate-hover-pulse">{userData.email}</p>
                 <p className="text-textColor text-[15px] leading-6 font-medium">Blood Group : <span className="ml-2 text-headingColor text-[22px] leading-8">{userData.bloodType}
 
                 </span>
                 </p>
-
               </div>
-
-
               <div className="mt-[50px] md:mt[100px]">
                 <button onClick={handleLogout} className="w-full bg-[#181A1E] font-bold shadow-sm shadow-black p-3 text-[16px] leading-7 rounded-md text-white hover:text-[#181A1E] hover:bg-white hover:border border-solid hover:border-[#181A1E] animate-scale-up">Logout
                 </button>

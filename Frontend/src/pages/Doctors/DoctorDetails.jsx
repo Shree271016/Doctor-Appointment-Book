@@ -64,17 +64,17 @@ const DoctorDetails = () => {
                     <img src={starIcon} alt="" /> {averageRating}
 
                   </span>
-                  <span className=' text-[14px] leading-5 lg:text-[16px] lg:leading-7 font-[400] text-textColor'>({totalRating})
+                  <span className=' text-[14px] leading-5 lg:text-[16px] lg:leading-7 font-[400] text-headingColor'>({totalRating})
                   </span>
                 </div>
-                <p className="text__para textl-[14px] leading-5 md-text-[15px] lg:max-w-[390px] " >{bio}</p>
+                <p className="text__para textl-[14px] leading-5 md-text-[15px] lg:max-w-[390px] text-headingColor " >{bio}</p>
               </div>
 
 
 
             </div>
 
-            <div className="mt-[50px] border-b border-solid border-[#0066ff34] hover:animate-hover-pulse">
+            <div className="mt-[50px] border-b border-solid border-headingColor hover:animate-hover-pulse">
               <button
                 onClick={() => setTab('about')}
                 className={` ${tab === 'about' && 'border-b border-solid border-[rgb(0,126,105)]'} py-2 px-5 mr-5 text-[16px] leading-7 text-headingColor font-semibold`}>

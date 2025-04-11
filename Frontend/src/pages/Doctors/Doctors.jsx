@@ -32,10 +32,10 @@ const Doctors = () => {
   return (
 
     <>
-      <section className='pt-32 pb-16 relative overflow-hidden'>
+      <section className='relative min-h-screen overflow-hidden bg-fixed bg-no-repeat bg-center'>
         <div className="fixed inset-0 z-0 h-screen">
                   <img
-                    className="w-full h-[1500px] object-cover"
+                    className="fixed inset-0 z-[-1] w-full h-full"
                     src={medicareplus}
                     alt="Medical background"
                   />
