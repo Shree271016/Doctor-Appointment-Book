@@ -29,8 +29,8 @@ const Feedback = ({ reviews, totalRating }) => {
               <h5 className="text-[16px] leading-6 text-primaryColor font-bold">
                 {review?.user?.name}
               </h5>
-              <p className="text-[14px] leading-6 text-textColor">{formateDate(review?.createdAt)}</p>
-              <p className="text__ para mt-3 font-medium text-[15px]">{review.reviewText}</p>
+              <p className="text-[14px] leading-6 text-headingColor">{formateDate(review?.createdAt)}</p>
+              <p className="text__ para mt-3 font-medium text-[15px] text-headingColor">{review.reviewText}</p>
             </div>
           </div>
           <div className="flex gap-1 hover:animate-hover-pulse">

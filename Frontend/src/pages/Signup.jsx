@@ -74,7 +74,7 @@ const Signup = () => {
   };
 
 
-  return <section className="relative min-h-screen overflow-hidden bg-fixed bg-no-repeat bg-center px-5 xl:px-0'">
+  return <section className="relative min-h-screen overflow-hidden bg-fixed bg-no-repeat bg-center px-5 xl:px-0">
             {/* Fixed Background Image with Overlay */}
             <div className="fixed inset-0 z-[-1] w-full h-full">
               <img
@@ -112,7 +112,7 @@ const Signup = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full px-4 pr-4 py-3 border-b-2 border-solid border-headingColo focus:outline-none focus:border-b-[#007e69] bg-[#404c49] text-[16px] leading-7 text-headingColor placeholder:text-headingColor rounded-md cursor-pointer hover:animate-hover-pulse"
+                className="w-full px-4 pr-4 py-3 border-b-2 border-solid border-headingColo focus:outline-none focus:border-b-[#007e69] bg-[#404c49] text-[16px] leading-7 text-headingColor placeholder:text-white/80 rounded-md cursor-pointer hover:animate-hover-pulse"
                 required
               />
             </div>
@@ -122,7 +122,7 @@ const Signup = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-4 pr-4 py-3 border-b-2 border-solid border-headingColor focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 bg-[#404c49] text-headingColor placeholder:text-headingColor rounded-md cursor-pointer hover:animate-hover-pulse"
+                className="w-full px-4 pr-4 py-3 border-b-2 border-solid border-headingColor focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 bg-[#404c49] text-headingColor placeholder:text-white/80 rounded-md cursor-pointer hover:animate-hover-pulse"
                 required
               />
             </div>
@@ -133,7 +133,7 @@ const Signup = () => {
               name="password"
               value={formData.password}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border-b-2 border-solid border-headingColor focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 text-headingColor bg-[#404c49] placeholder:text-headingColor rounded-md cursor-pointer hover:animate-hover-pulse"
+              className="w-full px-4 py-3 border-b-2 border-solid border-headingColor focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 text-headingColor bg-[#404c49] placeholder:text-white/80 rounded-md cursor-pointer hover:animate-hover-pulse"
               required
             />
             <button

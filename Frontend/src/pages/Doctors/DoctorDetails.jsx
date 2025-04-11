@@ -9,6 +9,7 @@ import Error from "../../components/Error/Error";
 import { BASE_URL } from "./../../utils/config";
 import { useFetchData } from "./../../hooks/useFetchData";
 import { useParams } from "react-router-dom";
+import medicareplus from "../../assets/images/medicareplus.png";
 
 
 const DoctorDetails = () => {
@@ -40,8 +41,17 @@ const DoctorDetails = () => {
 
   return (
 
-    <section>
-      <div className='max-w-[1170px] px-5 mx-auto bg-[#f6f6f6]'>
+    <section className="relative min-h-screen overflow-hidden bg-fixed bg-no-repeat bg-center">
+                {/* Fixed Background Image with Overlay */}
+                <div className="fixed inset-0 z-[-1] w-full h-full">
+                  <img
+                    className="w-full h-full object-cover object-top"
+                    src={medicareplus}
+                    alt="Medical background"
+                  />
+                  <div className="absolute inset-0 bg-black/60"></div>
+                </div>
+      <div className='max-w-[1170px] px-5 mx-auto bg-[#404c49/50]'>
 
         {loading && <Loader />}
         {error && <Error />}

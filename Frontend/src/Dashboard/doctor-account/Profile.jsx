@@ -166,7 +166,7 @@ const Profile = ({ doctorData }) => {
 
 
   return (
-    <section>
+    <section className='px-6'>
     <div>
       <h2 className='text-headingColor font-bold text-[24px] leading-9 mb-10'>Profile Information</h2>
       <form >
@@ -249,7 +249,7 @@ const Profile = ({ doctorData }) => {
               </div>
             </div>
           ))}
-          <button onClick={addQualification} className=' px-2 py-3 rounded  h-fit cursor-pointer text-headingColor bg-[#404c49]'>Add Qualification</button>
+          <button onClick={addQualification} className=' px-2 py-3 rounded  h-fit cursor-pointer text-headingColor bg-green-600'>Add Qualification</button>
         </div>
         <div className='mb-5'>
           <p className='form__label font-bold text-xl  text-[rgb(0,126,105)] animate-scale-up'>Experiences:*</p>
@@ -269,18 +269,18 @@ const Profile = ({ doctorData }) => {
                 <div className='grid grid-cols-2 gap-5 mt-5'>
                   <div>
                     <p className='form__label'>Position*</p>
-                    <input type="text" name='position' value={item.position} className='form__input' onChange={e => handleExperienceChange(e, index)} />
+                    <input type="text" name='position' value={item.position} className='form__input bg-[#404c49]' onChange={e => handleExperienceChange(e, index)} />
                   </div>
                   <div>
                     <p className='form__label'>Hospital*</p>
-                    <input type="text" name='hospital' value={item.hospital} className='form__input' onChange={e => handleExperienceChange(e, index)} />
+                    <input type="text" name='hospital' value={item.hospital} className='form__input bg-[#404c49]' onChange={e => handleExperienceChange(e, index)} />
                   </div>
                 </div>
                 <button className='bg-red-600 p-2 rounded-full text-white text-[22px] mt-2 mb-[30px] cursor-pointer ' onClick={e => deleteExperience(e, index)}><AiOutlineDelete /> </button>
               </div>
             </div>
           ))}
-          <button onClick={addExperience} className='text-headingColor bg-[#404c49] px-2 py-3 rounded  h-fit cursor-pointer '>Add Experience</button>
+          <button onClick={addExperience} className='text-headingColor bg-green-600 px-2 py-3 rounded  h-fit cursor-pointer '>Add Experience</button>
         </div>
         <div className='mb-5'>
           <p className='form__label font-bold text-xl  text-[rgb(0,126,105)]'>Time Slots:*</p>
@@ -290,7 +290,7 @@ const Profile = ({ doctorData }) => {
                 <div className='grid grid-cols-2 md:grid-cols-4 mb-[30px] gap-5 text-headingColor bg-[#404c49]'>
                   <div>
                     <p className='form__label'>Days*</p>
-                    <select name="day" value={item.day} className='form__input py-3.5 text-headingColor' onChange={e => handleTimeSlotChange(e, index)}>
+                    <select name="day" value={item.day} className='form__input bg-[#404c49] py-3.5 text-headingColor' onChange={e => handleTimeSlotChange(e, index)}>
                       <option value="">Select</option>
                       <option value="sunday">Sunday</option>
                       <option value="monday">Monday</option>
@@ -303,11 +303,11 @@ const Profile = ({ doctorData }) => {
                   </div>
                   <div>
                     <p className='form__label'>Starting Time*</p>
-                    <input type="time" name='startingTime' value={item.startingTime} className='form__input' onChange={e => handleTimeSlotChange(e, index)} />
+                    <input type="time" name='startingTime' value={item.startingTime} className='form__input bg-[#404c49]'  onChange={e => handleTimeSlotChange(e, index)} />
                   </div>
                   <div>
                     <p className='form__label'>Ending Time*</p>
-                    <input type="time" name='endingTime' value={item.endingTime} className='form__input' onChange={e => handleTimeSlotChange(e, index)} />
+                    <input type="time" name='endingTime' value={item.endingTime} className='form__input bg-[#404c49]' onChange={e => handleTimeSlotChange(e, index)} />
                   </div>
                   <div className='flex items-center'>
                     <button onClick={e => deleteTimeSlot(e, index)} className='bg-red-600 p-2 rounded-full text-white text-[22px]  mt-9 cursor-pointer '><AiOutlineDelete /> </button>
@@ -320,7 +320,7 @@ const Profile = ({ doctorData }) => {
         </div>
         <div className='mb-5'>
           <p className='form__label font-bold text-xl text-center text-[rgb(0,126,105)] animate-scale-up'>About:*</p>
-          <textarea name="about" rows={5} value={formData.about} placeholder='Write about you ...' onChange={handleInputChange} className='form__input'></textarea>
+          <textarea name="about" rows={5} value={formData.about} placeholder='Write about you ...' onChange={handleInputChange} className='form__input bg-[#404c49] text-headingColor'></textarea>
         </div>
         <div className='mb-5 flex items-center gap-3'>
           {formData.photo && (

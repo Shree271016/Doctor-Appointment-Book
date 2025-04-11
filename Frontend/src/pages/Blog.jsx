@@ -156,25 +156,25 @@ const Blog = () => {
                     </div>
 
                     <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center ">
-                        <div className="tech-card p-4 bg-[#404c49] rounded-lg shadow">
+                        <div className="tech-card p-4 bg-[#97a4a1] rounded-lg shadow">
                             <img src="https://cdn-icons-png.flaticon.com/512/919/919851.png"
                                 alt="React"
                                 className="h-16 mx-auto mb-2" />
                             <span className="text-headingColor">React JS</span>
                         </div>
-                        <div className="tech-card p-4 bg-[#404c49] rounded-lg shadow">
+                        <div className="tech-card p-4 bg-[#97a4a1] rounded-lg shadow">
                             <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png"
                                 alt="Node.js"
                                 className="h-16 mx-auto mb-2" />
                             <span className="text-headingColor">Node.js</span>
                         </div>
-                        <div className="tech-card p-4 bg-[#404c49] rounded-lg shadow">
+                        <div className="tech-card p-4 bg-[#97a4a1] rounded-lg shadow">
                             <img src="https://cdn-icons-png.flaticon.com/512/873/873120.png"
                                 alt="MongoDB"
                                 className="h-16 mx-auto mb-2" />
                             <span className="text-headingColor">MongoDB</span>
                         </div>
-                        <div className="tech-card p-4 bg-[#404c49] rounded-lg shadow">
+                        <div className="tech-card p-4 bg-[#97a4a1] rounded-lg shadow">
                             <img src="https://ajeetchaulagain.com/static/7cb4af597964b0911fe71cb2f8148d64/87351/express-js.png"
                                 alt="Express.js Logo"
                                 className="h-16 mx-auto mb-2" />
@@ -191,14 +191,14 @@ const Blog = () => {
                         <h2 className="text-2xl font-semibold mb-4 animate-slide-in">Enterprise-Grade Security</h2>
 
 
-                        <ul className="space-y-3 text-headingColor hover:animate-hover-pulse">
-                            <li>🔒 HIPAA-compliant data storage</li>
-                            <li>🔑 End-to-end encryption for all communications</li>
-                            <li>📜 Audit trails and access controls</li>
-                            <li>🛡️ Regular security testing</li>
-                            <li>📌 Two-factor authentication</li>
-                            <li>🔐 Biometric login options</li>
-                            <li>📊 Compliance with GDPR and other regulations</li>
+                        <ul className="space-y-3 text-headingColor ">
+                            <li className='hover:animate-hover-pulse'>🔒 HIPAA-compliant data storage</li>
+                            <li className='hover:animate-hover-pulse'>🔑 End-to-end encryption for all communications</li>
+                            <li className='hover:animate-hover-pulse'>📜 Audit trails and access controls</li>
+                            <li className='hover:animate-hover-pulse'>🛡️ Regular security testing</li>
+                            <li className='hover:animate-hover-pulse'>📌 Two-factor authentication</li>
+                            <li className='hover:animate-hover-pulse'>🔐 Biometric login options</li>
+                            <li className='hover:animate-hover-pulse'>📊 Compliance with GDPR and other regulations</li>
                         </ul>
 
                     </div>
@@ -222,12 +222,12 @@ const Blog = () => {
                         <h2 className="text-2xl font-semibold mb-4 animate-slide-in">Key Features</h2>
 
 
-                        <ul className="list-disc list-inside space-y-3 text-headingColor hover:animate-hover-pulse">
-                            <li>Effortless appointment scheduling with top healthcare professionals.</li>
-                            <li>Real-time availability and instant confirmations.</li>
-                            <li>Secure patient-doctor communication.</li>
-                            <li>Integrated reminders to reduce missed appointments.</li>
-                            <li>User-friendly interface for all age groups.</li>
+                        <ul className="list-disc list-inside space-y-3 text-headingColor ">
+                            <li className='hover:animate-hover-pulse'>Effortless appointment scheduling with top healthcare professionals.</li>
+                            <li className='hover:animate-hover-pulse'>Real-time availability and instant confirmations.</li>
+                            <li className='hover:animate-hover-pulse'>Secure patient-doctor communication.</li>
+                            <li className='hover:animate-hover-pulse'>Integrated reminders to reduce missed appointments.</li>
+                            <li className='hover:animate-hover-pulse'>User-friendly interface for all age groups.</li>
                         </ul>
 
                     </div>
@@ -250,7 +250,7 @@ const Blog = () => {
                                     alt="User"
                                     className="w-12 h-12 rounded-full mr-4" />
                                 <div>
-                                    <p className="font-semibold">Dr. Kasmita Ghimire</p>
+                                    <p className="font-semibold text-orange-500">Dr. Kasmita Ghimire</p>
                                     <p className="text-headingColor">Cardiologist</p>
                                 </div>
                             </div>
@@ -262,7 +262,7 @@ const Blog = () => {
                                     alt="User"
                                     className="w-12 h-12 rounded-full mr-4" />
                                 <div>
-                                    <p className="font-semibold">Ai Shree Krishna</p>
+                                    <p className="font-semibold text-orange-500">Ai Shree Krishna</p>
                                     <p className="text-headingColor">Patient since 2022</p>
                                 </div>
                             </div>
@@ -282,12 +282,12 @@ const Blog = () => {
 
                     <div className="flex flex-col md:flex-row justify-center gap-4">
                         <Link to="/register">
-                            <button className="bg-white text-[rgb(0,126,105)] px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition animate-scale-up">
+                            <button className="bg-headingColor text-[rgb(0,126,105)] px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition animate-scale-up">
                                 I&apos;m a Patient
                             </button>
                         </Link>
                         <Link to="/login">
-                            <button className="animate-scale-up border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-[rgb(0,126,105)] transition">
+                            <button className="animate-scale-up border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-headingColor hover:text-[rgb(0,126,105)] transition">
                                 I&apos;m a Doctor
                             </button>
                         </Link>

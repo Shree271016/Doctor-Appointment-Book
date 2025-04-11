@@ -8,6 +8,7 @@ import starIcon from "../../assets/images/Star.png";
 import DoctorAbout from '../../pages/Doctors/DoctorAbout';
 import Profile from "./Profile";
 import Appointments from './Appointments';
+import medicareplus from "../../assets/images/medicareplus.png";
 
 
 const Dashboard = () => {
@@ -16,7 +17,17 @@ const Dashboard = () => {
 
 
   return (
-    <section>
+   <section className="relative min-h-screen overflow-hidden bg-fixed bg-no-repeat bg-center px-5 lg:px-0">
+           {/* Fixed Background Image with Overlay */}
+           <div className="fixed inset-0 z-[-1] w-full h-full">
+             <img
+               className="w-full h-full object-cover object-top"
+               src={medicareplus}
+               alt="Medical background"
+             />
+             <div className="absolute inset-0 bg-black/60"></div>
+           </div>
+      
       <div className='max-w-[1170px] px-5 mx-auto'>
         {loading && !error && <Loader />}
         {error && !loading && <Error message={error} />}
@@ -26,7 +37,7 @@ const Dashboard = () => {
             <div className='grid lg:grid-cols-3 gap-[30px] lg:gap-[50px]'>
               <Tabs tab={tab} setTab={setTab} />
 
-              <div className="lg:col-span-2 bg-[#404c49]">
+              <div className="lg:col-span-2  px-5">
 
 
                 <h1 className="text-2xl font-bold animate-rotate-bounce text-headingColor">Welcome, Dr. {data.name}</h1>

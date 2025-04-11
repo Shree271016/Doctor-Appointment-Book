@@ -29,7 +29,7 @@ const DoctorCard = ({ doctor }) => {
                 <div>
 
                 
-                    <p className="text-[14px] leading-6 font-[500] text-headingColor animate-scale-up" >
+                    <p className="text-[14px] leading-6 font-[500] text-headingColor hover:animate-hover-pulse" >
                         At {experiences && experiences[0]?.hospital}
                     </p>
                 </div>

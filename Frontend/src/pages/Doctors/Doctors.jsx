@@ -33,9 +33,9 @@ const Doctors = () => {
 
     <>
       <section className='relative min-h-screen overflow-hidden bg-fixed bg-no-repeat bg-center'>
-        <div className="fixed inset-0 z-0 h-screen">
+        <div className="fixed inset-0 z-[-1] w-full h-full">
                   <img
-                    className="fixed inset-0 z-[-1] w-full h-full"
+                    className="w-full h-full object-cover object-top"
                     src={medicareplus}
                     alt="Medical background"
                   />

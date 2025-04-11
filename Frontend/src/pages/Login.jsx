@@ -93,7 +93,7 @@ const Login = () => {
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 border-b-2 border-solid border-headingColor focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 bg-[#404c49] text-headingColor placeholder:text-headingColor rounded-md cursor-pointer hover:animate-hover-pulse"
+            className="w-full px-4 py-3 border-b-2 border-solid border-headingColor focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 bg-[#404c49] text-headingColor placeholder:text-white/80 rounded-md cursor-pointer hover:animate-hover-pulse"
             required
           />
         </div>
@@ -105,7 +105,7 @@ const Login = () => {
             name="password"
             value={formData.password}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 border-b-2 border-solid border-headingColor focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 bg-[#404c49] text-headingColor placeholder:text-headingColor rounded-md cursor-pointer hover:animate-hover-pulse"
+            className="w-full px-4 py-3 border-b-2 border-solid border-headingColor focus:outline-none focus:border-b-[#007e69] text-[16px] leading-7 bg-[#404c49] text-headingColor placeholder:text-white/80 rounded-md cursor-pointer hover:animate-hover-pulse"
             required
           />
           <button

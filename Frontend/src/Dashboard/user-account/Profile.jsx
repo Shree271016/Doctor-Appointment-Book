@@ -73,7 +73,7 @@ const Profile = ({ user }) => {
   };
   return (
 
-    <div className='pt-3 bg-black/60'>
+    <div className='pt-3 bg-black/60 px-5 '>
 
       <form onSubmit={submitHandler}>
 
