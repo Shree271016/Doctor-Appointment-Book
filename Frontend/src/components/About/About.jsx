@@ -18,7 +18,7 @@ const About = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-[#007e69] to-transparent opacity-20" />
                         </div>
                         <div className="absolute -bottom-6 -right-6 hidden lg:block animate-scale-up">
-                            <div className="bg-[#007e69] text-white px-8 py-4 rounded-full shadow-lg font-medium">
+                            <div className="bg-[#007e69] text-headingColor px-8 py-4 rounded-full shadow-lg font-medium">
                                 Since 1994
                             </div>
                         </div>
@@ -35,23 +35,23 @@ const About = () => {
                             </div>
                             
                             <div className="space-y-6">
-                                <h2 className="text-4xl lg:text-5xl font-bold text-[#003a33] leading-tight hover:animate-hover-pulse">
+                                <h2 className="text-4xl lg:text-5xl font-bold text-headingColor leading-tight hover:animate-hover-pulse">
                                     Proud to be one of the nations best
                                 </h2>
                                 
                                 <div className="space-y-6">
-                                    <p className="text-lg text-[#4a5957] leading-relaxed relative pl-6 border-l-2 border-[#00a88b]">
+                                    <p className="text-lg text-headingColor leading-relaxed relative pl-6 border-l-2 border-[#00a88b]">
                                         For 30 years in a row, Nepal News & World Report has recognized us as one of the best public hospitals in the nation, known for exceptional care, innovation, and community-focused healthcare services.
                                     </p>
                                     
-                                    <p className="text-lg text-[#4a5957] leading-relaxed bg-[#f5fffd] p-6 rounded-lg border border-[#e0f5f1]">
+                                    <p className="text-lg text-headingColor leading-relaxed bg-[#404c49] p-6 rounded-lg border border-[#e0f5f1]">
                                         Our best is something we strive for each day, caring for our patients—not looking back at what we accomplished but towards what we can do tomorrow. Providing the best care, compassion, innovation, excellence, dedication, integrity, empathy, trust, teamwork, and growth.
                                     </p>
                                 </div>
 
                                 <Link 
                                     to='/Services'
-                                    className="animate-scale-up inline-flex items-center gap-3 px-8 py-4 bg-[#007e69] text-white rounded-full font-semibold hover:bg-[#00a88b] transition-all duration-300 shadow-md hover:shadow-lg group"
+                                    className="animate-scale-up inline-flex items-center gap-3 px-8 py-4 bg-[#007e69] text-headingColor rounded-full font-semibold hover:bg-[#00a88b] transition-all duration-300 shadow-md hover:shadow-lg group"
                                 >
                                     <span>Learn More</span>
                                     <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">

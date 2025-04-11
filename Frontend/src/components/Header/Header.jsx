@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import { NavLink, Link } from "react-router-dom";
-import { MdMenu, MdDarkMode, MdLightMode, MdClose } from 'react-icons/md';
+import { MdMenu, MdClose } from 'react-icons/md';
 import { authContext } from '../../context/AuthContext';
 
 const navLinks = [
@@ -15,7 +15,7 @@ const Header = () => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
   const { user, role, token } = useContext(authContext);
-  const [darkMode, setDarkMode] = useState(localStorage.getItem("theme") === "dark");
+  // const [darkMode, setDarkMode] = useState(localStorage.getItem("theme") === "dark");
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -31,12 +31,12 @@ const Header = () => {
   }, []);
 
   // Dark mode toggle
-  const toggleDarkMode = () => {
-    const newMode = !darkMode;
-    setDarkMode(newMode);
-    localStorage.setItem("theme", newMode ? "dark" : "light");
-    document.documentElement.classList.toggle("dark", newMode);
-  };
+  // const toggleDarkMode = () => {
+  //   const newMode = !darkMode;
+  //   setDarkMode(newMode);
+  //   localStorage.setItem("theme", newMode ? "dark" : "light");
+  //   document.documentElement.classList.toggle("dark", newMode);
+  // };
 
   // Menu toggle
   const toggleMenu = () => {
@@ -69,8 +69,8 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className={`fixed w-full z-50 py-4 ${isScrolled
-        ? 'bg-white dark:bg-gray-600 bg-opacity-25 backdrop-blur-sm shadow-md'
+      className={`fixed w-full z-50 py-4 text-headingColor bg-slate-700/95  ${isScrolled
+        ? ' bg-opacity-90  shadow-md '
         : 'bg-transparent'
         }`}
     >
@@ -95,8 +95,8 @@ const Header = () => {
                 to={link.path}
                 className={({ isActive }) =>
                   `text-lg font-medium transition-colors  ${isActive
-                    ? 'text-[#007e69] dark:text-emerald-400'
-                    : 'text-gray-600 dark:text-gray-300 hover:text-[#007e69] dark:hover:text-emerald-400 hover:animate-hover-pulse'
+                    ? 'text-headingColor dark:text-emerald-400'
+                    : 'text-emerald-400 dark:text-white hover:text-headingColor dark:hover:text-emerald-400 hover:animate-hover-pulse'
                   }`
                 }
               >
@@ -108,7 +108,7 @@ const Header = () => {
           {/* Right Section */}
           <div className="flex items-center gap-6">
             {/* Dark Mode Toggle */}
-            <button
+            {/* <button
               onClick={toggleDarkMode}
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             >
@@ -117,7 +117,7 @@ const Header = () => {
               ) : (
                 <MdDarkMode className="w-6 h-6 text-gray-800 dark:text-gray-200" />
               )}
-            </button>
+            </button> */}
 
             {/* Profile/Login */}
             {token && user ? (
@@ -130,7 +130,7 @@ const Header = () => {
                   alt="Profile"
                   className="w-10 h-10 rounded-full border-2 border-[#007e69]"
                 />
-                <span className="text-sm font-semibold text-[#007e69] dark:text-emerald-400">
+                <span className="text-sm font-bold text-headingColor dark:text-emerald-600 ">
                   {role === "doctor" ? `Dr. ${user?.name}` : user?.name}
                 </span>
               </Link>

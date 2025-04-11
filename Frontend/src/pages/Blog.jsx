@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import medicareplus from "../assets/images/medicareplus.png";
 import shree from "../assets/images/shree.png";
 import kasmita2 from "../assets/images/kasmita2.jpg";
-import homeImage from "../assets/images/homeImage.webp";
+import HomeImage from "../assets/images/HomeImage.png";
 
 
 const Blog = () => {
@@ -258,7 +258,7 @@ const Blog = () => {
                     <div className="bg-white p-6 rounded-xl shadow-md ">
                         <p className="text-gray-700 mb-4">&quot;Found my perfect specialist in minutes - finally a healthcare app that actually works!&quot;</p>
                         <div className="flex items-center">
-                            <img src={homeImage}
+                            <img src={HomeImage}
                                 alt="User"
                                 className="w-12 h-12 rounded-full mr-4" />
                             <div>

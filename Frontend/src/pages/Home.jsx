@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-undef */
 import myAi2 from "../assets/images/myAi2.png";
 import kasmitapng from "../assets/images/kasmitapng.png";
-import doctor2 from "../assets/images/doctor2.avif";
+import HomeImage from "../assets/images/HomeImage.png";
 import medicareplus from "../assets/images/medicareplus.png";
 import kasmita2 from "../assets/images/kasmita2.jpg";
 import { Link } from "react-router-dom";
@@ -22,102 +22,107 @@ import {
 const Home = () => {
   return (
     <>
-      <section className="hero__section  2xl:h-[900px] 2xl:mb-28">
-        <div className='container'>
-          <div className="flex flex-col lg:flex-row gap-[90px] items-center justify-between">
-            <div className="lg:w-[570px] space-y-6">
-              <div className="space-y-6 ">
+      <section className="hero__section relative  min-h-[900px] md:min-h-[1100px] 2xl:min-h-[1600px] overflow-hidden">
+        {/* Fixed Background Image with Overlay */}
+        <div className="fixed inset-0 z-0 h-screen">
+          <img
+            className="w-full h-[1500px] object-cover"
+            src={medicareplus}
+            alt="Medical background"
+          />
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
 
-                <h1 className="text-4xl md:text-5xl mt-4 font-bold leading-tight animate-slide-in">
+        {/* Original Content (unchanged) */}
+        <div className="container relative z-10 h-full flex items-center bg-transparent">
+          <div className="flex flex-col lg:flex-row gap-[90px] items-center justify-between w-full">
+            <div className="lg:w-[570px] space-y-6">
+              <div className="space-y-6">
+                <h1 className="opacity-95 text-4xl md:text-5xl mt-4 font-bold leading-tight animate-slide-in">
                   Empowering Your Health Journey
                 </h1>
 
                 <div className="space-y-6">
-                  <p className="text-lg font-semibold text-emerald-700 text-center md:text-left  animate-scale-up">
+                  <p className="text-lg font-semibold text-red-600 text-center md:text-left animate-scale-up">
                     Welcome to Medicare+
                   </p>
-                  <div className="space-y-4 text-gray-600">
-                    <p className="text-lg  hover:animate-hover-pulse">
+                  <div className="space-y-4 text-textColor opacity-95">
+                    <p className="text-lg hover:animate-hover-pulse ">
                       Discover a new era of healthcare with our comprehensive digital platform
                     </p>
                     <div className="space-y-3">
-
                       <div className="flex items-start gap-3 hover:animate-hover-pulse">
                         <CheckCircleIcon className="w-6 h-6 text-green-600 flex-shrink-0" />
                         <div>
-                          <h3 className="font-semibold text-gray-800">Instant Appointments</h3>
-                          <p className="text-sm">Book same-day consultations with top specialists</p>
+                          <h3 className="font-semibold text-textColor">Instant Appointments</h3>
+                          <p className="text-sm text-textColor">Book same-day consultations with top specialists</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3 hover:animate-hover-pulse">
                         <UserCircleIcon className="w-6 h-6 text-blue-600 flex-shrink-0" />
                         <div>
-                          <h3 className="font-semibold text-gray-800">Verified Doctors</h3>
-                          <p className="text-sm">Detailed profiles with qualifications and reviews</p>
+                          <h3 className="font-semibold text-textColor">Verified Doctors</h3>
+                          <p className="text-sm text-textColor">Detailed profiles with qualifications and reviews</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3 hover:animate-hover-pulse">
                         <CreditCardIcon className="w-6 h-6 text-purple-600 flex-shrink-0" />
                         <div>
-                          <h3 className="font-semibold text-gray-800">Secure Payments</h3>
-                          <p className="text-sm">Encrypted transactions with real-time tracking</p>
+                          <h3 className="font-semibold text-textColor">Secure Payments</h3>
+                          <p className="text-sm text-textColor">Encrypted transactions with real-time tracking</p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-
               </div>
-
 
               <div className="flex flex-col gap-6">
                 <div className="flex justify-center md:justify-start">
                   <Link to="/doctors" className="inline-block">
-                    <button className=" animate-scale-up px-8 py-3 bg-gradient-to-r from-[#007e69] to-[#B63E96] text-white rounded-lg font-semibold hover:scale-105 transition-transform">
+                    <button className="animate-scale-up px-8 py-3 bg-gradient-to-r from-[#007e69] to-[#B63E96] text-textColor opacity-95 rounded-lg font-semibold hover:scale-105 transition-transform">
                       Book Your Consultation Now
                     </button>
                   </Link>
                 </div>
                 <div className="grid grid-cols-3 divide-x divide-gray-200 border border-gray-200 rounded-lg py-4">
                   <div className="text-center px-4 hover:animate-hover-pulse">
-                    <p className="text-3xl font-bold text-[#007e69]">30+</p>
-                    <p className="text-sm font-medium text-gray-600">Years Experience</p>
+                    <p className="text-3xl font-bold text-[#007e69] opacity-95">30+</p>
+                    <p className="text-sm font-medium text-textColor">Years Experience</p>
                   </div>
                   <div className="text-center px-4 hover:animate-hover-pulse">
-                    <p className="text-3xl font-bold text-[#B63E96]">15+</p>
-                    <p className="text-sm font-medium text-gray-600">Clinics Nationwide</p>
+                    <p className="text-3xl font-bold text-[#B63E96] opacity-95">15+</p>
+                    <p className="text-sm font-medium text-textColor">Clinics Nationwide</p>
                   </div>
                   <div className="text-center px-4 hover:animate-hover-pulse">
-                    <p className="text-3xl font-bold text-[#37d892]">100%</p>
-                    <p className="text-sm font-medium text-gray-600">Patient Satisfaction</p>
+                    <p className="text-3xl font-bold text-[#37d892] opacity-95">100%</p>
+                    <p className="text-sm font-medium text-textColor ">Patient Satisfaction</p>
                   </div>
                 </div>
               </div>
-
             </div>
 
-            <div className=" gap-[40px] justify-end grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+            <div className=" md:grid gap-4 lg:gap-[40px] grid-cols-1 md:grid-cols-2">
               <div>
-                <img className='w-full rounded-lg h-[70%] animate-scale-up' src={kasmitapng} alt="" />
+                <img className='w-full rounded-lg h-auto max-h-[700px] object-cover animate-scale-up' src={kasmitapng} alt="" />
               </div>
               <div className="">
-                <img className='w-full mb-[10px] h-[60%] rounded-2xl animate-scale-up' src={myAi2} alt="" />
-                <img className='w-full rounded-lg animate-scale-up' src={doctor2} alt="" />
+                <img className='w-full rounded-lg h-[500px] object-cover animate-scale-up' src={myAi2} alt="" />
+                <img className='w-[90%] pt-5 rounded-lg h-[400px] object-cover animate-scale-up' src={HomeImage} alt="" />
               </div>
             </div>
-
           </div>
         </div>
       </section>
-      <section>
-        <div className="container bg-[#f6f6f6]">
+      <section className="relative z-20 bg- ">
+        <div className="container">
           <div className="lg:w-[470px] mx-auto">
 
             <h2 className="heading text-center animate-slide-in">
               Providing the best medical services
             </h2>
 
-            <p className="text__para text-center hover:animate-hover-pulse">World-class care for everyone. Our health System offers unmatched,expert health care</p>
+            <p className="text__para text-textColor opacity-100 text-center hover:animate-hover-pulse">World-class care for everyone. Our health System offers unmatched,expert health care</p>
 
           </div>
 
@@ -129,8 +134,8 @@ const Home = () => {
               </div>
               <div className="mt-[30px]">
                 <h2 className="text-[26px] landing-9 text-headingColor font-[700] text-center hover:animate-hover-pulse"> Find a Doctor</h2>
-                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center "> World class care for everyone. Our health offers unmatched,expert health care. </p>
-                <Link to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[35px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none animate-scale-up">
+                <p className="text-[16px] leading-7 text-headingColor font-[400] mt-4 text-center "> World class care for everyone. Our health offers unmatched,expert health care. </p>
+                <Link to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-headingColor mt-[35px] mx-auto text-headingColor flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none animate-scale-up">
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </Link>
               </div>
@@ -145,7 +150,7 @@ const Home = () => {
               </div>
               <div className="mt-[30px]">
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center hover:animate-hover-pulse">Find a Location</h2>
-                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
+                <p className="text-[16px] leading-7 text-headingColor font-[400] mt-4 text-center">
                   MedicarePlus Hospital Pvt. Ltd.<br />
                   <span className="text-[16px] cursor-pointer inline-block mt-3">
                     📍 View on Map →
@@ -155,7 +160,7 @@ const Home = () => {
                   href="https://www.shreekrishnapudasaini.com.np/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[30px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none t animate-scale-up"
+                  className="opacity-95 w-[50px] h-[50px] rounded-full border border-solid border-textColor mt-[30px] mx-auto text-headingColor flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none t animate-scale-up"
                 >
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </a>
@@ -168,8 +173,8 @@ const Home = () => {
               </div>
               <div className="mt-[30px]">
                 <h2 className="text-[26px] landing-9 text-headingColor font-[700] text-center hover:animate-hover-pulse"> Book an Appointment</h2>
-                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center "> Experience expert care at Medicare+ with skilled professionals and advanced facilities.</p>
-                <Link to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-[#007e69] mt-[30px] mx-auto text-[#007e69] flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none animate-scale-up">
+                <p className="text-[16px] leading-7 text-headingColor font-[400] mt-4 text-center "> Experience expert care at Medicare+ with skilled professionals and advanced facilities.</p>
+                <Link to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-headingColor mt-[30px] mx-auto text-headingColor flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none animate-scale-up">
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </Link>
               </div>
@@ -201,16 +206,16 @@ const Home = () => {
 
         </div>
       </section>
-      <section className="relative py-16 bg-gradient-to-br from-[#f8fcff] to-[#e6f4fe]">
+      <section className="relative py-16 bg-gradient-to-br ">
 
 
         <div className="container max-w-7xl px-4 mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12 xl:gap-24">
 
             <div className="xl:w-[670px] relative z-10 order-2 lg:order-1">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#003366] mb-8 leading-tight animate-slide-in">
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight animate-slide-in">
                 Get Virtual Treatment <br />
-                <span className="bg-gradient-to-r from-[#007e69] to-[#00a88b] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#007e69] to-[#e60adf] bg-clip-text text-transparent">
                   Anytime
                 </span>
               </h2>
@@ -218,10 +223,10 @@ const Home = () => {
               <ul className="space-y-6 mb-10">
                 {[1, 2, 3].map((item) => (
                   <li key={item} className="flex items-start gap-4 group">
-                    <div className="w-8 h-8 bg-[#007e69] rounded-full flex items-center justify-center text-white font-bold shrink-0">
+                    <div className="w-8 h-8 bg-[#007e69] rounded-full flex items-center justify-center text-headingColor font-bold shrink-0">
                       {item}
                     </div>
-                    <p className="hover:animate-hover-pulse  text-lg text-[#4a5957] leading-relaxed transition-all group-hover:text-[#003366]">
+                    <p className="hover:animate-hover-pulse  text-lg text-headingColor leading-relaxed transition-all group-hover:text-[#003366]">
                       {item === 1 && "Schedule the appointment directly."}
                       {item === 2 && "Search for your physician here, and contact their office."}
                       {item === 3 && "View our physicians who are accepting new patients, use the online scheduling tool to select an appointment time."}
@@ -231,7 +236,7 @@ const Home = () => {
               </ul>
 
               <Link to="/doctors/67e57087e4429f939241421e">
-                <button className="px-8 py-4 bg-gradient-to-r from-[#007e69] to-[#00a88b] text-white rounded-full font-semibold hover:from-[#00a88b] hover:to-[#007e69] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-3 animate-scale-up">
+                <button className="px-8 py-4 bg-gradient-to-r from-[#007e69] to-[#00a88b] text-headingColor rounded-full font-semibold hover:from-[#00a88b] hover:to-[#007e69] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-3 animate-scale-up">
                   Learn More
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
@@ -252,7 +257,7 @@ const Home = () => {
               </div>
 
 
-              <div className="absolute -bottom-8 left-8 w-[280px] bg-white shadow-2xl rounded-2xl p-4 transform hover:-translate-y-2 transition-all duration-300 z-20 animate-scale-up">
+              <div className="absolute -bottom-8 left-8 w-[280px] bg-gray-200 shadow-2xl rounded-2xl p-4 transform hover:-translate-y-2 transition-all duration-300 z-20 animate-scale-up">
                 <div className="flex items-center justify-between mb-3">
                   <div className="space-y-1">
                     <p className="text-lg font-bold text-[#003366]">Thu, 24</p>
@@ -304,9 +309,10 @@ const Home = () => {
 
         </div>
       </section>
-      <div className="container py-20">
 
 
+      <section>
+      <div className="container pt-10 pb-3" >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
 
           <div className="relative group w-full h-[680px] overflow-hidden rounded-3xl shadow-2xl">
@@ -315,34 +321,32 @@ const Home = () => {
               alt="Medical FAQ"
               className="w-[85%] h-full object-cover transform group-hover:scale-105 transition-all duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#007e69]/40 to-transparent" />
-            <div className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold text-[#003a33] mb-2 animate-scale-up">Have Questions?</h3>
-              <p className="text-[#4a5957] animate-scale-up">Our team is always ready to help with any inquiries</p>
+            <div className="absolute z-10 inset-0 bg-gradient-to-t from-[#007e69]/40 to-transparent" />
+            <div className="absolute z-10 bottom-8 left-8 bg-slate-200 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
+              <h3 className="text-2xl font-bold text-black mb-2 animate-scale-up">Have Questions?</h3>
+              <p className="text-black animate-scale-up">Our team is always ready to help with any inquiries</p>
             </div>
           </div>
 
 
-          <div className="w-full space-y-8">
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#003a33] mb-8 leading-tight animate-rotate-bounce">
+          <div className="w-full  relative">
+            <h2 className="text-4xl lg:text-5xl font-bold text-headingColor mb-3 leading-tight animate-rotate-bounce">
               Most questions by our<br className="hidden lg:block" /> beloved patients
             </h2>
 
-            <div className="space-y-6">
+            <div className="relative z-10">
               <FaqList />
             </div>
           </div>
         </div>
-
-
       </div>
+      </section>
+
       <section>
         <div className="container">
           <div className="xl:w[470px] mx-auto">
-            <h2 className="heading text-center animate-slide-in "> Our Patients Speak</h2>
-            <p className="text__para text-center hover:animate-hover-pulse"> World-class care for everyone. Experience compassionate, personalized health care tailored to your needs.</p>
-
-
+            <h2 className="heading text-center animate-slide-in text-headingColor "> Our Patients Speak</h2>
+            <p className="text__para text-center hover:animate-hover-pulse relative text-headingColor " > World-class care for everyone. Experience compassionate, personalized health care tailored to your needs.</p>
           </div>
 
 

@@ -16,14 +16,14 @@
     }
 
  .btn {
-    @apply bg-[#007e69] py-[15px] px-[35px] rounded-[50px] text-white font-[600] mt-[38px] hover:bg-[#37d892] hover:text-white hover:border-[#007e69] border-[1px] ;
+    @apply bg-[#007e69] py-[15px] px-[35px] rounded-[50px] text-black font-[600] mt-[38px] hover:bg-[#37d892] hover:text-black hover:border-[#007e69] border-[1px] ;
      
   }
   .heading {
-    @apply text-[44px] leading-[54px] font-[700] text-headingColor;
+    @apply text-[44px] leading-[54px] font-[700] text-black;
   }
   .text__para {
-    @apply text-[18px] leading-[30px] font-[400] text-textColor mt-[18px];
+    @apply text-[18px] leading-[30px] font-[400] text-black mt-[18px];
   }
   .header{
     @apply bg-[url('./assets/images/mask.png')] bg-no-repeat bg-center bg-cover w-full h-[100px] leading-[100px];
@@ -33,10 +33,10 @@
     @apply bg-[url('./assets/images/hero-bg.png')] bg-no-repeat bg-center bg-cover;
   }
   .form__label{
-    @apply text-textColor font-semibold text-[16px] leading-7 mb-2;
+    @apply text-white font-semibold text-[16px] leading-7 mb-2;
   }
   .form__input{
-    @apply w-full px-4 py-3 border border-solid border-[rgb(0,126,105)] focus:outline-none focus:border-[rgb(0,126,105)] text-[16px]  leading-7 text-headingColor placeholder:text-textColor cursor-pointer focus:shadow-emerald-600 rounded-md focus:shadow-sm ;
+    @apply w-full px-4 py-3 border border-solid border-[rgb(0,126,105)] focus:outline-none focus:border-[rgb(0,126,105)] text-[16px]  leading-7 text-headingColor placeholder:text-black cursor-pointer focus:shadow-emerald-600 rounded-md focus:shadow-sm ;
   }
 
 }

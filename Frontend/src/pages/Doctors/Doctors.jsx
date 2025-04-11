@@ -7,6 +7,7 @@ import Error from "../../components/Error/Error";
 import { BASE_URL } from "./../../utils/config";
 import { useFetchData } from "./../../hooks/useFetchData";
 import { useEffect, useState } from "react";
+import medicareplus from "../../assets/images/medicareplus.png";
 
 
 
@@ -31,26 +32,28 @@ const Doctors = () => {
   return (
 
     <>
-      <section className='bg-[#fff9ea]'>
+      <section className='pt-32 pb-16 relative overflow-hidden'>
+        <div className="fixed inset-0 z-0 h-screen">
+                  <img
+                    className="w-full h-[1500px] object-cover"
+                    src={medicareplus}
+                    alt="Medical background"
+                  />
+                  <div className="absolute inset-0 bg-black/40"></div>
+                </div>
         <div className='container text-center mt-6'>
-
-
-          <h2 className='heading animate-rotate-bounce'>Find a Doctor</h2>
-
-
-          <div className='max-w-[570px] mt-[30px] mx-auto bg-[#0066ff2c] rounded-md flex items-center justify-between'>
-            <input type="search" className='py-4 pl-4 pr-2 bg-transparent w-full focus:outline-none cursor-pointer placeholder:text-textColor' placeholder='Search Doctor Dr by Name or Specification'
+          <h2 className='heading animate-rotate-bounce text-headingColor'>Find a Doctor</h2>
+          <div className='max-w-[570px] mt-[30px] mx-auto bg-headingColor rounded-md flex items-center justify-between relative '>
+            <input type="search" className='py-4 pl-4 pr-2 bg-transparent w-full focus:outline-none cursor-pointer placeholder:text-black' placeholder='Search Doctor Dr by Name or Specification'
               value={query} onChange={e => setQuery(e.target.value)} />
-            <button className='btn mt-0 rounded-[0px] rounded-r-md' onClick={handleSearch}>Search
+            <button className='btn mt-0 rounded-[0px] rounded-r-md text-headingColor' onClick={handleSearch}>Search
             </button>
           </div>
-
-
         </div>
       </section>
       <section >
 
-        <div className="container">
+        <div className="container relative z-10">
 
           {loading && <Loader />}
           {error && <Error />}
@@ -68,7 +71,7 @@ const Doctors = () => {
             <h2 className="heading text-center animate-slide-in"> Our Patients Speak</h2>
 
 
-            <p className="text__para text-center hover:animate-hover-pulse"> World-class care for everyone. Experience compassionate, personalized health care tailored to your needs.</p>
+            <p className="text__para font-bold text-center hover:animate-hover-pulse relative text-headingColor "> World-class care for everyone. Experience compassionate, personalized health care tailored to your needs.</p>
 
 
           </div>

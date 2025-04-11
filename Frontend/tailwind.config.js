@@ -18,8 +18,8 @@ export default {
         yellowColor: '#FEB60D',
         purpleColor: '#9771FF',
         irisBlueColor: '#01B5C5',
-        headingColor: '#181A1E',
-        textColor: '#4E545F',
+        headingColor: '#ffffff',
+        textColor: '#eaeaea',
       },
       boxShadow: {
         planeShadow: "rgba(17,12,46,0.15) 0px 48px 100px 0px",
@@ -28,18 +28,18 @@ export default {
         slideIn: {
           '0%': {
             transform: 'translateX(-100%)',
-            opacity: 0,
-            color: '#B63E96', // Start with color #B63E96 (Purple)
+            opacity: 20,
+            color: '#ffffff', // Start with color #B63E96 (Purple)
           },
           '50%': {
             transform: 'translateX(0)',
             opacity: 0.5, // Partially faded in
-            color: '#FEB60D', // Transition to color #FEB60D (Yellow)
+            color: '#007e69', // End with color #007e69 (Green)
           },
           '100%': {
             transform: 'translateX(0)',
-            opacity: 1, // Fully visible
-            color: '#007e69', // End with color #007e69 (Green)
+            opacity: 60, // Fully visible
+            color: '#fff', // Transition to color #FEB60D (Yellow)
           },},
           continuousScaleUp: {
             '0%, 100%': { transform: 'scale(1)' },
@@ -58,7 +58,7 @@ export default {
           }
         },
         animation: {
-          'slide-in': 'slideIn 4s ease-out infinite',
+          'slide-in': 'slideIn 5s ease-out infinite',
           'scale-up': 'continuousScaleUp 4s ease-in-out infinite',
           'rotate-bounce': 'rotateAndBounce 4s ease-out infinite',
           'hover-pulse': 'hoverPulse 1s ease-in-out',
