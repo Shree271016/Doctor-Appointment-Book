@@ -43,10 +43,10 @@ const Doctors = () => {
                 </div>
         <div className='container text-center mt-6'>
           <h2 className='heading animate-rotate-bounce text-headingColor'>Find a Doctor</h2>
-          <div className='max-w-[570px] mt-[30px] mx-auto bg-headingColor rounded-md flex items-center justify-between relative '>
-            <input type="search" className='py-4 pl-4 pr-2 bg-transparent w-full focus:outline-none cursor-pointer placeholder:text-headingColor' placeholder='Search Doctor Dr by Name or Specification'
+          <div className='max-w-[570px] mt-[30px] mx-auto bg-[#404c49] rounded-md flex items-center justify-between relative '>
+            <input type="search" className='py-4 pl-4 pr-2 bg-[#404c49] w-full focus:outline-none cursor-pointer placeholder:text-headingColor' placeholder='Search Doctor Dr by Name or Specification'
               value={query} onChange={e => setQuery(e.target.value)} />
-            <button className='btn mt-0 rounded-[0px] rounded-r-md text-[#404c49] bg-headingColor' onClick={handleSearch}>Search
+            <button className='btn mt-0 rounded-[0px] rounded-r-md text-headingColor bg-green-600' onClick={handleSearch}>Search
             </button>
           </div>
         </div>
