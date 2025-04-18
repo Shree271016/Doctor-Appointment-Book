@@ -20,7 +20,7 @@ const port = process.env.PORT || 5000;
 
 const corsOptions = {
     origin: ["https://medicareplus-nine.vercel.app"],
-    methods: ["POST", "GET"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], 
     credentials: true,
   };
 
@@ -44,6 +44,7 @@ const connectDB = async () => {
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 app.use('/api/v1/auth', authRoute);
 app.use('/api/v1/users', userRoute);
 app.use('/api/v1/doctors', doctorRoute);

@@ -24,7 +24,7 @@ const DoctorAbout = ({ name, about, qualifications, experiences, phone }) => {
                 <div className="mt-12">
                     <h3 className=" animate-scale-up text-[20px] leading-[30px] text-headingColor font-semibold border-b border-solid ">
                         Education :</h3>
-                    <ul className="pt-4 md:p-5 bg-[rgb(229,231,235)] rounded-xl mt-3 hover:animate-hover-pulse">
+                    <ul className="pt-4 md:p-5 bg-[rgb(229,231,235)] rounded-xl mt-3 hover:animate-hover-pulse sm:pl-3">
                         {qualifications?.map((item, index) => <li key={index} className="flex flex-col sm:flex-row sm:justify-between sm:items-end md:gap-5 mb-[30px]  ">
                             <div>
                                 <span className="text-irisBlueColor text-[18px] leading-6 font-semibold">
