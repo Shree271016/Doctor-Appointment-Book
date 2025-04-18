@@ -128,14 +128,26 @@ const Home = () => {
 
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px] pb-10">
+            {/* Modified Find a Doctor Card */}
             <div className=" px-5">
               <div className="flex items-center justify-center h-[200px]">
-                <img src="https://media.istockphoto.com/id/489779612/photo/doctor-holding-stethoscope-in-hand.jpg?s=1024x1024&w=is&k=20&c=Fk5QEzwe4Daa5UB1PZFXUY36fxJ8TACun_VcUGcqnSg=" alt="" className="w-full max-w-[200px] h-auto rounded-lg shadow-lg object-cover animate-scale-up" />
+                <img
+                  src="https://media.istockphoto.com/id/489779612/photo/doctor-holding-stethoscope-in-hand.jpg?s=1024x1024&w=is&k=20&c=Fk5QEzwe4Daa5UB1PZFXUY36fxJ8TACun_VcUGcqnSg="
+                  alt=""
+                  className="w-full max-w-[200px] h-auto rounded-lg shadow-lg object-cover animate-scale-up"
+                />
               </div>
               <div className="mt-[30px]">
-                <h2 className="text-[26px] landing-9 text-headingColor font-[700] text-center hover:animate-hover-pulse"> Find a Doctor</h2>
-                <p className="text-[16px] leading-7 text-headingColor font-[400] mt-4 text-center "> World class care for everyone. Our health offers unmatched,expert health care. </p>
-                <Link to="/doctors" className="w-[50px] h-[50px] rounded-full border border-solid border-headingColor mt-[35px] mx-auto text-headingColor flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none animate-scale-up">
+                <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center hover:animate-hover-pulse">
+                कुन डाक्टरसँग भेट्न आवश्यक छ ?
+                </h2>
+                <p className="text-[16px] leading-7 text-headingColor font-[400] mt-4 text-center">
+                कुन डाक्टरसँग परामर्श गर्ने थाहा छैन ? तपाईंका लक्षणबाट खाेजनुहोस्।
+                </p>
+                <Link
+                  to="/symptom-checker"
+                  className="w-[50px] h-[50px] rounded-full border border-solid border-headingColor mt-[35px] mx-auto text-headingColor flex items-center justify-center group hover:bg-[rgb(0,126,105)] hover:border-none animate-scale-up"
+                >
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </Link>
               </div>
@@ -312,34 +324,34 @@ const Home = () => {
 
 
       <section>
-      <div className="container pt-10 pb-3" >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+        <div className="container pt-10 pb-3" >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
 
-          <div className="relative group w-full h-[680px] overflow-hidden rounded-3xl shadow-2xl">
-            <img
-              src={kasmita1}
-              alt="Medical FAQ"
-              className="w-[85%] h-full object-cover transform group-hover:scale-105 transition-all duration-500"
-            />
-            <div className="absolute z-10 inset-0 bg-gradient-to-t from-[#007e69]/40 to-transparent" />
-            <div className="absolute z-10 bottom-8 left-8 bg-slate-200 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold text-black mb-2 animate-scale-up">Have Questions?</h3>
-              <p className="text-black animate-scale-up">Our team is always ready to help with any inquiries</p>
+            <div className="relative group w-full h-[680px] overflow-hidden rounded-3xl shadow-2xl">
+              <img
+                src={kasmita1}
+                alt="Medical FAQ"
+                className="w-[85%] h-full object-cover transform group-hover:scale-105 transition-all duration-500"
+              />
+              <div className="absolute z-10 inset-0 bg-gradient-to-t from-[#007e69]/40 to-transparent" />
+              <div className="absolute z-10 bottom-8 left-8 bg-slate-200 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
+                <h3 className="text-2xl font-bold text-black mb-2 animate-scale-up">Have Questions?</h3>
+                <p className="text-black animate-scale-up">Our team is always ready to help with any inquiries</p>
+              </div>
             </div>
-          </div>
 
 
-          <div className="w-full  relative">
-            <h2 className="text-4xl lg:text-5xl font-bold text-headingColor mb-3 leading-tight animate-rotate-bounce">
-              Most questions by our<br className="hidden lg:block" /> beloved patients
-            </h2>
+            <div className="w-full  relative">
+              <h2 className="text-4xl lg:text-5xl font-bold text-headingColor mb-3 leading-tight animate-rotate-bounce">
+                Most questions by our<br className="hidden lg:block" /> beloved patients
+              </h2>
 
-            <div className="relative z-10">
-              <FaqList />
+              <div className="relative z-10">
+                <FaqList />
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </section>
 
       <section>

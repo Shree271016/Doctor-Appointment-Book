@@ -8,6 +8,7 @@ const navLinks = [
   { path: '/doctors', display: 'Find a Doctor' },
   { path: '/Services', display: 'Services' },
   { path: '/blog', display: 'Blog' },
+  { path: '/symptom-checker', display: 'Symptoms' },
   { path: '/contact', display: 'Contact' },
 ];
 

@@ -12,6 +12,7 @@ import CheckoutSuccess from '../pages/Doctors/CheckoutSuccess';
 import { Routes, Route } from 'react-router-dom';
 import ProtectedRoute from './ProtectedRoute';
 import Blog from '../pages/Blog';
+import SymptomChecker from '../pages/SymptomChecker';
 
 const Routers = () => {
   return <Routes>
@@ -25,6 +26,7 @@ const Routers = () => {
     <Route path="/services" element={<Services />} />
     <Route path="/blog" element={<Blog />} />
     <Route path="checkout-success" element={<CheckoutSuccess />} />
+    <Route path="/symptom-checker" element={<SymptomChecker />} />
     <Route path="/users/profile/me"
       element={
         <ProtectedRoute allowedRoles={["patient"]}>
