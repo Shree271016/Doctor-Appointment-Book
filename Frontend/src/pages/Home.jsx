@@ -18,6 +18,7 @@ import {
   UserCircleIcon,
   CreditCardIcon
 } from "@heroicons/react/24/outline";
+import { FaStethoscope } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -51,6 +52,15 @@ const Home = () => {
                       Discover a new era of healthcare with our comprehensive digital platform
                     </p>
                     <div className="space-y-3">
+                      <div className="flex items-start gap-3 hover:animate-hover-pulse">
+                        <FaStethoscope className="w-6 h-6 text-amber-600 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-extrabold text-amber-600 ">लक्षणको आधारमा डाक्टर खोज्नुहोस्</h3>
+                          <p className="text-sm text-amber-400 font-bold">
+                            यदि तपाईंलाई कहाँ जाँच गराउने वा कुन डाक्टरसँग भेट्ने थाहा छैन भने, यहाँ पत्ता लगाउन सक्नुहुन्छ।
+                          </p>
+                        </div>
+                      </div>
                       <div className="flex items-start gap-3 hover:animate-hover-pulse">
                         <CheckCircleIcon className="w-6 h-6 text-green-600 flex-shrink-0" />
                         <div>
@@ -139,10 +149,10 @@ const Home = () => {
               </div>
               <div className="mt-[30px]">
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center hover:animate-hover-pulse">
-                कुन डाक्टरसँग भेट्न आवश्यक छ ?
+                  कुन डाक्टरसँग भेट्न आवश्यक छ ?
                 </h2>
                 <p className="text-[16px] leading-7 text-headingColor font-[400] mt-4 text-center">
-                कुन डाक्टरसँग परामर्श गर्ने थाहा छैन ? तपाईंका लक्षणबाट खाेजनुहोस्।
+                  कुन डाक्टरसँग परामर्श गर्ने थाहा छैन ? तपाईंका लक्षणबाट खाेजनुहोस्।
                 </p>
                 <Link
                   to="/symptom-checker"
