@@ -52,7 +52,7 @@ const Doctors = () => {
         </div>
       </section>
       <section >
-        <div className="relative -mt-24 z-10">
+        <div className="relative mt-24 z-10 mx-2 ">
 
           {loading && <Loader />}
           {error && <Error />}

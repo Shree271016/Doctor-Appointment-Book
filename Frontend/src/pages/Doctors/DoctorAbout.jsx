@@ -48,7 +48,7 @@ const DoctorAbout = ({ name, about, qualifications, experiences, phone }) => {
                         Experience :
 
                     </h3>
-                    <ul className="grid sm:grid-cols-2 gap-[30px] pt-4 md:p-5 bg-slate-300 rounded-md hover:animate-hover-pulse">
+                    <ul className="grid sm:grid-cols-2 gap-[30px] pt-4 md:p-5 bg-slate-300 rounded-md hover:animate-hover-pulse mt-4">
                         {experiences?.map((item, index) => <li key={index} className="p-4 rounded bg-[#fff9ea]">
                             <span className="text-yellowColor text-[18px] leading-6 font-semibold">
                                 {formateDate(item.startingDate)} - {formateDate(item.endingDate)}

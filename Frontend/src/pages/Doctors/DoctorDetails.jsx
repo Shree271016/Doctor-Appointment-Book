@@ -87,13 +87,13 @@ const DoctorDetails = () => {
             <div className="mt-[50px] border-b border-solid border-headingColor hover:animate-hover-pulse">
               <button
                 onClick={() => setTab('about')}
-                className={` ${tab === 'about' && 'border-b border-solid border-[rgb(0,126,105)]'} py-2 px-5 mr-5 text-[16px] leading-7 text-headingColor font-semibold`}>
+                className={` ${tab === 'about' && 'border-b border-solid border-[rgb(0,126,105)]'} py-2 px-5 mr-5 text-[16px] leading-7 text-orange-400 font-semibold`}>
                 About
               </button>
               <button
                 onClick={() => setTab('feedback')}
 
-                className={`${tab === 'feedback' && 'border-b border-solid border-[rgb(0,126,105)]'} py-2 px-5 mr-5 text-[16px] leading-7 text-headingColor font-semibold`}>
+                className={`${tab === 'feedback' && 'border-b border-solid border-[rgb(0,126,105)]'} py-2 px-5 mr-5 text-[16px] leading-7 text-orange-400 font-semibold`}>
                 Feedback
               </button>
             </div>
