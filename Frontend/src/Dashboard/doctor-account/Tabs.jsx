@@ -18,9 +18,9 @@ const Tabs = ({ tab, setTab }) => {
 
     <div>
       <span className="lg:hidden">
-        <BiMenu className="w-6 h-6 cursor-pointer" />
+        <BiMenu className="lg:hidden" />
       </span>
-      <div className="hover:animate-hover-pulse hidden lg:flex flex-col p-[30px] bg-[#404c49]/50 shadow-planeShadow items-center h-max rounded-md  ">
+      <div className="hover:animate-hover-pulse  flex flex-col p-[30px] bg-[#404c49]/50 shadow-planeShadow items-center h-max rounded-md  ">
         <button
           onClick={() => setTab("overview")}
           className={`${tab === "overview"
