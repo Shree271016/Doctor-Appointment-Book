@@ -10,7 +10,7 @@ const DoctorAbout = ({ name, about, qualifications, experiences, phone }) => {
               
 
                     <h3 className='text-[20px]   font-semibold flex items-center gap-2'>
-                        <span className='text-headingColor font-bold text-[18px] leading-5 '>
+                        <span className='text-green-600 font-bold text-[18px] leading-5 '>
                             &quot; {about} &quot;
                         </span>
                     </h3>
@@ -44,7 +44,7 @@ const DoctorAbout = ({ name, about, qualifications, experiences, phone }) => {
                 </div>
          
                 <div className="mt-12">
-                    <h3 className="animate-scale-up text-[20px] leading-[30px] text-headingColor font-semibold border-b border-solid  ">
+                    <h3 className="animate-scale-up text-[20px] leading-[30px] text-green-600 font-semibold border-b border-solid  ">
                         Experience :
 
                     </h3>

@@ -45,8 +45,8 @@ const Dashboard = () => {
 
 
                 {data.isApproved === "pending" && (
-                  <div className="flex p-4 mb-4 text-yellow-800 bg-yellow-50 rounded-lg">
-                    <div className="ml-3 text-sm font-bold animate-scale-up text-headingColor"> &#10162; 👆  To get approval please complete your profile. We&apos;ll review manually and approve within 3 days.
+                  <div className="flex p-4 mb-4 text-yellow-600 bg-yellow-50 rounded-lg">
+                    <div className="ml-3 text-sm font-bold animate-scale-up text-black"> &#10162; 👆  To get approval please complete your profile. We&apos;ll review manually and approve within 3 days.
                     </div>
                   </div>
                 )}

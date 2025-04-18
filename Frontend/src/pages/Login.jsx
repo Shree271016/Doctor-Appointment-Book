@@ -111,7 +111,7 @@ const Login = () => {
           <button
             type="button"
             onClick={() => setShowPassword(!showPassword)}
-            className="absolute right-4 top-3 text-headingColor"
+            className="absolute right-4 top-3 text-green-500"
           >
             {showPassword ? <FaEyeSlash /> : <FaEye />}
           </button>
@@ -121,7 +121,7 @@ const Login = () => {
           Forget Password ?
           </Link>
         <div className="mt-7">
-          <button type="submit" className="w-full bg-[#007e69] font-bold border-solid border-2 border-[#007e69] text-white text-[20px] leading-[30px] rounded-lg px-4 py-3 hover:bg-white hover:border-[#007e69] hover:border-solid  hover:text-[#007e69] animate-scale-up">
+          <button type="submit" className="w-full bg-[#007e69] font-bold border-solid border-2 border-[#007e69] text-white text-[20px] leading-[30px] rounded-lg px-4 py-3 hover:bg-white hover:border-[#007e69] hover:border-solid  hover:text-black animate-scale-up">
             {loading ? <HashLoader color="#fff" size={25} /> : 'login'}
           </button>
         </div>
