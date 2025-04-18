@@ -17,25 +17,27 @@ const Dashboard = () => {
 
 
   return (
-   <section className="relative min-h-screen overflow-hidden bg-fixed bg-no-repeat bg-center px-5 lg:px-0">
-           {/* Fixed Background Image with Overlay */}
-           <div className="fixed inset-0 z-[-1] w-full h-full">
-             <img
-               className="w-full h-full object-cover object-top"
-               src={medicareplus}
-               alt="Medical background"
-             />
-             <div className="absolute inset-0 bg-black/60"></div>
-           </div>
-      
+    <section className="relative min-h-screen overflow-hidden bg-fixed bg-no-repeat bg-center px-5 lg:px-0">
+      {/* Fixed Background Image with Overlay */}
+      <div className="fixed inset-0 z-[-1] w-full h-full">
+        <img
+          className="w-full h-full object-cover object-top"
+          src={medicareplus}
+          alt="Medical background"
+        />
+        <div className="absolute inset-0 bg-black/60"></div>
+      </div>
+
       <div className='max-w-[1170px] px-5 mx-auto'>
         {loading && !error && <Loader />}
         {error && !loading && <Error message={error} />}
 
         {
           !loading && !error && data && (
-            <div className='grid lg:grid-cols-3 gap-[30px] lg:gap-[50px]'>
-              <Tabs tab={tab} setTab={setTab} />
+            <div className='grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2  gap-[30px] lg:gap-[50px]'>
+              <div className="hidden lg:block">
+                <Tabs tab={tab} setTab={setTab} />
+              </div>
 
               <div className="lg:col-span-2  px-5">
 
