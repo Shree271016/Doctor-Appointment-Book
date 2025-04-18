@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 import { BsArrowRight } from 'react-icons/bs';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const SymptomChecker = () => {
     const allSymptoms = [
@@ -613,7 +612,7 @@ const SymptomChecker = () => {
     const [filteredSymptoms, setFilteredSymptoms] = useState(allSymptoms);
     const [selectedSymptoms, setSelectedSymptoms] = useState([]);
     const [matchedDepartments, setMatchedDepartments] = useState([]);
-    const [showResults, setShowResults] = useState(false); // 👈 to control reveal
+    const [showResults, setShowResults] = useState(false);
 
     const handleSymptomToggle = (symptom) => {
         setSelectedSymptoms((prev) =>
@@ -635,17 +634,13 @@ const SymptomChecker = () => {
             dept.symptoms.some((symptom) => selectedSymptoms.includes(symptom))
         );
         setMatchedDepartments(matched);
-        setShowResults(true); // 👈 show right side content
+        setShowResults(true);
     };
 
     return (
         <section>
-
             <div className="container py-10 min-h-screen">
                 <div className="max-w-6xl mx-auto">
-
-
-
                     <div className="flex items-center gap-4 mb-6">
                         <input
                             type="text"
@@ -661,7 +656,8 @@ const SymptomChecker = () => {
                             Search
                         </button>
                     </div>
-                    {/* Nepali version */}
+                    
+                    {/* Notification Box */}
                     <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 rounded">
                         <div className="flex">
                             <div className="flex-shrink-0">
@@ -678,7 +674,7 @@ const SymptomChecker = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
+                        {/* Left: Symptom Selector */}
                         <div className="border p-6 rounded-2xl shadow-md bg-zinc-700">
                             <h3 className="text-2xl font-semibold mb-4 text-headingColor">Select Symptoms</h3>
                             <div className="max-h-64 overflow-y-auto pr-2">
@@ -703,52 +699,37 @@ const SymptomChecker = () => {
                             </button>
                         </div>
 
-
-                        <motion.div
-                            className="border p-6 rounded-2xl shadow-md  min-h-[120px]"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.4 }}
-                        >
-                            <h3 className="text-2xl font-semibold mb-4 text-headingColor opacity-100">विशेषज्ञ डाक्टर</h3>
-
-                            <AnimatePresence>
-                                {showResults && (
-                                    <motion.div
-                                        key="results"
-                                        initial={{ height: 0, opacity: 0 }}
-                                        animate={{ height: "auto", opacity: 1 }}
-                                        exit={{ height: 0, opacity: 0 }}
-                                        transition={{ duration: 0.5 }}
-                                        className="overflow-hidden"
-                                    >
-                                        {matchedDepartments.length === 0 ? (
-                                            <p className="text-black">
-                                                No departments matched. Please select symptoms and click &quot;Go&quot;.
-                                            </p>
-                                        ) : (
-                                            <div className="grid gap-4 mt-4">
-                                                {matchedDepartments.map((dept, index) => (
-                                                    <motion.div
-                                                        key={index}
-                                                        className="p-5 bg-[#f9f9f9] border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#007e69] transition duration-300"
-                                                        whileHover={{ scale: 1.02 }}
-                                                    >
-                                                        <div className="text-4xl mb-3">{dept.icon}</div>
-                                                        <h4 className="text-xl font-semibold text-[#007e69]"> {dept.name}मा जानुहोस् । </h4>
-                                                        <ul className="text-sm text-gray-700 mt-2 list-disc pl-5">
-                                                            {dept.symptoms.map((symptom, i) => (
-                                                                <li key={i}>{symptom}</li>
-                                                            ))}
-                                                        </ul>
-                                                    </motion.div>
-                                                ))}
-                                            </div>
-                                        )}
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </motion.div>
+                        {/* Right: Results */}
+                        <div className="border p-6 rounded-2xl shadow-md min-h-[120px]">
+                            <h3 className="text-2xl font-semibold mb-4 text-headingColor">विशेषज्ञ डाक्टर</h3>
+                            
+                            {showResults && (
+                                <div className="overflow-hidden">
+                                    {matchedDepartments.length === 0 ? (
+                                        <p className="text-black">
+                                            No departments matched. Please select symptoms and click the button.
+                                        </p>
+                                    ) : (
+                                        <div className="grid gap-4 mt-4">
+                                            {matchedDepartments.map((dept, index) => (
+                                                <div
+                                                    key={index}
+                                                    className="p-5 bg-[#f9f9f9] border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#007e69] transition duration-300"
+                                                >
+                                                    <div className="text-4xl mb-3">{dept.icon}</div>
+                                                    <h4 className="text-xl font-semibold text-[#007e69]"> {dept.name}मा जानुहोस् । </h4>
+                                                    <ul className="text-sm text-gray-700 mt-2 list-disc pl-5">
+                                                        {dept.symptoms.map((symptom, i) => (
+                                                            <li key={i}>{symptom}</li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
