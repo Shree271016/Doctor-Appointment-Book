@@ -34,10 +34,10 @@ const Dashboard = () => {
 
         {
           !loading && !error && data && (
-            <div className='grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2  gap-[30px] lg:gap-[50px]'>
-              <div className="hidden lg:block">
+            <div className='grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-1  gap-[30px] lg:gap-[50px]'>
+             
                 <Tabs tab={tab} setTab={setTab} />
-              </div>
+              
 
               <div className="lg:col-span-2  px-5">
 
