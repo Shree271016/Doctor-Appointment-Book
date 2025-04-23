@@ -148,10 +148,10 @@ const Home = () => {
                 />
               </div>
               <div className="mt-[30px]">
-                <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center hover:animate-hover-pulse">
+                <h2 className="text-[26px] leading-9 text-yellowColor font-[700] text-center hover:animate-hover-pulse">
                   कुन डाक्टरसँग भेट्न आवश्यक छ ?
                 </h2>
-                <p className="text-[16px] leading-7 text-headingColor font-[400] mt-4 text-center">
+                <p className="text-[16px] leading-7 text-yellowColor font-[400] mt-4 text-center">
                   कुन डाक्टरसँग परामर्श गर्ने थाहा छैन ? तपाईंका लक्षणबाट खाेजनुहोस्।
                 </p>
                 <Link

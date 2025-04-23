@@ -8,7 +8,6 @@ import { formateDate } from "../../utils/formateDate";
 const Appointments = ({ appointments }) => {
     return (
 
-
         <table className="w-full text-left text-sm text-headingColor hover:animate-hover-pulse">
             <thead className="text-xs text-headingColor uppercase bg-[#404c49]">
                 <tr>
